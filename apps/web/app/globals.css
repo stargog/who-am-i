@@ -1,0 +1,219 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0f1419;
+  --surface: #1a2332;
+  --surface-hover: #243044;
+  --border: #2d3a4f;
+  --text: #f0f4f8;
+  --muted: #94a3b8;
+  --accent: #f59e0b;
+  --accent-hover: #fbbf24;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --card-hidden: #334155;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  min-height: 100dvh;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+/* --- Game table (playing phase) --- */
+.game-table-wrap {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.game-table-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-height: min(52vh, 380px);
+  margin-inline: auto;
+}
+
+.game-table-surface {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 58%;
+  height: 42%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    #3d2e1f 0%,
+    #2a1f14 55%,
+    #1a1209 100%
+  );
+  box-shadow:
+    inset 0 4px 24px rgba(0, 0, 0, 0.45),
+    0 0 0 3px #5c4a32,
+    0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.game-table-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 42%;
+  max-width: 10rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.75rem;
+  background: rgba(15, 20, 25, 0.88);
+  border: 1px solid var(--border);
+  pointer-events: none;
+}
+
+.game-table-center-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.game-table-center-main {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text);
+  margin-top: 0.15rem;
+}
+
+.game-table-center-sub {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.game-table-seat {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 4.75rem;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.game-table-seat--active {
+  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.65));
+}
+
+.game-table-seat--active .game-table-avatar {
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.game-table-seat--self {
+  z-index: 4;
+}
+
+.game-table-card {
+  position: relative;
+  width: 3.25rem;
+  height: 2.25rem;
+  margin-bottom: -0.35rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.35rem;
+  background: linear-gradient(145deg, #fef3c7, #fde68a);
+  border: 1px solid #d97706;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  transform: rotate(-6deg);
+}
+
+.game-table-card--hidden {
+  background: linear-gradient(145deg, #475569, #334155);
+  border-color: #64748b;
+}
+
+.game-table-card-text {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #1a1200;
+  text-align: center;
+  line-height: 1.1;
+  padding: 0 0.2rem;
+  max-width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.game-table-card--hidden .game-table-card-text {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.game-table-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  color: var(--accent);
+}
+
+.game-table-name {
+  margin-top: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  max-width: 5.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.game-table-you {
+  font-size: 0.6rem;
+  color: var(--accent);
+}
+
+.game-table-offline {
+  font-size: 0.55rem;
+  color: var(--danger);
+}
+
+.playing-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}

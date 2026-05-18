@@ -1,0 +1,401 @@
+category,name
+movie_characters,Harry Potter
+movie_characters,Hermione Granger
+movie_characters,Ron Weasley
+movie_characters,Lord Voldemort
+movie_characters,Albus Dumbledore
+movie_characters,Hagrid
+movie_characters,Darth Vader
+movie_characters,Luke Skywalker
+movie_characters,Princess Leia
+movie_characters,Han Solo
+movie_characters,Yoda
+movie_characters,Obi-Wan Kenobi
+movie_characters,Anakin Skywalker
+movie_characters,Indiana Jones
+movie_characters,Jack Sparrow
+movie_characters,Will Turner
+movie_characters,Elizabeth Swann
+movie_characters,Frodo Baggins
+movie_characters,Gandalf
+movie_characters,Aragorn
+movie_characters,Legolas
+movie_characters,Gollum
+movie_characters,Neo
+movie_characters,Morpheus
+movie_characters,John Wick
+movie_characters,Terminator
+movie_characters,Rocky Balboa
+movie_characters,Rambo
+movie_characters,Joker
+movie_characters,Batman
+movie_characters,Superman
+movie_characters,Wonder Woman
+movie_characters,Aquaman
+movie_characters,Flash
+movie_characters,Spider-Man
+movie_characters,Iron Man
+movie_characters,Captain America
+movie_characters,Thor
+movie_characters,Loki
+movie_characters,Hulk
+movie_characters,Black Panther
+movie_characters,Doctor Strange
+movie_characters,Deadpool
+movie_characters,Wolverine
+movie_characters,Thanos
+movie_characters,Shrek
+movie_characters,Fiona
+movie_characters,Donkey
+movie_characters,Puss in Boots
+movie_characters,Elsa
+movie_characters,Anna
+movie_characters,Olaf
+movie_characters,Moana
+movie_characters,Maui
+movie_characters,Simba
+movie_characters,Mufasa
+movie_characters,Scar
+movie_characters,Timon
+movie_characters,Pumbaa
+movie_characters,Woody
+movie_characters,Buzz Lightyear
+movie_characters,Lightning McQueen
+movie_characters,Mater
+movie_characters,Nemo
+movie_characters,Dory
+movie_characters,Sulley
+movie_characters,Mike Wazowski
+movie_characters,Po
+movie_characters,Mulan
+movie_characters,Aladdin
+movie_characters,Genie
+movie_characters,Jasmine
+movie_characters,Hercules
+movie_characters,Tarzan
+movie_characters,Peter Parker
+movie_characters,Bruce Wayne
+movie_characters,Clark Kent
+movie_characters,Diana Prince
+movie_characters,Pennywise
+movie_characters,Dracula
+movie_characters,Frankenstein
+movie_characters,Wednesday Addams
+movie_characters,Gomez Addams
+movie_characters,Morticia Addams
+movie_characters,Katniss Everdeen
+movie_characters,Peeta Mellark
+movie_characters,Jack Dawson
+movie_characters,Rose DeWitt Bukater
+movie_characters,Ethan Hunt
+movie_characters,James Bond
+movie_characters,Sherlock Holmes
+movie_characters,Enola Holmes
+movie_characters,Willy Wonka
+movie_characters,Charlie Bucket
+movie_characters,Gru
+movie_characters,Minion Kevin
+movie_characters,King Kong
+movie_characters,Godzilla
+movie_characters,Caesar
+movie_characters,Avatar Jake Sully
+anime_characters,Naruto Uzumaki
+anime_characters,Sasuke Uchiha
+anime_characters,Sakura Haruno
+anime_characters,Kakashi Hatake
+anime_characters,Itachi Uchiha
+anime_characters,Gaara
+anime_characters,Monkey D. Luffy
+anime_characters,Roronoa Zoro
+anime_characters,Nami
+anime_characters,Sanji
+anime_characters,Usopp
+anime_characters,Tony Tony Chopper
+anime_characters,Trafalgar Law
+anime_characters,Portgas D. Ace
+anime_characters,Goku
+anime_characters,Vegeta
+anime_characters,Gohan
+anime_characters,Piccolo
+anime_characters,Frieza
+anime_characters,Cell
+anime_characters,Saitama
+anime_characters,Genos
+anime_characters,Tanjiro Kamado
+anime_characters,Nezuko Kamado
+anime_characters,Zenitsu Agatsuma
+anime_characters,Inosuke Hashibira
+anime_characters,Muzan Kibutsuji
+anime_characters,Eren Yeager
+anime_characters,Mikasa Ackerman
+anime_characters,Levi Ackerman
+anime_characters,Armin Arlert
+anime_characters,Erwin Smith
+anime_characters,Light Yagami
+anime_characters,L
+anime_characters,Ryuk
+anime_characters,Edward Elric
+anime_characters,Alphonse Elric
+anime_characters,Roy Mustang
+anime_characters,Ichigo Kurosaki
+anime_characters,Rukia Kuchiki
+anime_characters,Aizen Sosuke
+anime_characters,Gon Freecss
+anime_characters,Killua Zoldyck
+anime_characters,Kurapika
+anime_characters,Hisoka
+anime_characters,Deku
+anime_characters,Bakugo
+anime_characters,Todoroki
+anime_characters,All Might
+anime_characters,Tomura Shigaraki
+anime_characters,Jujutsu Kaisen Gojo
+anime_characters,Yuji Itadori
+anime_characters,Megumi Fushiguro
+anime_characters,Nobara Kugisaki
+anime_characters,Sukuna
+anime_characters,Denji
+anime_characters,Power
+anime_characters,Makima
+anime_characters,Aki Hayakawa
+anime_characters,Ash Ketchum
+anime_characters,Pikachu
+anime_characters,Misty
+anime_characters,Brock
+anime_characters,Doraemon
+anime_characters,Nobita
+anime_characters,Shizuka
+anime_characters,Conan Edogawa
+anime_characters,Shinichi Kudo
+anime_characters,Sailor Moon
+anime_characters,Astro Boy
+anime_characters,Totoro
+anime_characters,Kiki
+anime_characters,Howl
+anime_characters,Spirited Away Chihiro
+anime_characters,Lelouch Lamperouge
+anime_characters,C.C.
+anime_characters,Zero Two
+anime_characters,Rem
+anime_characters,Emilia
+anime_characters,Subaru Natsuki
+anime_characters,Kirito
+anime_characters,Asuna
+anime_characters,Sinon
+anime_characters,Yujiro Hanma
+anime_characters,Baki Hanma
+anime_characters,Joseph Joestar
+anime_characters,Jotaro Kujo
+anime_characters,Dio Brando
+anime_characters,Mob
+anime_characters,Reigen Arataka
+anime_characters,Ken Kaneki
+anime_characters,Rize Kamishiro
+anime_characters,Spike Spiegel
+anime_characters,Vash the Stampede
+anime_characters,Lucy Heartfilia
+anime_characters,Natsu Dragneel
+anime_characters,Happy
+anime_characters,Yugi Muto
+anime_characters,Seto Kaiba
+anime_characters,Anya Forger
+animals,Dog
+animals,Cat
+animals,Lion
+animals,Tiger
+animals,Elephant
+animals,Giraffe
+animals,Zebra
+animals,Panda
+animals,Koala
+animals,Kangaroo
+animals,Bear
+animals,Polar Bear
+animals,Wolf
+animals,Fox
+animals,Rabbit
+animals,Deer
+animals,Moose
+animals,Buffalo
+animals,Cow
+animals,Horse
+animals,Donkey
+animals,Pig
+animals,Goat
+animals,Sheep
+animals,Camel
+animals,Alpaca
+animals,Llama
+animals,Monkey
+animals,Gorilla
+animals,Chimpanzee
+animals,Orangutan
+animals,Sloth
+animals,Otter
+animals,Beaver
+animals,Squirrel
+animals,Mouse
+animals,Rat
+animals,Hamster
+animals,Hedgehog
+animals,Raccoon
+animals,Skunk
+animals,Bat
+animals,Dolphin
+animals,Whale
+animals,Shark
+animals,Octopus
+animals,Squid
+animals,Seal
+animals,Walrus
+animals,Penguin
+animals,Eagle
+animals,Hawk
+animals,Owl
+animals,Crow
+animals,Parrot
+animals,Flamingo
+animals,Peacock
+animals,Swan
+animals,Duck
+animals,Goose
+animals,Chicken
+animals,Turkey
+animals,Ostrich
+animals,Crocodile
+animals,Alligator
+animals,Snake
+animals,Cobra
+animals,Python
+animals,Turtle
+animals,Tortoise
+animals,Frog
+animals,Toad
+animals,Salamander
+animals,Chameleon
+animals,Gecko
+animals,Iguana
+animals,Komodo Dragon
+animals,Ant
+animals,Bee
+animals,Butterfly
+animals,Dragonfly
+animals,Mosquito
+animals,Spider
+animals,Scorpion
+animals,Crab
+animals,Lobster
+animals,Jellyfish
+animals,Seahorse
+animals,Starfish
+animals,Clownfish
+animals,Tuna
+animals,Salmon
+animals,Pufferfish
+animals,Rhino
+animals,Hippopotamus
+animals,Hyena
+animals,Leopard
+animals,Cheetah
+animals,Meerkat
+animals,Platypus
+objects,Chair
+objects,Table
+objects,Sofa
+objects,Bed
+objects,Pillow
+objects,Blanket
+objects,Lamp
+objects,Fan
+objects,Television
+objects,Remote Control
+objects,Refrigerator
+objects,Microwave
+objects,Oven
+objects,Toaster
+objects,Blender
+objects,Washing Machine
+objects,Vacuum Cleaner
+objects,Air Conditioner
+objects,Computer
+objects,Laptop
+objects,Keyboard
+objects,Mouse
+objects,Monitor
+objects,Printer
+objects,Smartphone
+objects,Tablet
+objects,Headphones
+objects,Camera
+objects,Speaker
+objects,Clock
+objects,Watch
+objects,Backpack
+objects,Wallet
+objects,Handbag
+objects,Suitcase
+objects,Umbrella
+objects,Bicycle
+objects,Skateboard
+objects,Helmet
+objects,Guitar
+objects,Piano
+objects,Drum
+objects,Violin
+objects,Microphone
+objects,Book
+objects,Notebook
+objects,Pen
+objects,Pencil
+objects,Eraser
+objects,Ruler
+objects,Scissors
+objects,Stapler
+objects,Tape
+objects,Glue
+objects,Calculator
+objects,Bottle
+objects,Cup
+objects,Mug
+objects,Plate
+objects,Bowl
+objects,Spoon
+objects,Fork
+objects,Knife
+objects,Chopsticks
+objects,Frying Pan
+objects,Pot
+objects,Kettle
+objects,Trash Can
+objects,Broom
+objects,Mop
+objects,Toothbrush
+objects,Toothpaste
+objects,Soap
+objects,Shampoo
+objects,Towel
+objects,Mirror
+objects,Comb
+objects,Hair Dryer
+objects,Sunglasses
+objects,Shoes
+objects,Slippers
+objects,Jacket
+objects,Hat
+objects,Gloves
+objects,Ring
+objects,Necklace
+objects,Candle
+objects,Flashlight
+objects,Toolbox
+objects,Hammer
+objects,Screwdriver
+objects,Wrench
+objects,Drill
+objects,Paintbrush
+objects,Basketball
+objects,Football
+objects,Tennis Racket
+objects,Dice
+objects,Chessboard
+objects,Teddy Bear

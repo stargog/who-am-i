@@ -1,0 +1,25 @@
+{
+  "name": "who-am-i",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:party\" \"npm run dev:web\"",
+    "dev:web": "npm run dev -w @who-am-i/web",
+    "dev:party": "partykit dev",
+    "build": "npm run build -w @who-am-i/web",
+    "build:deck": "node scripts/build-deck.mjs",
+    "import:pool": "node scripts/import-pool-csv.mjs",
+    "setup:deck": "npm run import:pool",
+    "fetch:images": "node scripts/fetch-deck-images.mjs --only-missing",
+    "sync:images": "node scripts/sync-deck-images.mjs",
+    "party:deploy": "partykit deploy"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "partykit": "^0.0.115",
+    "typescript": "^5.8.3"
+  }
+}

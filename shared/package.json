@@ -1,0 +1,13 @@
+{
+  "name": "@who-am-i/shared",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./types.ts",
+  "types": "./types.ts",
+  "exports": {
+    ".": "./types.ts",
+    "./types": "./types.ts",
+    "./utils": "./utils.ts",
+    "./decks/th": "./decks/th.json"
+  }
+}
