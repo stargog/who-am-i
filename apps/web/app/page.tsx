@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 import { generateRoomCode } from "@who-am-i/shared/utils";
 import { getStoredPlayerName, setStoredPlayerName } from "@/lib/storage";
+import { GameShell } from "@/components/game-shell";
 import { Button, Input, Panel } from "@/components/ui";
 
 export default function HomePage() {
@@ -34,50 +36,63 @@ export default function HomePage() {
   }
 
   return (
-    <main className="mx-auto flex min-h-dvh max-w-md flex-col justify-center gap-6 p-6">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-[var(--accent)]">Who Am I</h1>
-        <p className="mt-2 text-lg text-[var(--muted)]">ฉันคือใคร?</p>
-        <p className="mt-4 text-sm text-[var(--muted)]">
-          สร้างห้อง เชิญเพื่อน มอบตัวละครให้กัน แล้วถามจนรู้ว่าตัวเองคือใคร
-        </p>
-      </div>
+    <GameShell connected>
+      <main className="app-shell flex min-h-[calc(100dvh-65px)] flex-col justify-center gap-6 py-8 md:gap-8">
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-4xl font-black tracking-tight text-white md:text-5xl">
+            Who Am I?
+          </h2>
+          <p className="mt-4 text-sm leading-relaxed text-white/40 md:text-base">
+            Create a room, invite friends, assign characters, and ask yes/no
+            questions until you guess who you are.
+          </p>
+        </motion.div>
 
-      <Panel>
-        <label className="mb-2 block text-sm text-[var(--muted)]">ชื่อเล่น</label>
+        <Panel>
+          <label className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/30">
+            Display name
+          </label>
+          <Input
+            placeholder="Your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            maxLength={24}
+          />
+        </Panel>
+
+        <Button className="w-full" disabled={!name.trim()} onClick={createRoom}>
+          Create room
+        </Button>
+
+        <div className="flex items-center gap-3 text-white/25">
+          <div className="h-px flex-1 bg-white/10" />
+          <span className="text-xs font-medium uppercase tracking-widest">
+            or join
+          </span>
+          <div className="h-px flex-1 bg-white/10" />
+        </div>
+
         <Input
-          placeholder="ชื่อของคุณ"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          maxLength={24}
+          placeholder="6-letter room code"
+          value={roomCode}
+          onChange={(e) => setRoomCode(e.target.value.toUpperCase())}
+          maxLength={6}
+          className="text-center uppercase tracking-[0.3em]"
         />
-      </Panel>
-
-      <Button className="w-full" disabled={!name.trim()} onClick={createRoom}>
-        สร้างห้องใหม่
-      </Button>
-
-      <div className="flex items-center gap-3 text-[var(--muted)]">
-        <div className="h-px flex-1 bg-[var(--border)]" />
-        <span className="text-sm">หรือเข้าห้อง</span>
-        <div className="h-px flex-1 bg-[var(--border)]" />
-      </div>
-
-      <Input
-        placeholder="รหัสห้อง 6 ตัว"
-        value={roomCode}
-        onChange={(e) => setRoomCode(e.target.value.toUpperCase())}
-        maxLength={6}
-        className="text-center tracking-widest uppercase"
-      />
-      <Button
-        variant="secondary"
-        className="w-full"
-        disabled={!name.trim() || roomCode.trim().length !== 6}
-        onClick={joinRoom}
-      >
-        เข้าห้อง
-      </Button>
-    </main>
+        <Button
+          variant="secondary"
+          className="w-full"
+          disabled={!name.trim() || roomCode.trim().length !== 6}
+          onClick={joinRoom}
+        >
+          Join room
+        </Button>
+      </main>
+    </GameShell>
   );
 }

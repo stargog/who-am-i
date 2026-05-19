@@ -11,6 +11,8 @@
   "dependencies": {
     "@who-am-i/shared": "*",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.16.0",
     "next": "^15.3.2",
     "partysocket": "^1.0.4",
     "react": "^19.1.0",

@@ -41,7 +41,7 @@ export function useRoom(roomCode: string, playerName: string) {
           setError(msg.message);
         }
       } catch {
-        setError("ได้รับข้อมูลไม่ถูกต้องจากเซิร์ฟเวอร์");
+        setError("Invalid data received from server");
       }
     },
   });

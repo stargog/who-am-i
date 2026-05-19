@@ -124,9 +124,19 @@ function resolveImage(row, entry) {
   return `/deck/${id}.svg`;
 }
 
+function loadExistingById() {
+  try {
+    const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
+    return new Map(catalog.entries.map((e) => [e.id, e]));
+  } catch {
+    return new Map();
+  }
+}
+
 function main() {
   const content = fs.readFileSync(csvPath, "utf8");
   const rows = parseCsv(content);
+  const existingById = loadExistingById();
   const usedIds = new Set();
   const entries = [];
   let rasterCount = 0;
@@ -141,8 +151,13 @@ function main() {
     usedIds.add(id);
 
     const tags = tagsFor(row.category);
-    const hints = buildHints(row.category, row.name, row.hints);
-    const facts = buildFacts(row.category, row.name, hints, row.facts);
+    const prev = existingById.get(id);
+    let hints = buildHints(row.category, row.name, row.hints);
+    let facts = buildFacts(row.category, row.name, hints, row.facts);
+    if (row.hints.length === 0 && row.facts.length === 0 && prev?.hints?.length) {
+      hints = prev.hints;
+      facts = prev.facts?.length ? prev.facts : hints;
+    }
 
     const draft = { id, name: row.name, category: row.category };
     const image = resolveImage(row, draft);

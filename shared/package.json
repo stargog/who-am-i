@@ -8,6 +8,10 @@
     ".": "./types.ts",
     "./types": "./types.ts",
     "./utils": "./utils.ts",
-    "./decks/th": "./decks/th.json"
+    "./deck": "./deck.ts",
+    "./deck-utils": "./deck-utils.ts",
+    "./decks/catalog": "./decks/catalog.json",
+    "./decks/th": "./decks/th.json",
+    "./decks/en": "./decks/en.json"
   }
 }

@@ -1,21 +1,23 @@
 "use client";
 
 import { clsx } from "clsx";
+import type { ClientDeckInfo } from "@who-am-i/shared/deck";
 import type { ClientRoomState } from "@who-am-i/shared/types";
 import { orderPlayersForTable, seatPosition } from "@/lib/table-layout";
+import { CharacterCard } from "./character-card";
 
 type Props = {
   state: ClientRoomState;
   playerId: string;
   currentTurnId: string;
-  getCharacter: (targetId: string) => string | null;
+  getDeck: (targetId: string) => ClientDeckInfo | null;
 };
 
 export function GameTable({
   state,
   playerId,
   currentTurnId,
-  getCharacter,
+  getDeck,
 }: Props) {
   const ordered = orderPlayersForTable(state.players, playerId);
   const n = ordered.length;
@@ -25,30 +27,34 @@ export function GameTable({
 
   return (
     <div className="game-table-wrap">
-      <div className="game-table-stage" aria-label="โต๊ะเกม">
+      <div
+        className="game-table-stage"
+        aria-label="Game table"
+        data-players={n}
+      >
         <div className="game-table-surface" />
 
         <div className="game-table-center">
           {pending ? (
             <>
-              <p className="game-table-center-label">คำถาม</p>
+              <p className="game-table-center-label">Question</p>
               <p className="game-table-center-main line-clamp-3">{pending.text}</p>
               <p className="game-table-center-sub">
-                จาก {state.players.find((p) => p.id === pending.askerId)?.name}
+                from {state.players.find((p) => p.id === pending.askerId)?.name}
               </p>
             </>
           ) : isMyTurn ? (
             <>
-              <p className="game-table-center-label">เทิร์นของคุณ</p>
-              <p className="game-table-center-main">ถามหรือทายได้</p>
+              <p className="game-table-center-label">Your turn</p>
+              <p className="game-table-center-main">Ask or guess</p>
             </>
           ) : currentPlayer ? (
             <>
-              <p className="game-table-center-label">เทิร์นของ</p>
+              <p className="game-table-center-label">Turn</p>
               <p className="game-table-center-main">{currentPlayer.name}</p>
             </>
           ) : (
-            <p className="game-table-center-main">รอเริ่มเทิร์น</p>
+            <p className="game-table-center-main">Waiting for turn</p>
           )}
         </div>
 
@@ -56,11 +62,12 @@ export function GameTable({
           const pos = seatPosition(index, n);
           const isMe = p.id === playerId;
           const isCurrent = p.id === currentTurnId;
-          const char = isMe ? null : getCharacter(p.id);
+          const deck = isMe ? null : getDeck(p.id);
 
           return (
             <div
               key={p.id}
+              data-seat={index}
               className={clsx(
                 "game-table-seat",
                 isCurrent && "game-table-seat--active",
@@ -68,24 +75,23 @@ export function GameTable({
               )}
               style={{ left: pos.left, top: pos.top }}
             >
-              <div
-                className={clsx(
-                  "game-table-card",
-                  isMe && "game-table-card--hidden"
-                )}
-              >
-                <span className="game-table-card-text">
-                  {isMe ? "?" : (char ?? "—")}
+              <div className="game-table-seat-player">
+                <span className="game-table-avatar" aria-hidden>
+                  {p.name.charAt(0).toUpperCase()}
                 </span>
+                <span className="game-table-name">{p.name}</span>
+                {isMe && <span className="game-table-you">You</span>}
+                {!p.connected && (
+                  <span className="game-table-offline">Offline</span>
+                )}
               </div>
-              <span className="game-table-avatar" aria-hidden>
-                {p.name.charAt(0).toUpperCase()}
-              </span>
-              <p className="game-table-name">{p.name}</p>
-              {isMe && <span className="game-table-you">คุณ</span>}
-              {!p.connected && (
-                <span className="game-table-offline">ออฟไลน์</span>
-              )}
+
+              <CharacterCard
+                deck={deck}
+                hidden={isMe}
+                variant="table"
+                className="game-table-seat-card"
+              />
             </div>
           );
         })}

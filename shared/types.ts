@@ -1,4 +1,6 @@
-export type Phase = "lobby" | "assigning" | "playing" | "finished";
+import type { ClientDeckInfo, DeckCategory } from "./deck";
+
+export type Phase = "lobby" | "playing" | "finished";
 
 export type Player = {
   id: string;
@@ -12,6 +14,7 @@ export type Assignment = {
   targetPlayerId: string;
   character: string;
   fromPlayerId: string;
+  deckEntryId: string;
 };
 
 export type Question = {
@@ -27,9 +30,9 @@ export type RoomState = {
   turnOrder: string[];
   currentTurnIndex: number;
   assignments: Assignment[];
-  assignTargets: Record<string, string>;
-  submittedAssigners: string[];
-  questions: Question[];
+  deckCategories: DeckCategory[];
+  /** Server-only: each player's private clue notebook */
+  questionsByPlayer: Record<string, Question[]>;
   winnerId?: string;
   pendingQuestion?: {
     askerId: string;
@@ -42,19 +45,22 @@ export type ClientAssignment = {
   targetPlayerId: string;
   character: string | null;
   fromPlayerId: string;
+  /** Set when the viewer may see this player's character (client can resolve from catalog). */
+  deckEntryId: string | null;
+  deck: ClientDeckInfo | null;
 };
 
-export type ClientRoomState = Omit<RoomState, "assignments"> & {
+export type ClientRoomState = Omit<RoomState, "assignments" | "questionsByPlayer"> & {
   assignments: ClientAssignment[];
-  myAssignTargetId?: string;
-  hasSubmittedAssignment: boolean;
+  /** This viewer's questions only */
+  questions: Question[];
+  /** How many questions each player has asked (no text) */
+  questionCounts: Record<string, number>;
 };
-
 export type ClientMessage =
   | { type: "join"; playerId: string; name: string }
   | { type: "ready" }
-  | { type: "start_game" }
-  | { type: "submit_assignment"; character: string }
+  | { type: "start_game"; categories?: DeckCategory[] }
   | { type: "ask"; text: string }
   | { type: "vote"; vote: "yes" | "no" }
   | { type: "guess"; text: string }

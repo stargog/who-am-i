@@ -2,17 +2,22 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { useRoom } from "@/lib/use-room";
 import { getStoredPlayerName } from "@/lib/storage";
+import { playerColor } from "@/lib/player-theme";
 import { Lobby } from "./lobby";
-import { Assigning } from "./assigning";
 import { Playing } from "./playing";
 import { Finished } from "./finished";
+import { GameShell } from "./game-shell";
 import { Button, Input, Panel } from "./ui";
 
 export function RoomGame({ roomCode }: { roomCode: string }) {
   const [name, setName] = useState("");
   const [nameConfirmed, setNameConfirmed] = useState(false);
+  const [mobilePanel, setMobilePanel] = useState<"players" | "info" | null>(
+    null
+  );
   const { state, error, connected, send, clearError, reconnectJoin, playerId } =
     useRoom(roomCode, nameConfirmed ? name : "");
 
@@ -24,111 +29,123 @@ export function RoomGame({ roomCode }: { roomCode: string }) {
     }
   }, []);
 
+  const code = roomCode.toUpperCase();
+  const currentTurnId =
+    state?.phase === "playing"
+      ? (state.turnOrder[state.currentTurnIndex] ?? "")
+      : "";
+  const glowColor = currentTurnId ? playerColor(currentTurnId) : "#a78bfa";
+
   if (!nameConfirmed) {
     return (
-      <main className="mx-auto flex min-h-dvh max-w-md flex-col justify-center gap-6 p-6">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold">ห้อง {roomCode.toUpperCase()}</h1>
-          <p className="mt-2 text-[var(--muted)]">ใส่ชื่อเล่นก่อนเข้าห้อง</p>
-        </div>
-        <Input
-          placeholder="ชื่อเล่น"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          maxLength={24}
-          autoFocus
-        />
-        <Button
-          className="w-full"
-          disabled={!name.trim()}
-          onClick={() => setNameConfirmed(true)}
-        >
-          เข้าห้อง
-        </Button>
-        <Link href="/" className="text-center text-sm text-[var(--muted)] hover:underline">
-          กลับหน้าแรก
-        </Link>
-      </main>
+      <GameShell roomCode={code} connected={connected}>
+        <main className="app-shell flex min-h-[calc(100dvh-65px)] flex-col justify-center gap-6 py-8">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <h2 className="text-2xl font-black text-white md:text-3xl">
+              Join room{" "}
+              <span style={{ color: glowColor }}>{code}</span>
+            </h2>
+            <p className="mt-2 text-sm text-white/40">
+              Enter your display name to join
+            </p>
+          </motion.div>
+          <Input
+            placeholder="Display name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            maxLength={24}
+            autoFocus
+          />
+          <Button
+            className="w-full"
+            disabled={!name.trim()}
+            onClick={() => setNameConfirmed(true)}
+          >
+            Join room
+          </Button>
+          <Link
+            href="/"
+            className="text-center text-sm text-white/30 transition-colors hover:text-white/60"
+          >
+            ← Back to home
+          </Link>
+        </main>
+      </GameShell>
     );
   }
 
+  const isPlaying = state?.phase === "playing";
+
   return (
-    <main className="mx-auto min-h-dvh max-w-md p-4 pb-8">
-      <header className="mb-4 flex items-center justify-between">
-        <Link href="/" className="text-sm text-[var(--muted)] hover:underline">
-          ← หน้าแรก
-        </Link>
-        <span
-          className={`text-xs ${connected ? "text-[var(--success)]" : "text-[var(--danger)]"}`}
-        >
-          {connected ? "เชื่อมต่อแล้ว" : "กำลังเชื่อมต่อ..."}
-        </span>
-      </header>
-
-      <h1 className="mb-4 text-center text-xl font-bold">
-        ฉันคือใคร?{" "}
-        <span className="text-[var(--accent)]">{roomCode.toUpperCase()}</span>
-      </h1>
-
+    <GameShell
+      roomCode={code}
+      playerCount={state?.players.length}
+      connected={connected}
+      glowColor={glowColor}
+      showMobileToggles={isPlaying}
+      mobilePanel={mobilePanel}
+      onMobilePanel={isPlaying ? setMobilePanel : undefined}
+    >
       {error && (
-        <Panel className="mb-4 border-[var(--danger)] bg-red-950/30">
-          <p className="text-sm text-[var(--danger)]">{error}</p>
+        <div className="mx-4 mb-4 mt-2 rounded-2xl border border-red-400/30 bg-red-950/30 p-4 md:mx-6">
+          <p className="text-sm text-red-300">{error}</p>
           <Button variant="ghost" className="mt-2" onClick={clearError}>
-            ปิด
+            Dismiss
           </Button>
-        </Panel>
+        </div>
       )}
 
       {!connected && (
-        <Panel className="mb-4 text-center">
-          <p className="text-[var(--muted)]">กำลังเชื่อมต่อเซิร์ฟเวอร์...</p>
-          <Button className="mt-2" variant="secondary" onClick={reconnectJoin}>
-            ลองใหม่
+        <div className="mx-4 mb-4 mt-2 glass-panel p-4 text-center md:mx-6">
+          <p className="text-white/40">Connecting to server…</p>
+          <Button className="mt-3" variant="secondary" onClick={reconnectJoin}>
+            Retry
           </Button>
-        </Panel>
+        </div>
       )}
 
-      {state && (
-        <>
-          {state.phase === "lobby" && (
-            <Lobby
-              state={state}
-              playerId={playerId}
-              onReady={() => send({ type: "ready" })}
-              onStart={() => send({ type: "start_game" })}
-            />
-          )}
-          {state.phase === "assigning" && (
-            <Assigning
-              state={state}
-              playerId={playerId}
-              onSubmit={(character) =>
-                send({ type: "submit_assignment", character })
-              }
-            />
-          )}
-          {state.phase === "playing" && (
-            <Playing
-              state={state}
-              playerId={playerId}
-              onAsk={(text) => send({ type: "ask", text })}
-              onVote={(vote) => send({ type: "vote", vote })}
-              onGuess={(text) => send({ type: "guess", text })}
-            />
-          )}
-          {state.phase === "finished" && (
-            <Finished
-              state={state}
-              playerId={playerId}
-              onPlayAgain={() => send({ type: "play_again" })}
-            />
-          )}
-        </>
+      {state?.phase === "lobby" && (
+        <main className="app-shell py-6">
+          <Lobby
+            state={state}
+            playerId={playerId}
+            onReady={() => send({ type: "ready" })}
+            onStart={(categories) => send({ type: "start_game", categories })}
+          />
+        </main>
+      )}
+
+      {state?.phase === "playing" && (
+        <Playing
+          state={state}
+          playerId={playerId}
+          mobilePanel={mobilePanel}
+          onMobilePanel={setMobilePanel}
+          onAsk={(text) => send({ type: "ask", text })}
+          onVote={(vote) => send({ type: "vote", vote })}
+          onGuess={(text) => send({ type: "guess", text })}
+        />
+      )}
+
+      {state?.phase === "finished" && (
+        <main className="app-shell py-6">
+          <Finished
+            state={state}
+            playerId={playerId}
+            onPlayAgain={() => send({ type: "play_again" })}
+          />
+        </main>
       )}
 
       {!state && connected && (
-        <Panel className="text-center text-[var(--muted)]">กำลังโหลดห้อง...</Panel>
+        <div className="app-shell py-12 text-center text-white/40">
+          Loading room…
+        </div>
       )}
-    </main>
+    </GameShell>
   );
 }

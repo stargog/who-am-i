@@ -14,6 +14,8 @@
     "import:pool": "node scripts/import-pool-csv.mjs",
     "setup:deck": "npm run import:pool",
     "fetch:images": "node scripts/fetch-deck-images.mjs --only-missing",
+    "fetch:images:all": "node scripts/fetch-deck-images.mjs --only-missing --force",
+    "fetch:text": "node scripts/fetch-deck-images.mjs --refresh-text --force",
     "sync:images": "node scripts/sync-deck-images.mjs",
     "party:deploy": "partykit deploy"
   },

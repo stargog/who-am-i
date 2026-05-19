@@ -2274,32 +2274,6 @@
       "imageAttribution": "Wikipedia / Wikimedia Commons"
     },
     {
-      "id": "movie-characters-katniss-everdeen",
-      "name": "Katniss Everdeen",
-      "category": "movie_characters",
-      "image": "/deck/movie-characters-katniss-everdeen.svg",
-      "imageAlt": "Katniss Everdeen",
-      "tags": {
-        "type": "character",
-        "human": true,
-        "fictional": true,
-        "alive": "unknown",
-        "gender": "na"
-      },
-      "hints": [
-        "From movies or TV",
-        "Fictional character",
-        "Not a real person",
-        "Name begins with “K”",
-        "Multi-word name"
-      ],
-      "facts": [
-        "Main character in the Hunger Games universe",
-        "Katniss Everdeen is a fictional character and the protagonist of The Hunger Games trilogy written by American author Suzanne Collins.",
-        "She is portrayed by Jennifer Lawrence in the film adaptations of the trilogy."
-      ]
-    },
-    {
       "id": "movie-characters-peeta-mellark",
       "name": "Peeta Mellark",
       "category": "movie_characters",

@@ -20,15 +20,9 @@ NEXT_PUBLIC_PARTYKIT_HOST=127.0.0.1:1999
 
 ## Deploy (เล่นกับเพื่อนทางอินเทอร์เน็ต)
 
-**เซิร์ฟเวอร์เกม (PartyKit) ขึ้นแล้ว:** `who-am-i-party.stargog.partykit.dev`
+**เล่นออนไลน์:** https://who-am-i-bay-kappa.vercel.app
 
-**เว็บ (Vercel):** ดูคู่มือภาษาไทยทีละขั้น → **[DEPLOY_TH.md](./DEPLOY_TH.md)**
-
-สรุปเร็ว:
-```powershell
-npx vercel login
-.\scripts\deploy-vercel.ps1
-```
+รายละเอียด → **[DEPLOY_TH.md](./DEPLOY_TH.md)**
 
 ## เล่นอย่างไร
 
