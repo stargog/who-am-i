@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { Users, BookOpen, RotateCcw } from "lucide-react";
+import { BgmPlayer } from "./bgm-player";
 
 type Props = {
   children: ReactNode;
@@ -102,6 +103,8 @@ export function GameShell({
           )}
 
           {headerExtra}
+
+          <BgmPlayer />
 
           {showMobileToggles && onMobilePanel && (
             <>
