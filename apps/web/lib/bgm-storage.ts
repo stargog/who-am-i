@@ -1,6 +1,6 @@
 const BGM_MUTED_KEY = "who-am-i-bgm-muted";
 const BGM_VOLUME_KEY = "who-am-i-bgm-volume";
-export const BGM_DEFAULT_VOLUME = 0.35;
+export const BGM_DEFAULT_VOLUME = 0.1;
 const VOLUME_STEP = 0.05;
 
 export function getBgmMuted(): boolean {
