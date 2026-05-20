@@ -1,0 +1,24 @@
+{
+  "harry_potter_characters": {
+    "source": "wikipedia",
+    "title": "Harry Potter and the Philosopher's Stone (film)"
+  },
+  "one_piece_characters": { "source": "mal", "id": 21 },
+  "naruto_characters": { "source": "mal", "id": 20 },
+  "dragon_ball_characters": { "source": "mal", "id": 813 },
+  "pokemon_characters": { "source": "mal", "id": 527 },
+  "demon_slayer_characters": { "source": "mal", "id": 38000 },
+  "attack_on_titan_characters": { "source": "mal", "id": 16498 },
+  "my_hero_academia_characters": { "source": "mal", "id": 31964 },
+  "jujutsu_kaisen_characters": { "source": "mal", "id": 40748 },
+  "anime_characters": { "source": "mal", "id": 1 },
+  "movie_characters": {
+    "source": "wikipedia",
+    "title": "The Godfather"
+  },
+  "animals": {
+    "source": "wikipedia",
+    "title": "Lion"
+  },
+  "objects": { "source": "svg" }
+}

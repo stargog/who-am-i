@@ -1,11 +1,15 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Copy, Check } from "lucide-react";
+import { Copy, Check, CheckCircle2 } from "lucide-react";
 import type { ClientRoomState } from "@who-am-i/shared/types";
 import { MIN_PLAYERS, MIN_PLAYER_CATEGORIES } from "@who-am-i/shared/types";
-import { DECK_CATEGORIES, type DeckCategory } from "@who-am-i/shared/deck";
+import {
+  categoryPosterFallback,
+  DECK_CATEGORIES,
+  type DeckCategory,
+} from "@who-am-i/shared/deck";
 import {
   canAssignCharactersPerPlayer,
   getDeckPool,
@@ -21,6 +25,61 @@ type Props = {
   onStart: () => void;
   onSetCategories: (categories: DeckCategory[]) => void;
 };
+
+function CategoryPosterCard({
+  label,
+  poster,
+  selected,
+  onToggle,
+}: {
+  label: string;
+  poster: string;
+  selected: boolean;
+  onToggle: () => void;
+}) {
+  const [src, setSrc] = useState(poster);
+
+  return (
+    <label
+      className="group relative block aspect-[2/3] cursor-pointer overflow-hidden rounded-xl transition-transform hover:scale-[1.02]"
+      style={{
+        boxShadow: selected
+          ? "0 0 0 2px #a78bfa, 0 8px 24px rgba(167,139,250,0.25)"
+          : "0 4px 16px rgba(0,0,0,0.35)",
+      }}
+    >
+      <input
+        type="checkbox"
+        checked={selected}
+        onChange={onToggle}
+        className="sr-only"
+      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
+        decoding="async"
+        onError={() => {
+          const fallback = categoryPosterFallback(poster);
+          if (src !== fallback) setSrc(fallback);
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
+      {selected && (
+        <div className="absolute right-2 top-2 rounded-full bg-purple-500/90 p-0.5 shadow-lg">
+          <CheckCircle2 className="h-5 w-5 text-white" aria-hidden />
+        </div>
+      )}
+      <div className="absolute inset-x-0 bottom-0 p-2.5">
+        <p className="text-sm font-bold leading-tight text-white drop-shadow-md">
+          {label}
+        </p>
+      </div>
+    </label>
+  );
+}
 
 export function Lobby({
   state,
@@ -43,13 +102,10 @@ export function Lobby({
     (p) => p.preferredCategories.length >= MIN_PLAYER_CATEGORIES
   );
 
-  const assignmentOk = useMemo(
-    () =>
-      connected.length >= MIN_PLAYERS &&
-      everyoneHasCategories &&
-      canAssignCharactersPerPlayer(connected),
-    [connected, everyoneHasCategories]
-  );
+  const assignmentOk =
+    connected.length >= MIN_PLAYERS &&
+    everyoneHasCategories &&
+    canAssignCharactersPerPlayer(connected);
 
   const allReady =
     connected.length >= MIN_PLAYERS &&
@@ -115,31 +171,17 @@ export function Lobby({
           Pick at least {MIN_PLAYER_CATEGORIES} — you will only get a character
           from your own picks.
         </p>
-        <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-          {DECK_CATEGORIES.map((cat) => {
-            const selected = myCategories.includes(cat.id);
-            return (
-              <li key={cat.id}>
-                <label
-                  className="flex cursor-pointer items-center gap-2 rounded-xl px-3 py-2.5 transition-colors hover:bg-white/5"
-                  style={{
-                    background: selected
-                      ? "rgba(167,139,250,0.1)"
-                      : "rgba(255,255,255,0.03)",
-                    border: `1px solid ${selected ? "rgba(167,139,250,0.3)" : "rgba(255,255,255,0.06)"}`,
-                  }}
-                >
-                  <input
-                    type="checkbox"
-                    checked={selected}
-                    onChange={() => toggleCategory(cat.id)}
-                    className="h-4 w-4 accent-[#a78bfa]"
-                  />
-                  <span className="text-sm">{cat.label}</span>
-                </label>
-              </li>
-            );
-          })}
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          {DECK_CATEGORIES.map((cat) => (
+            <li key={cat.id}>
+              <CategoryPosterCard
+                label={cat.label}
+                poster={cat.poster}
+                selected={myCategories.includes(cat.id)}
+                onToggle={() => toggleCategory(cat.id)}
+              />
+            </li>
+          ))}
         </ul>
         <p
           className={`mt-3 text-xs ${

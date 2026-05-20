@@ -13,23 +13,28 @@ export type DeckCategory =
   | "animals"
   | "objects";
 
+function categoryPosterPath(id: DeckCategory): string {
+  return `/categories/${id.replace(/_/g, "-")}.jpg`;
+}
+
 export const DECK_CATEGORIES: {
   id: DeckCategory;
   label: string;
+  poster: string;
 }[] = [
-  { id: "harry_potter_characters", label: "Harry Potter" },
-  { id: "one_piece_characters", label: "One Piece" },
-  { id: "naruto_characters", label: "Naruto" },
-  { id: "dragon_ball_characters", label: "Dragon Ball" },
-  { id: "pokemon_characters", label: "Pokemon" },
-  { id: "demon_slayer_characters", label: "Demon Slayer" },
-  { id: "attack_on_titan_characters", label: "Attack on Titan" },
-  { id: "my_hero_academia_characters", label: "My Hero Academia" },
-  { id: "jujutsu_kaisen_characters", label: "Jujutsu Kaisen" },
-  { id: "anime_characters", label: "Anime (other)" },
-  { id: "movie_characters", label: "Movie characters" },
-  { id: "animals", label: "Animals" },
-  { id: "objects", label: "Objects" },
+  { id: "harry_potter_characters", label: "Harry Potter", poster: categoryPosterPath("harry_potter_characters") },
+  { id: "one_piece_characters", label: "One Piece", poster: categoryPosterPath("one_piece_characters") },
+  { id: "naruto_characters", label: "Naruto", poster: categoryPosterPath("naruto_characters") },
+  { id: "dragon_ball_characters", label: "Dragon Ball", poster: categoryPosterPath("dragon_ball_characters") },
+  { id: "pokemon_characters", label: "Pokemon", poster: categoryPosterPath("pokemon_characters") },
+  { id: "demon_slayer_characters", label: "Demon Slayer", poster: categoryPosterPath("demon_slayer_characters") },
+  { id: "attack_on_titan_characters", label: "Attack on Titan", poster: categoryPosterPath("attack_on_titan_characters") },
+  { id: "my_hero_academia_characters", label: "My Hero Academia", poster: categoryPosterPath("my_hero_academia_characters") },
+  { id: "jujutsu_kaisen_characters", label: "Jujutsu Kaisen", poster: categoryPosterPath("jujutsu_kaisen_characters") },
+  { id: "anime_characters", label: "Anime (other)", poster: categoryPosterPath("anime_characters") },
+  { id: "movie_characters", label: "Movie characters", poster: categoryPosterPath("movie_characters") },
+  { id: "animals", label: "Animals", poster: categoryPosterPath("animals") },
+  { id: "objects", label: "Objects", poster: categoryPosterPath("objects") },
 ];
 
 export type DeckTags = {
@@ -61,3 +66,7 @@ export type ClientDeckInfo = Pick<
   DeckEntry,
   "id" | "name" | "category" | "image" | "imageAlt" | "tags" | "hints" | "facts"
 >;
+
+export function categoryPosterFallback(poster: string): string {
+  return poster.replace(/\.jpg$/, ".svg");
+}
