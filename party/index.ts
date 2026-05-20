@@ -307,7 +307,15 @@ export default class RoomServer implements Party.Server {
     const player = this.state.players.find((p) => p.id === playerId);
     if (!player) return;
 
-    player.preferredCategories = sanitizeCategories(categories);
+    const sanitized = sanitizeCategories(categories);
+    const dropped = categories.filter((c) => !VALID_CATEGORIES.has(c));
+    if (dropped.length > 0) {
+      this.sendError(
+        sender,
+        "Some categories are not available yet — refresh the page or wait for server update."
+      );
+    }
+    player.preferredCategories = sanitized;
     player.ready = false;
     this.broadcastState();
   }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Copy, Check, CheckCircle2 } from "lucide-react";
 import type { ClientRoomState } from "@who-am-i/shared/types";
@@ -40,20 +40,17 @@ function CategoryPosterCard({
   const [src, setSrc] = useState(poster);
 
   return (
-    <label
-      className="group relative block aspect-[2/3] cursor-pointer overflow-hidden rounded-xl transition-transform hover:scale-[1.02]"
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-pressed={selected}
+      className="group relative block aspect-[2/3] w-full cursor-pointer overflow-hidden rounded-xl text-left transition-transform hover:scale-[1.02]"
       style={{
         boxShadow: selected
           ? "0 0 0 2px #a78bfa, 0 8px 24px rgba(167,139,250,0.25)"
           : "0 4px 16px rgba(0,0,0,0.35)",
       }}
     >
-      <input
-        type="checkbox"
-        checked={selected}
-        onChange={onToggle}
-        className="sr-only"
-      />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
@@ -77,7 +74,7 @@ function CategoryPosterCard({
           {label}
         </p>
       </div>
-    </label>
+    </button>
   );
 }
 
@@ -89,9 +86,30 @@ export function Lobby({
   onSetCategories,
 }: Props) {
   const [copied, setCopied] = useState(false);
+  const serverCategories = state.players.find((p) => p.id === playerId)
+    ?.preferredCategories;
+  const [optimisticCategories, setOptimisticCategories] = useState<
+    DeckCategory[] | null
+  >(null);
+  const pendingCategoriesRef = useRef<DeckCategory[] | null>(null);
+
+  useEffect(() => {
+    const pending = pendingCategoriesRef.current;
+    if (!pending) return;
+    const server = serverCategories ?? [];
+    const serverSet = new Set(server);
+    const settled =
+      pending.length === server.length &&
+      pending.every((c) => serverSet.has(c));
+    if (settled) {
+      pendingCategoriesRef.current = null;
+      setOptimisticCategories(null);
+    }
+  }, [serverCategories]);
+
   const me = state.players.find((p) => p.id === playerId);
   const connected = state.players.filter((p) => p.connected);
-  const myCategories = me?.preferredCategories ?? [];
+  const myCategories = optimisticCategories ?? serverCategories ?? [];
   const roomUrl = getRoomUrl(state.code);
 
   const myPoolSize = getDeckPool(
@@ -120,6 +138,8 @@ export function Lobby({
     const next = myCategories.includes(id)
       ? myCategories.filter((c) => c !== id)
       : [...myCategories, id];
+    pendingCategoriesRef.current = next;
+    setOptimisticCategories(next);
     onSetCategories(next);
   }
 
