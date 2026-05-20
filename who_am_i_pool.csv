@@ -1,10 +1,20 @@
 category,name
-movie_characters,Harry Potter
-movie_characters,Hermione Granger
-movie_characters,Ron Weasley
-movie_characters,Lord Voldemort
-movie_characters,Albus Dumbledore
-movie_characters,Hagrid
+harry_potter_characters,Harry Potter
+harry_potter_characters,Hermione Granger
+harry_potter_characters,Ron Weasley
+harry_potter_characters,Lord Voldemort
+harry_potter_characters,Albus Dumbledore
+harry_potter_characters,Hagrid
+harry_potter_characters,Severus Snape
+harry_potter_characters,Minerva McGonagall
+harry_potter_characters,Draco Malfoy
+harry_potter_characters,Sirius Black
+harry_potter_characters,Neville Longbottom
+harry_potter_characters,Ginny Weasley
+harry_potter_characters,Luna Lovegood
+harry_potter_characters,Bellatrix Lestrange
+harry_potter_characters,Remus Lupin
+harry_potter_characters,Dobby
 movie_characters,Darth Vader
 movie_characters,Luke Skywalker
 movie_characters,Princess Leia
@@ -98,38 +108,78 @@ movie_characters,King Kong
 movie_characters,Godzilla
 movie_characters,Caesar
 movie_characters,Avatar Jake Sully
-anime_characters,Naruto Uzumaki
-anime_characters,Sasuke Uchiha
-anime_characters,Sakura Haruno
-anime_characters,Kakashi Hatake
-anime_characters,Itachi Uchiha
-anime_characters,Gaara
-anime_characters,Monkey D. Luffy
-anime_characters,Roronoa Zoro
-anime_characters,Nami
-anime_characters,Sanji
-anime_characters,Usopp
-anime_characters,Tony Tony Chopper
-anime_characters,Trafalgar Law
-anime_characters,Portgas D. Ace
-anime_characters,Goku
-anime_characters,Vegeta
-anime_characters,Gohan
-anime_characters,Piccolo
-anime_characters,Frieza
-anime_characters,Cell
+one_piece_characters,Monkey D. Luffy
+one_piece_characters,Roronoa Zoro
+one_piece_characters,Nami
+one_piece_characters,Sanji
+one_piece_characters,Usopp
+one_piece_characters,Tony Tony Chopper
+one_piece_characters,Trafalgar Law
+one_piece_characters,Portgas D. Ace
+one_piece_characters,Shanks
+one_piece_characters,Nico Robin
+one_piece_characters,Franky
+one_piece_characters,Brook
+one_piece_characters,Jinbe
+one_piece_characters,Buggy
+naruto_characters,Naruto Uzumaki
+naruto_characters,Sasuke Uchiha
+naruto_characters,Sakura Haruno
+naruto_characters,Kakashi Hatake
+naruto_characters,Itachi Uchiha
+naruto_characters,Gaara
+naruto_characters,Jiraiya
+naruto_characters,Hinata Hyuga
+naruto_characters,Madara Uchiha
+naruto_characters,Minato Namikaze
+naruto_characters,Pain
+dragon_ball_characters,Goku
+dragon_ball_characters,Vegeta
+dragon_ball_characters,Gohan
+dragon_ball_characters,Piccolo
+dragon_ball_characters,Frieza
+dragon_ball_characters,Cell
+dragon_ball_characters,Trunks
+dragon_ball_characters,Bulma
+dragon_ball_characters,Krillin
+dragon_ball_characters,Broly
+pokemon_characters,Ash Ketchum
+pokemon_characters,Pikachu
+pokemon_characters,Misty
+pokemon_characters,Brock
+pokemon_characters,Gary Oak
+pokemon_characters,Professor Oak
+pokemon_characters,Jessie
+pokemon_characters,James
+demon_slayer_characters,Tanjiro Kamado
+demon_slayer_characters,Nezuko Kamado
+demon_slayer_characters,Zenitsu Agatsuma
+demon_slayer_characters,Inosuke Hashibira
+demon_slayer_characters,Muzan Kibutsuji
+demon_slayer_characters,Kyojuro Rengoku
+demon_slayer_characters,Shinobu Kocho
+demon_slayer_characters,Giyu Tomioka
+attack_on_titan_characters,Eren Yeager
+attack_on_titan_characters,Mikasa Ackerman
+attack_on_titan_characters,Levi Ackerman
+attack_on_titan_characters,Armin Arlert
+attack_on_titan_characters,Erwin Smith
+my_hero_academia_characters,Deku
+my_hero_academia_characters,Bakugo
+my_hero_academia_characters,Todoroki
+my_hero_academia_characters,All Might
+my_hero_academia_characters,Tomura Shigaraki
+my_hero_academia_characters,Ochaco Uraraka
+my_hero_academia_characters,Endeavor
+my_hero_academia_characters,Dabi
+my_hero_academia_characters,Hawks
+jujutsu_kaisen_characters,Jujutsu Kaisen Gojo
+jujutsu_kaisen_characters,Yuji Itadori
+jujutsu_kaisen_characters,Megumi Fushiguro
+jujutsu_kaisen_characters,Nobara Kugisaki
+jujutsu_kaisen_characters,Sukuna
 anime_characters,Saitama
 anime_characters,Genos
-anime_characters,Tanjiro Kamado
-anime_characters,Nezuko Kamado
-anime_characters,Zenitsu Agatsuma
-anime_characters,Inosuke Hashibira
-anime_characters,Muzan Kibutsuji
-anime_characters,Eren Yeager
-anime_characters,Mikasa Ackerman
-anime_characters,Levi Ackerman
-anime_characters,Armin Arlert
-anime_characters,Erwin Smith
 anime_characters,Light Yagami
 anime_characters,L
 anime_characters,Ryuk
@@ -143,24 +193,10 @@ anime_characters,Gon Freecss
 anime_characters,Killua Zoldyck
 anime_characters,Kurapika
 anime_characters,Hisoka
-anime_characters,Deku
-anime_characters,Bakugo
-anime_characters,Todoroki
-anime_characters,All Might
-anime_characters,Tomura Shigaraki
-anime_characters,Jujutsu Kaisen Gojo
-anime_characters,Yuji Itadori
-anime_characters,Megumi Fushiguro
-anime_characters,Nobara Kugisaki
-anime_characters,Sukuna
 anime_characters,Denji
 anime_characters,Power
 anime_characters,Makima
 anime_characters,Aki Hayakawa
-anime_characters,Ash Ketchum
-anime_characters,Pikachu
-anime_characters,Misty
-anime_characters,Brock
 anime_characters,Doraemon
 anime_characters,Nobita
 anime_characters,Shizuka

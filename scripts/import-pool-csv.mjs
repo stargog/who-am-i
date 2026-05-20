@@ -96,17 +96,22 @@ function parseCsv(content) {
   });
 }
 
-function findRasterImage(id) {
+function findRasterExt(basename) {
   for (const ext of RASTER_EXTS) {
-    const file = path.join(imageDir, `${id}${ext}`);
+    const file = path.join(imageDir, `${basename}${ext}`);
     if (fs.existsSync(file) && fs.statSync(file).size > 500) {
-      return `/deck/${id}${ext}`;
+      return ext;
     }
   }
   return null;
 }
 
-function resolveImage(row, entry) {
+function findRasterImage(id) {
+  const ext = findRasterExt(id);
+  return ext ? `/deck/${id}${ext}` : null;
+}
+
+function resolveImage(row, entry, existingByName) {
   const { id, name, category } = entry;
 
   if (row.image) {
@@ -118,25 +123,39 @@ function resolveImage(row, entry) {
   const raster = findRasterImage(id);
   if (raster) return raster;
 
+  const prev = existingByName.get(name.toLowerCase());
+  if (prev?.image?.startsWith("/deck/")) {
+    const oldBase = path.basename(prev.image, path.extname(prev.image));
+    const ext = findRasterExt(oldBase);
+    if (ext) {
+      const src = path.join(imageDir, `${oldBase}${ext}`);
+      const dest = path.join(imageDir, `${id}${ext}`);
+      if (!fs.existsSync(dest)) fs.copyFileSync(src, dest);
+      return `/deck/${id}${ext}`;
+    }
+  }
+
   fs.mkdirSync(imageDir, { recursive: true });
   const svgPath = path.join(imageDir, `${id}.svg`);
   fs.writeFileSync(svgPath, generateCardSvg({ name, category }), "utf8");
   return `/deck/${id}.svg`;
 }
 
-function loadExistingById() {
+function loadExisting() {
   try {
     const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
-    return new Map(catalog.entries.map((e) => [e.id, e]));
+    const byId = new Map(catalog.entries.map((e) => [e.id, e]));
+    const byName = new Map(catalog.entries.map((e) => [e.name.toLowerCase(), e]));
+    return { byId, byName };
   } catch {
-    return new Map();
+    return { byId: new Map(), byName: new Map() };
   }
 }
 
 function main() {
   const content = fs.readFileSync(csvPath, "utf8");
   const rows = parseCsv(content);
-  const existingById = loadExistingById();
+  const { byId: existingById, byName: existingByName } = loadExisting();
   const usedIds = new Set();
   const entries = [];
   let rasterCount = 0;
@@ -151,7 +170,8 @@ function main() {
     usedIds.add(id);
 
     const tags = tagsFor(row.category);
-    const prev = existingById.get(id);
+    const prev =
+      existingById.get(id) ?? existingByName.get(row.name.toLowerCase());
     let hints = buildHints(row.category, row.name, row.hints);
     let facts = buildFacts(row.category, row.name, hints, row.facts);
     if (row.hints.length === 0 && row.facts.length === 0 && prev?.hints?.length) {
@@ -160,7 +180,7 @@ function main() {
     }
 
     const draft = { id, name: row.name, category: row.category };
-    const image = resolveImage(row, draft);
+    const image = resolveImage(row, draft, existingByName);
 
     if (row.image) customImageCount++;
     else if (RASTER_EXTS.some((ext) => image.endsWith(ext))) rasterCount++;

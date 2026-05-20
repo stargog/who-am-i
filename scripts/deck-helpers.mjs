@@ -1,4 +1,90 @@
 export const CATEGORY_META = {
+  harry_potter_characters: {
+    label: "Harry Potter character",
+    shortLabel: "Harry Potter",
+    emoji: "⚡",
+    gradient: ["#1e3a5f", "#7c2d12"],
+    tagType: "character",
+    hintSeeds: [
+      "From Harry Potter",
+      "Fictional wizarding character",
+      "Not a real person",
+    ],
+    factLead: (name) =>
+      `${name} is a character from the Harry Potter books and films.`,
+  },
+  one_piece_characters: {
+    label: "One Piece character",
+    shortLabel: "One Piece",
+    emoji: "🏴‍☠️",
+    gradient: ["#dc2626", "#1d4ed8"],
+    tagType: "character",
+    hintSeeds: ["From One Piece", "Fictional anime character", "Not a real person"],
+    factLead: (name) => `${name} is a character from the One Piece series.`,
+  },
+  naruto_characters: {
+    label: "Naruto character",
+    shortLabel: "Naruto",
+    emoji: "🍥",
+    gradient: ["#ea580c", "#2563eb"],
+    tagType: "character",
+    hintSeeds: ["From Naruto", "Fictional anime character", "Not a real person"],
+    factLead: (name) => `${name} is a character from the Naruto series.`,
+  },
+  dragon_ball_characters: {
+    label: "Dragon Ball character",
+    shortLabel: "Dragon Ball",
+    emoji: "🐉",
+    gradient: ["#f97316", "#eab308"],
+    tagType: "character",
+    hintSeeds: ["From Dragon Ball", "Fictional anime character", "Not a real person"],
+    factLead: (name) => `${name} is a character from the Dragon Ball series.`,
+  },
+  pokemon_characters: {
+    label: "Pokemon character",
+    shortLabel: "Pokemon",
+    emoji: "⚡",
+    gradient: ["#eab308", "#dc2626"],
+    tagType: "character",
+    hintSeeds: ["From Pokemon", "Fictional anime character", "Not a real person"],
+    factLead: (name) => `${name} is a character from the Pokemon series.`,
+  },
+  demon_slayer_characters: {
+    label: "Demon Slayer character",
+    shortLabel: "Demon Slayer",
+    emoji: "👹",
+    gradient: ["#059669", "#7c2d12"],
+    tagType: "character",
+    hintSeeds: ["From Demon Slayer", "Fictional anime character", "Not a real person"],
+    factLead: (name) => `${name} is a character from Demon Slayer: Kimetsu no Yaiba.`,
+  },
+  attack_on_titan_characters: {
+    label: "Attack on Titan character",
+    shortLabel: "AoT",
+    emoji: "🧱",
+    gradient: ["#57534e", "#991b1b"],
+    tagType: "character",
+    hintSeeds: ["From Attack on Titan", "Fictional anime character", "Not a real person"],
+    factLead: (name) => `${name} is a character from Attack on Titan.`,
+  },
+  my_hero_academia_characters: {
+    label: "My Hero Academia character",
+    shortLabel: "MHA",
+    emoji: "💥",
+    gradient: ["#2563eb", "#16a34a"],
+    tagType: "character",
+    hintSeeds: ["From My Hero Academia", "Fictional anime character", "Not a real person"],
+    factLead: (name) => `${name} is a character from My Hero Academia.`,
+  },
+  jujutsu_kaisen_characters: {
+    label: "Jujutsu Kaisen character",
+    shortLabel: "JJK",
+    emoji: "👁",
+    gradient: ["#1e1b4b", "#7c3aed"],
+    tagType: "character",
+    hintSeeds: ["From Jujutsu Kaisen", "Fictional anime character", "Not a real person"],
+    factLead: (name) => `${name} is a character from Jujutsu Kaisen.`,
+  },
   movie_characters: {
     label: "Movie character",
     shortLabel: "Movie",
@@ -74,16 +160,17 @@ export function initials(name) {
 
 export function tagsFor(category) {
   const meta = CATEGORY_META[category];
+  if (!meta) throw new Error(`Unknown category: ${category}`);
+  if (meta.tagType === "character") {
+    return {
+      type: meta.tagType,
+      human: true,
+      fictional: true,
+      alive: "unknown",
+      gender: "na",
+    };
+  }
   switch (category) {
-    case "movie_characters":
-    case "anime_characters":
-      return {
-        type: meta.tagType,
-        human: true,
-        fictional: true,
-        alive: "unknown",
-        gender: "na",
-      };
     case "animals":
       return {
         type: meta.tagType,

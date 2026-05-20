@@ -219,15 +219,39 @@ async function wikidataImage(query) {
   return info?.thumburl ?? info?.url ?? null;
 }
 
+const ANIME_LIKE_CATEGORIES = new Set([
+  "harry_potter_characters",
+  "one_piece_characters",
+  "naruto_characters",
+  "dragon_ball_characters",
+  "pokemon_characters",
+  "demon_slayer_characters",
+  "attack_on_titan_characters",
+  "my_hero_academia_characters",
+  "jujutsu_kaisen_characters",
+  "anime_characters",
+  "movie_characters",
+]);
+
 function titleCandidates(entry, overrides) {
   const { name, category, id } = entry;
   const list = [];
   if (overrides[id]) list.push(overrides[id]);
   if (overrides[name]) list.push(overrides[name]);
   list.push(name);
-  if (category === "movie_characters" || category === "anime_characters") {
+  if (ANIME_LIKE_CATEGORIES.has(category)) {
     list.push(`${name} (character)`);
-    if (category === "anime_characters") list.push(`${name} (anime)`);
+    if (category === "harry_potter_characters") {
+      list.push(`${name} (Harry Potter)`);
+    }
+    if (
+      category === "anime_characters" ||
+      (category.endsWith("_characters") &&
+        category !== "harry_potter_characters" &&
+        category !== "movie_characters")
+    ) {
+      list.push(`${name} (anime)`);
+    }
     if (category === "movie_characters") list.push(`${name} (film character)`);
   }
   if (category === "animals") {
