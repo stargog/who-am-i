@@ -1,14 +1,16 @@
 const BGM_MUTED_KEY = "who-am-i-bgm-muted";
 const BGM_VOLUME_KEY = "who-am-i-bgm-volume";
-export const BGM_DEFAULT_VOLUME = 0.1;
-const VOLUME_STEP = 0.05;
+export const BGM_DEFAULT_VOLUME = 0.05;
+export const VOLUME_STEP = 0.05;
 
 export function getBgmMuted(): boolean {
-  if (typeof window === "undefined") return true;
+  if (typeof window === "undefined") return false;
   try {
-    return localStorage.getItem(BGM_MUTED_KEY) === "1";
+    const raw = localStorage.getItem(BGM_MUTED_KEY);
+    if (raw == null) return false;
+    return raw === "1";
   } catch {
-    return true;
+    return false;
   }
 }
 
@@ -41,5 +43,3 @@ export function setBgmVolume(volume: number): void {
     /* ignore */
   }
 }
-
-export { VOLUME_STEP };

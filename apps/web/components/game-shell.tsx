@@ -62,7 +62,7 @@ export function GameShell({
         aria-hidden
       />
 
-      <header className="relative z-10 flex items-center justify-between border-b border-white/[0.06] px-4 py-3 md:px-6 md:py-4">
+      <header className="relative z-30 flex items-center justify-between overflow-visible border-b border-white/[0.06] px-4 py-3 md:px-6 md:py-4">
         <div className="flex items-center gap-3">
           <Link
             href={homeHref}
