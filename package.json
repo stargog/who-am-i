@@ -17,7 +17,8 @@
     "fetch:images:all": "node scripts/fetch-deck-images.mjs --only-missing --force",
     "fetch:text": "node scripts/fetch-deck-images.mjs --refresh-text --force",
     "sync:images": "node scripts/sync-deck-images.mjs",
-    "party:deploy": "partykit deploy"
+    "party:deploy": "partykit deploy",
+    "ship": "node scripts/ship.mjs"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",

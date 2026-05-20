@@ -40,10 +40,33 @@ npm run dev
 
 ## อัปเดตเกมในอนาคต
 
-หลังแก้โค้ด รันในเทอร์มินัล:
+หลังแก้โค้ด รันคำสั่งเดียว:
 
 ```powershell
 cd d:\work\who-am-i
+npm run ship -- "อธิบายสิ่งที่เปลี่ยน"
+```
+
+จะ **commit → push GitHub** แล้ว deploy อัตโนมัติ:
+
+| ส่วน | วิธี deploy |
+|------|-------------|
+| **Vercel (เว็บ)** | Auto หลัง push ถ้าเชื่อม GitHub ใน Vercel Dashboard แล้ว |
+| **PartyKit (เกมเรียลไทม์)** | GitHub Actions หลัง push (ต้องตั้ง secret ครั้งเดียว — ดูด้านล่าง) |
+
+### ตั้ง PartyKit ให้ deploy อัตโนมัติ (ครั้งเดียว)
+
+```powershell
+npx partykit token generate
+```
+
+เอา `PARTYKIT_LOGIN` และ `PARTYKIT_TOKEN` ไปใส่ใน  
+GitHub → repo **who-am-i** → Settings → Secrets and variables → Actions
+
+### Deploy มือ (ถ้า CI ยังไม่พร้อม)
+
+```powershell
+npm run party:deploy
 .\scripts\deploy-vercel.ps1
 ```
 

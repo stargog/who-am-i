@@ -1,0 +1,12 @@
+---
+description: Push and deploy after completing code changes
+alwaysApply: true
+---
+
+After finishing any task that modifies the who-am-i codebase:
+
+1. Run `npm run ship -- "<short commit message>"` to commit and push to `master`.
+2. Do not skip push/deploy unless the user explicitly says not to.
+3. Exclude the `who-am-i/` prototype folder from commits (ship script handles this).
+4. If GitHub Actions PartyKit deploy fails, remind the user to add `PARTYKIT_LOGIN` and `PARTYKIT_TOKEN` secrets (run `npx partykit token generate` locally once).
+5. Vercel deploys automatically when the repo is linked in Vercel Dashboard; otherwise run `npx vercel deploy --prod --yes`.
