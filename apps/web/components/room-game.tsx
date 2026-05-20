@@ -114,7 +114,10 @@ export function RoomGame({ roomCode }: { roomCode: string }) {
             state={state}
             playerId={playerId}
             onReady={() => send({ type: "ready" })}
-            onStart={(categories) => send({ type: "start_game", categories })}
+            onStart={() => send({ type: "start_game" })}
+            onSetCategories={(categories) =>
+              send({ type: "set_categories", categories })
+            }
           />
         </main>
       )}

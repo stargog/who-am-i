@@ -41,6 +41,54 @@ export function pickDeckForPlayers(
   return shuffled.slice(0, count);
 }
 
+/** Assign one unique character per player from each player's own category pool. */
+export function assignCharactersPerPlayer(
+  playerIds: string[],
+  getCategories: (playerId: string) => DeckCategory[],
+  shuffleFn: <T>(arr: T[]) => T[]
+): Map<string, DeckEntry> | null {
+  const order = shuffleFn([...playerIds]).sort((a, b) => {
+    const pa = getDeckPool(getCategories(a)).length;
+    const pb = getDeckPool(getCategories(b)).length;
+    return pa - pb;
+  });
+
+  const used = new Set<string>();
+  const assignment = new Map<string, DeckEntry>();
+
+  function backtrack(idx: number): boolean {
+    if (idx >= order.length) return true;
+    const pid = order[idx];
+    const pool = shuffleFn(getDeckPool(getCategories(pid))).filter(
+      (e) => !used.has(e.id)
+    );
+    if (pool.length === 0) return false;
+    for (const entry of pool) {
+      used.add(entry.id);
+      assignment.set(pid, entry);
+      if (backtrack(idx + 1)) return true;
+      used.delete(entry.id);
+      assignment.delete(pid);
+    }
+    return false;
+  }
+
+  if (!backtrack(0)) return null;
+  return assignment;
+}
+
+export function canAssignCharactersPerPlayer(
+  players: { id: string; preferredCategories: DeckCategory[] }[]
+): boolean {
+  return (
+    assignCharactersPerPlayer(
+      players.map((p) => p.id),
+      (id) => players.find((p) => p.id === id)!.preferredCategories,
+      (arr) => [...arr]
+    ) !== null
+  );
+}
+
 export function formatTagLine(tags: DeckEntry["tags"]): string {
   const parts: string[] = [];
   parts.push(tags.type);

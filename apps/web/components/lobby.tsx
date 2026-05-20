@@ -1,12 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Copy, Check } from "lucide-react";
 import type { ClientRoomState } from "@who-am-i/shared/types";
-import { MIN_PLAYERS } from "@who-am-i/shared/types";
+import { MIN_PLAYERS, MIN_PLAYER_CATEGORIES } from "@who-am-i/shared/types";
 import { DECK_CATEGORIES, type DeckCategory } from "@who-am-i/shared/deck";
-import { getDeckPool } from "@who-am-i/shared/deck-utils";
+import {
+  canAssignCharactersPerPlayer,
+  getDeckPool,
+} from "@who-am-i/shared/deck-utils";
 import { getRoomUrl } from "@/lib/party";
 import { playerAvatar, playerColor } from "@/lib/player-theme";
 import { Button, Panel } from "./ui";
@@ -15,27 +18,53 @@ type Props = {
   state: ClientRoomState;
   playerId: string;
   onReady: () => void;
-  onStart: (categories?: DeckCategory[]) => void;
+  onStart: () => void;
+  onSetCategories: (categories: DeckCategory[]) => void;
 };
 
-export function Lobby({ state, playerId, onReady, onStart }: Props) {
-  const [categories, setCategories] = useState<DeckCategory[]>([]);
+export function Lobby({
+  state,
+  playerId,
+  onReady,
+  onStart,
+  onSetCategories,
+}: Props) {
   const [copied, setCopied] = useState(false);
   const me = state.players.find((p) => p.id === playerId);
   const connected = state.players.filter((p) => p.connected);
-  const allReady =
-    connected.length >= MIN_PLAYERS && connected.every((p) => p.ready);
+  const myCategories = me?.preferredCategories ?? [];
   const roomUrl = getRoomUrl(state.code);
 
-  const poolSize = getDeckPool(
-    categories.length > 0 ? categories : undefined
+  const myPoolSize = getDeckPool(
+    myCategories.length > 0 ? myCategories : undefined
   ).length;
-  const poolOk = poolSize >= connected.length;
+
+  const everyoneHasCategories = connected.every(
+    (p) => p.preferredCategories.length >= MIN_PLAYER_CATEGORIES
+  );
+
+  const assignmentOk = useMemo(
+    () =>
+      connected.length >= MIN_PLAYERS &&
+      everyoneHasCategories &&
+      canAssignCharactersPerPlayer(connected),
+    [connected, everyoneHasCategories]
+  );
+
+  const allReady =
+    connected.length >= MIN_PLAYERS &&
+    connected.every((p) => p.ready) &&
+    everyoneHasCategories &&
+    assignmentOk;
+
+  const canReady =
+    myCategories.length >= MIN_PLAYER_CATEGORIES && myPoolSize > 0;
 
   function toggleCategory(id: DeckCategory) {
-    setCategories((prev) =>
-      prev.includes(id) ? prev.filter((c) => c !== id) : [...prev, id]
-    );
+    const next = myCategories.includes(id)
+      ? myCategories.filter((c) => c !== id)
+      : [...myCategories, id];
+    onSetCategories(next);
   }
 
   async function copyLink() {
@@ -78,46 +107,51 @@ export function Lobby({ state, playerId, onReady, onStart }: Props) {
         <p className="mt-2 truncate text-[10px] text-white/20">{roomUrl}</p>
       </Panel>
 
-      {me?.isHost && (
-        <Panel>
-          <h2 className="mb-1 text-sm font-bold uppercase tracking-widest text-white/40">
-            Character categories
-          </h2>
-          <p className="mb-3 text-sm text-white/35">
-            Leave all unchecked for the full deck. Pick one or more to narrow the
-            pool.
-          </p>
-          <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-            {DECK_CATEGORIES.map((cat) => (
+      <Panel>
+        <h2 className="mb-1 text-sm font-bold uppercase tracking-widest text-white/40">
+          Your categories
+        </h2>
+        <p className="mb-3 text-sm text-white/35">
+          Pick at least {MIN_PLAYER_CATEGORIES} — you will only get a character
+          from your own picks.
+        </p>
+        <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+          {DECK_CATEGORIES.map((cat) => {
+            const selected = myCategories.includes(cat.id);
+            return (
               <li key={cat.id}>
                 <label
                   className="flex cursor-pointer items-center gap-2 rounded-xl px-3 py-2.5 transition-colors hover:bg-white/5"
                   style={{
-                    background: categories.includes(cat.id)
+                    background: selected
                       ? "rgba(167,139,250,0.1)"
                       : "rgba(255,255,255,0.03)",
-                    border: `1px solid ${categories.includes(cat.id) ? "rgba(167,139,250,0.3)" : "rgba(255,255,255,0.06)"}`,
+                    border: `1px solid ${selected ? "rgba(167,139,250,0.3)" : "rgba(255,255,255,0.06)"}`,
                   }}
                 >
                   <input
                     type="checkbox"
-                    checked={categories.includes(cat.id)}
+                    checked={selected}
                     onChange={() => toggleCategory(cat.id)}
                     className="h-4 w-4 accent-[#a78bfa]"
                   />
                   <span className="text-sm">{cat.label}</span>
                 </label>
               </li>
-            ))}
-          </ul>
-          <p
-            className={`mt-3 text-xs ${poolOk ? "text-white/30" : "text-red-400"}`}
-          >
-            {poolSize} characters available for {connected.length} players
-            {!poolOk && " — need more categories or fewer players"}
-          </p>
-        </Panel>
-      )}
+            );
+          })}
+        </ul>
+        <p
+          className={`mt-3 text-xs ${
+            myCategories.length >= MIN_PLAYER_CATEGORIES && myPoolSize > 0
+              ? "text-white/30"
+              : "text-amber-400/90"
+          }`}
+        >
+          {myCategories.length}/{MIN_PLAYER_CATEGORIES}+ categories · {myPoolSize}{" "}
+          characters in your pool
+        </p>
+      </Panel>
 
       <Panel>
         <h2 className="mb-3 text-sm font-bold uppercase tracking-widest text-white/40">
@@ -126,31 +160,40 @@ export function Lobby({ state, playerId, onReady, onStart }: Props) {
         <ul className="flex flex-col gap-2">
           {state.players.map((p) => {
             const color = playerColor(p.id);
+            const catCount = p.preferredCategories.length;
+            const catsOk = catCount >= MIN_PLAYER_CATEGORIES;
             return (
               <li
                 key={p.id}
-                className="flex items-center justify-between rounded-xl px-3 py-3"
+                className="flex items-center justify-between gap-2 rounded-xl px-3 py-3"
                 style={{
                   background: "rgba(255,255,255,0.03)",
                   border: `1px solid ${p.id === playerId ? color + "33" : "rgba(255,255,255,0.06)"}`,
                 }}
               >
-                <span className="flex items-center gap-2">
-                  <span className="text-lg">{playerAvatar(p.id)}</span>
+                <span className="min-w-0 flex-1">
+                  <span className="flex items-center gap-2">
+                    <span className="text-lg">{playerAvatar(p.id)}</span>
+                    <span
+                      className={
+                        p.id === playerId ? "font-bold text-white" : "text-white/70"
+                      }
+                    >
+                      {p.name}
+                      {p.isHost && (
+                        <span className="ml-1.5 text-[10px] font-normal text-yellow-400/80">
+                          host
+                        </span>
+                      )}
+                    </span>
+                  </span>
                   <span
-                    className={
-                      p.id === playerId ? "font-bold text-white" : "text-white/70"
-                    }
+                    className={`mt-0.5 block text-[10px] ${catsOk ? "text-white/25" : "text-amber-400/80"}`}
                   >
-                    {p.name}
-                    {p.isHost && (
-                      <span className="ml-1.5 text-[10px] font-normal text-yellow-400/80">
-                        host
-                      </span>
-                    )}
+                    {catCount} categor{catCount === 1 ? "y" : "ies"} selected
                   </span>
                 </span>
-                <span className="text-xs font-semibold">
+                <span className="shrink-0 text-xs font-semibold">
                   {!p.connected && (
                     <span className="text-white/25">Offline</span>
                   )}
@@ -165,20 +208,31 @@ export function Lobby({ state, playerId, onReady, onStart }: Props) {
             );
           })}
         </ul>
+        {me?.isHost && connected.length >= MIN_PLAYERS && !assignmentOk && (
+          <p className="mt-3 text-xs text-amber-400/90">
+            Category picks may overlap — need enough unique characters across
+            players.
+          </p>
+        )}
       </Panel>
 
-      <Button className="w-full" variant="secondary" onClick={onReady}>
+      <Button
+        className="w-full"
+        variant="secondary"
+        disabled={!canReady}
+        onClick={onReady}
+      >
         {me?.ready ? "Cancel ready" : "Ready up"}
       </Button>
 
+      {!canReady && (
+        <p className="text-center text-xs text-white/25">
+          Select at least {MIN_PLAYER_CATEGORIES} categories to ready up
+        </p>
+      )}
+
       {me?.isHost && (
-        <Button
-          className="w-full"
-          disabled={!allReady || !poolOk}
-          onClick={() =>
-            onStart(categories.length > 0 ? categories : undefined)
-          }
-        >
+        <Button className="w-full" disabled={!allReady} onClick={onStart}>
           Start game
         </Button>
       )}
@@ -191,7 +245,8 @@ export function Lobby({ state, playerId, onReady, onStart }: Props) {
 
       {me?.isHost && !allReady && (
         <p className="text-center text-xs text-white/25">
-          Need at least {MIN_PLAYERS} players and everyone must be ready
+          Need {MIN_PLAYERS}+ players, {MIN_PLAYER_CATEGORIES}+ categories each,
+          unique assignable characters, and everyone ready
         </p>
       )}
     </motion.div>

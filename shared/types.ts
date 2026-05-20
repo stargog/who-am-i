@@ -8,6 +8,7 @@ export type Player = {
   ready: boolean;
   connected: boolean;
   isHost: boolean;
+  preferredCategories: DeckCategory[];
 };
 
 export type Assignment = {
@@ -59,8 +60,9 @@ export type ClientRoomState = Omit<RoomState, "assignments" | "questionsByPlayer
 };
 export type ClientMessage =
   | { type: "join"; playerId: string; name: string }
+  | { type: "set_categories"; categories: DeckCategory[] }
   | { type: "ready" }
-  | { type: "start_game"; categories?: DeckCategory[] }
+  | { type: "start_game" }
   | { type: "ask"; text: string }
   | { type: "vote"; vote: "yes" | "no" }
   | { type: "guess"; text: string }
@@ -72,6 +74,7 @@ export type ServerMessage =
 
 export const MAX_PLAYERS = 8;
 export const MIN_PLAYERS = 2;
+export const MIN_PLAYER_CATEGORIES = 2;
 export const MAX_NAME_LENGTH = 24;
 export const MAX_TEXT_LENGTH = 80;
 export const DISCONNECT_GRACE_MS = 60_000;

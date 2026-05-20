@@ -5,6 +5,7 @@ import {
   MAX_NAME_LENGTH,
   MAX_PLAYERS,
   MIN_PLAYERS,
+  MIN_PLAYER_CATEGORIES,
   type Assignment,
   type ClientMessage,
   type ClientRoomState,
@@ -13,15 +14,22 @@ import {
   type RoomState,
 } from "../shared/types";
 import {
+  assignCharactersPerPlayer,
   getDeckEntry,
-  pickDeckForPlayers,
+  getDeckPool,
 } from "../shared/deck-utils";
-import type { DeckCategory } from "../shared/deck";
+import { DECK_CATEGORIES, type DeckCategory } from "../shared/deck";
 import {
   guessesMatch,
   sanitizeText,
   shuffle,
 } from "../shared/utils";
+
+const VALID_CATEGORIES = new Set(DECK_CATEGORIES.map((c) => c.id));
+
+function sanitizeCategories(categories: DeckCategory[]): DeckCategory[] {
+  return [...new Set(categories.filter((c) => VALID_CATEGORIES.has(c)))];
+}
 
 type ConnectionMeta = {
   playerId: string;
@@ -207,11 +215,15 @@ export default class RoomServer implements Party.Server {
         break;
       case "ready":
         if (!playerId) return this.sendError(sender, "You have not joined the room");
-        this.handleReady(playerId);
+        this.handleReady(playerId, sender);
+        break;
+      case "set_categories":
+        if (!playerId) return this.sendError(sender, "You have not joined the room");
+        this.handleSetCategories(playerId, parsed.categories, sender);
         break;
       case "start_game":
         if (!playerId) return this.sendError(sender, "You have not joined the room");
-        this.handleStartGame(playerId, parsed.categories, sender);
+        this.handleStartGame(playerId, sender);
         break;
       case "ask":
         if (!playerId) return this.sendError(sender, "You have not joined the room");
@@ -274,29 +286,53 @@ export default class RoomServer implements Party.Server {
         ready: false,
         connected: true,
         isHost,
+        preferredCategories: [],
       };
       this.state.players.push(player);
     } else {
       player.name = cleanName;
       player.connected = true;
+      if (!player.preferredCategories) player.preferredCategories = [];
     }
 
     this.broadcastState();
   }
 
-  handleReady(playerId: string) {
+  handleSetCategories(
+    playerId: string,
+    categories: DeckCategory[],
+    sender: Party.Connection
+  ) {
     if (this.state.phase !== "lobby") return;
     const player = this.state.players.find((p) => p.id === playerId);
     if (!player) return;
+
+    player.preferredCategories = sanitizeCategories(categories);
+    player.ready = false;
+    this.broadcastState();
+  }
+
+  handleReady(playerId: string, sender: Party.Connection) {
+    if (this.state.phase !== "lobby") return;
+    const player = this.state.players.find((p) => p.id === playerId);
+    if (!player) return;
+
+    if (
+      !player.ready &&
+      player.preferredCategories.length < MIN_PLAYER_CATEGORIES
+    ) {
+      this.sendError(
+        sender,
+        `Pick at least ${MIN_PLAYER_CATEGORIES} categories before readying up`
+      );
+      return;
+    }
+
     player.ready = !player.ready;
     this.broadcastState();
   }
 
-  handleStartGame(
-    playerId: string,
-    categories: DeckCategory[] | undefined,
-    sender: Party.Connection
-  ) {
+  handleStartGame(playerId: string, sender: Party.Connection) {
     if (this.state.phase !== "lobby") return;
     const host = this.state.players.find((p) => p.id === playerId);
     if (!host?.isHost) {
@@ -315,27 +351,53 @@ export default class RoomServer implements Party.Server {
       return;
     }
 
-    const cats = categories ?? [];
-    this.state.deckCategories = cats;
+    for (const p of connected) {
+      if (p.preferredCategories.length < MIN_PLAYER_CATEGORIES) {
+        this.sendError(
+          sender,
+          `Everyone must pick at least ${MIN_PLAYER_CATEGORIES} categories`
+        );
+        return;
+      }
+      if (getDeckPool(p.preferredCategories).length === 0) {
+        this.sendError(
+          sender,
+          `${p.name} has no characters in their selected categories`
+        );
+        return;
+      }
+    }
 
-    let picked;
-    try {
-      picked = pickDeckForPlayers(connected.length, cats.length ? cats : undefined);
-    } catch {
+    const assignment = assignCharactersPerPlayer(
+      connected.map((p) => p.id),
+      (id) =>
+        this.state.players.find((p) => p.id === id)!.preferredCategories,
+      shuffle
+    );
+
+    if (!assignment) {
       this.sendError(
         sender,
-        "Not enough characters in the selected categories"
+        "Cannot assign unique characters — try different category mixes"
       );
       return;
     }
 
+    const unionCategories = sanitizeCategories(
+      connected.flatMap((p) => p.preferredCategories)
+    );
+    this.state.deckCategories = unionCategories;
+
     this.state.turnOrder = shuffle(connected.map((p) => p.id));
-    this.state.assignments = connected.map((p, i) => ({
-      targetPlayerId: p.id,
-      character: picked[i].name,
-      deckEntryId: picked[i].id,
-      fromPlayerId: "deck",
-    }));
+    this.state.assignments = connected.map((p) => {
+      const entry = assignment.get(p.id)!;
+      return {
+        targetPlayerId: p.id,
+        character: entry.name,
+        deckEntryId: entry.id,
+        fromPlayerId: "deck",
+      };
+    });
     this.state.questionsByPlayer = {};
     this.state.winnerId = undefined;
     this.state.pendingQuestion = undefined;
