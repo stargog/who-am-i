@@ -69,37 +69,47 @@ export function QuestionInput({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
           >
-            <p className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-white/40">
-              Submit your guess
+            <p className="mb-3 text-center text-sm font-bold uppercase tracking-widest text-emerald-400/90">
+              Guess your character
             </p>
-            <motion.div className="flex gap-3 items-center">
+            <motion.div className="flex flex-col gap-3 sm:flex-row sm:items-stretch">
               <input
                 type="text"
                 value={guessValue}
                 onChange={(e) => setGuessValue(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleGuessSubmit()}
-                placeholder="I amâ€¦"
+                placeholder="I am…"
                 maxLength={80}
-                className="w-full rounded-2xl px-4 py-3.5 text-sm text-white placeholder-white/20 outline-none transition-all"
+                className="w-full rounded-2xl px-4 py-3.5 text-base text-white placeholder-white/25 outline-none transition-all sm:flex-1"
                 style={{
                   background: "rgba(255,255,255,0.05)",
-                  border: `1.5px solid ${guessValue ? `${activePlayerColor}66` : "rgba(255,255,255,0.1)"}`,
+                  border: `2px solid ${guessValue ? "rgba(74,222,128,0.5)" : "rgba(255,255,255,0.1)"}`,
+                  boxShadow: guessValue
+                    ? "0 0 24px rgba(74,222,128,0.15)"
+                    : undefined,
                 }}
               />
               <motion.button
                 type="button"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={handleGuessSubmit}
                 disabled={!guessValue.trim()}
-                className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl transition-all disabled:opacity-30"
+                className="flex min-h-[3.25rem] shrink-0 items-center justify-center gap-2 rounded-2xl px-6 py-3.5 text-base font-black text-white transition-all disabled:cursor-not-allowed disabled:opacity-40 sm:min-w-[9.5rem]"
                 style={{
                   background: guessValue.trim()
-                    ? `linear-gradient(135deg, ${activePlayerColor}, ${activePlayerColor}88)`
+                    ? "linear-gradient(135deg, #22c55e, #16a34a)"
                     : "rgba(255,255,255,0.08)",
+                  border: guessValue.trim()
+                    ? "2px solid rgba(134,239,172,0.6)"
+                    : "2px solid rgba(255,255,255,0.08)",
+                  boxShadow: guessValue.trim()
+                    ? "0 8px 28px rgba(34,197,94,0.45)"
+                    : undefined,
                 }}
               >
-                <Target className="h-4 w-4 text-white" />
+                <Target className="h-5 w-5" />
+                Guess!
               </motion.button>
             </motion.div>
           </motion.div>
@@ -119,17 +129,17 @@ export function QuestionInput({
             )}
             {phase === "voted" && (
               <p className="mb-3 text-center text-sm text-white/40">
-                Voted â€” waiting for othersâ€¦
+                Voted — waiting for others…
               </p>
             )}
             {phase === "pending-wait" && (
               <p className="mb-3 text-center text-sm text-white/40">
-                Waiting for answersâ€¦
+                Waiting for answers…
               </p>
             )}
             {phase === "waiting" && (
               <p className="mb-3 text-center text-sm text-white/40">
-                Waiting for {activePlayerName}&apos;s turnâ€¦
+                Waiting for {activePlayerName}&apos;s turn…
               </p>
             )}
 
@@ -159,7 +169,7 @@ export function QuestionInput({
                         ))}
                       </div>
                       <span className="text-xs text-white/30">
-                        Ask a yes/no questionâ€¦
+                        Ask a yes/no question…
                       </span>
                     </motion.div>
                   )}
@@ -175,7 +185,7 @@ export function QuestionInput({
                         setIsTyping(e.target.value.length > 0);
                       }}
                       onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
-                      placeholder="Ask a yes/no questionâ€¦"
+                      placeholder="Ask a yes/no question…"
                       maxLength={80}
                       className="w-full rounded-2xl px-4 py-3.5 text-sm text-white placeholder-white/20 outline-none transition-all"
                       style={{
@@ -207,11 +217,29 @@ export function QuestionInput({
                   </motion.button>
                 </div>
 
-                <div className="mt-3 flex items-center justify-between">
+                <div className="mt-4 flex flex-col gap-3">
+                  <motion.button
+                    type="button"
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.99 }}
+                    onClick={onShowGuess}
+                    className="flex w-full items-center justify-center gap-2.5 rounded-2xl px-5 py-4 text-base font-black text-white shadow-lg transition-all"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, rgba(34,197,94,0.55), rgba(22,163,74,0.35))",
+                      border: "2px solid rgba(74,222,128,0.65)",
+                      boxShadow:
+                        "0 6px 28px rgba(34,197,94,0.35), inset 0 1px 0 rgba(255,255,255,0.12)",
+                    }}
+                  >
+                    <Target className="h-5 w-5 shrink-0" />
+                    Guess who I am
+                  </motion.button>
+
                   <button
                     type="button"
                     onClick={() => setShowSuggestions(!showSuggestions)}
-                    className="flex items-center gap-1.5 text-xs text-white/30 transition-colors hover:text-white/50"
+                    className="flex items-center justify-center gap-1.5 text-xs text-white/30 transition-colors hover:text-white/50 sm:justify-start"
                   >
                     <Lightbulb className="h-3 w-3" />
                     Suggested questions
@@ -220,14 +248,6 @@ export function QuestionInput({
                     ) : (
                       <ChevronDown className="h-3 w-3" />
                     )}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={onShowGuess}
-                    className="text-xs font-semibold transition-colors hover:text-white/70"
-                    style={{ color: "#4ade80" }}
-                  >
-                    Guess instead â†’
                   </button>
                 </div>
 
