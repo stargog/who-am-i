@@ -43,12 +43,34 @@ export function QuestionInput({
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
 
+  const canSubmitQuestion = phase === "asking";
+  const showQuestionDraft =
+    canSubmitQuestion ||
+    phase === "waiting" ||
+    phase === "voted" ||
+    phase === "pending-wait" ||
+    phase === "vote-open";
+
   const handleSubmit = () => {
+    if (!canSubmitQuestion) return;
     const q = inputValue.trim();
     if (!q) return;
     onQuestion(q.endsWith("?") ? q : `${q}?`);
     setInputValue("");
     setShowSuggestions(false);
+  };
+
+  const applySuggestedQuestion = (q: string) => {
+    const formatted = q.endsWith("?") ? q : `${q}?`;
+    if (canSubmitQuestion) {
+      onQuestion(formatted);
+      setInputValue("");
+      setShowSuggestions(false);
+    } else {
+      setInputValue(formatted);
+      setIsTyping(true);
+      setShowSuggestions(false);
+    }
   };
 
   const handleGuessSubmit = () => {
@@ -138,15 +160,21 @@ export function QuestionInput({
               </p>
             )}
             {phase === "waiting" && (
-              <p className="mb-3 text-center text-sm text-white/40">
+              <p className="mb-2 text-center text-sm text-white/40">
                 Waiting for {activePlayerName}&apos;s turn…
               </p>
             )}
 
-            {phase === "asking" && (
+            {showQuestionDraft && (
               <>
+                {!canSubmitQuestion && (
+                  <p className="mb-2 text-center text-[11px] text-white/25">
+                    Draft your next question — sends when it&apos;s your turn
+                  </p>
+                )}
+
                 <AnimatePresence>
-                  {isTyping && (
+                  {isTyping && canSubmitQuestion && (
                     <motion.div
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -184,62 +212,106 @@ export function QuestionInput({
                         setInputValue(e.target.value);
                         setIsTyping(e.target.value.length > 0);
                       }}
-                      onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
-                      placeholder="Ask a yes/no question…"
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") handleSubmit();
+                      }}
+                      placeholder={
+                        canSubmitQuestion
+                          ? "Ask a yes/no question…"
+                          : "Draft a yes/no question for your turn…"
+                      }
                       maxLength={80}
                       className="w-full rounded-2xl px-4 py-3.5 text-sm text-white placeholder-white/20 outline-none transition-all"
                       style={{
                         background: "rgba(255,255,255,0.05)",
-                        border: `1.5px solid ${inputValue ? `${activePlayerColor}66` : "rgba(255,255,255,0.1)"}`,
+                        border: `1.5px solid ${
+                          inputValue
+                            ? canSubmitQuestion
+                              ? `${activePlayerColor}66`
+                              : "rgba(167,139,250,0.35)"
+                            : "rgba(255,255,255,0.1)"
+                        }`,
                         boxShadow: inputValue
-                          ? `0 0 20px ${activePlayerColor}15`
+                          ? canSubmitQuestion
+                            ? `0 0 20px ${activePlayerColor}15`
+                            : "0 0 16px rgba(167,139,250,0.08)"
                           : undefined,
                       }}
                     />
                   </div>
                   <motion.button
                     type="button"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={canSubmitQuestion ? { scale: 1.05 } : undefined}
+                    whileTap={canSubmitQuestion ? { scale: 0.95 } : undefined}
                     onClick={handleSubmit}
-                    disabled={!inputValue.trim()}
-                    className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl transition-all disabled:opacity-30"
+                    disabled={!canSubmitQuestion || !inputValue.trim()}
+                    className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl transition-all disabled:cursor-not-allowed disabled:opacity-25"
                     style={{
-                      background: inputValue.trim()
-                        ? `linear-gradient(135deg, ${activePlayerColor}, ${activePlayerColor}88)`
-                        : "rgba(255,255,255,0.08)",
-                      boxShadow: inputValue.trim()
-                        ? `0 8px 20px ${activePlayerColor}40`
-                        : undefined,
+                      background:
+                        canSubmitQuestion && inputValue.trim()
+                          ? `linear-gradient(135deg, ${activePlayerColor}, ${activePlayerColor}88)`
+                          : "rgba(255,255,255,0.08)",
+                      boxShadow:
+                        canSubmitQuestion && inputValue.trim()
+                          ? `0 8px 20px ${activePlayerColor}40`
+                          : undefined,
                     }}
+                    title={
+                      canSubmitQuestion
+                        ? "Send question"
+                        : "Available on your turn"
+                    }
+                    aria-label={
+                      canSubmitQuestion
+                        ? "Send question"
+                        : "Send question (your turn only)"
+                    }
                   >
                     <Send className="h-4 w-4 text-white" />
                   </motion.button>
                 </div>
 
-                <div className="mt-4 flex flex-col gap-3">
-                  <motion.button
-                    type="button"
-                    whileHover={{ scale: 1.01 }}
-                    whileTap={{ scale: 0.99 }}
-                    onClick={onShowGuess}
-                    className="flex w-full items-center justify-center gap-2.5 rounded-2xl px-5 py-4 text-base font-black text-white shadow-lg transition-all"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, rgba(34,197,94,0.55), rgba(22,163,74,0.35))",
-                      border: "2px solid rgba(74,222,128,0.65)",
-                      boxShadow:
-                        "0 6px 28px rgba(34,197,94,0.35), inset 0 1px 0 rgba(255,255,255,0.12)",
-                    }}
-                  >
-                    <Target className="h-5 w-5 shrink-0" />
-                    Guess who I am
-                  </motion.button>
+                {canSubmitQuestion && (
+                  <div className="mt-4 flex flex-col gap-3">
+                    <motion.button
+                      type="button"
+                      whileHover={{ scale: 1.01 }}
+                      whileTap={{ scale: 0.99 }}
+                      onClick={onShowGuess}
+                      className="flex w-full items-center justify-center gap-2.5 rounded-2xl px-5 py-4 text-base font-black text-white shadow-lg transition-all"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, rgba(34,197,94,0.55), rgba(22,163,74,0.35))",
+                        border: "2px solid rgba(74,222,128,0.65)",
+                        boxShadow:
+                          "0 6px 28px rgba(34,197,94,0.35), inset 0 1px 0 rgba(255,255,255,0.12)",
+                      }}
+                    >
+                      <Target className="h-5 w-5 shrink-0" />
+                      Guess who I am
+                    </motion.button>
 
+                    <button
+                      type="button"
+                      onClick={() => setShowSuggestions(!showSuggestions)}
+                      className="flex items-center justify-center gap-1.5 text-xs text-white/30 transition-colors hover:text-white/50 sm:justify-start"
+                    >
+                      <Lightbulb className="h-3 w-3" />
+                      Suggested questions
+                      {showSuggestions ? (
+                        <ChevronUp className="h-3 w-3" />
+                      ) : (
+                        <ChevronDown className="h-3 w-3" />
+                      )}
+                    </button>
+                  </div>
+                )}
+
+                {!canSubmitQuestion && (
                   <button
                     type="button"
                     onClick={() => setShowSuggestions(!showSuggestions)}
-                    className="flex items-center justify-center gap-1.5 text-xs text-white/30 transition-colors hover:text-white/50 sm:justify-start"
+                    className="mt-3 flex w-full items-center justify-center gap-1.5 text-xs text-white/30 transition-colors hover:text-white/50"
                   >
                     <Lightbulb className="h-3 w-3" />
                     Suggested questions
@@ -249,7 +321,7 @@ export function QuestionInput({
                       <ChevronDown className="h-3 w-3" />
                     )}
                   </button>
-                </div>
+                )}
 
                 <AnimatePresence>
                   {showSuggestions && (
@@ -264,10 +336,7 @@ export function QuestionInput({
                           <button
                             key={q}
                             type="button"
-                            onClick={() => {
-                              onQuestion(q);
-                              setShowSuggestions(false);
-                            }}
+                            onClick={() => applySuggestedQuestion(q)}
                             className="rounded-xl px-3 py-1.5 text-xs transition-all hover:scale-105"
                             style={{
                               background: "rgba(255,255,255,0.05)",
