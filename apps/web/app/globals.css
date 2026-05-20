@@ -296,29 +296,32 @@ textarea {
   overflow: hidden;
   border-radius: 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: var(--bg);
+  background: rgba(0, 0, 0, 0.45);
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .character-card__image-wrap--table {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3.25rem;
+  height: 4.75rem;
 }
 
 .character-card__image-wrap--panel {
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 7rem;
+  height: 8.5rem;
 }
 
 @media (min-width: 768px) {
   .character-card__image-wrap--table {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 4.25rem;
+    height: 6.25rem;
   }
 
   .character-card__image-wrap--panel {
-    width: 8rem;
-    height: 8rem;
+    width: 8.5rem;
+    height: 10.5rem;
   }
 }
 
@@ -326,7 +329,8 @@ textarea {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
 
 .game-table-avatar {

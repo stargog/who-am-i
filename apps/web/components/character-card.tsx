@@ -140,8 +140,8 @@ export function CharacterCard({
         <img
           src={src}
           alt={deck.imageAlt ?? deck.name}
-          width={isTable ? 88 : 128}
-          height={isTable ? 88 : 128}
+          width={isTable ? 68 : 136}
+          height={isTable ? 100 : 168}
           className="character-card__image"
           loading="lazy"
           decoding="async"
