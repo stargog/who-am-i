@@ -52,7 +52,8 @@ npm run ship -- "อธิบายสิ่งที่เปลี่ยน"
 | ส่วน | วิธี deploy |
 |------|-------------|
 | **Vercel (เว็บ)** | Auto หลัง push ถ้าเชื่อม GitHub ใน Vercel Dashboard แล้ว |
-| **PartyKit (เกมเรียลไทม์)** | GitHub Actions หลัง push (ต้องตั้ง secret ครั้งเดียว — ดูด้านล่าง) |
+| **PartyKit (เกมเรียลไทม์)** | GitHub Actions เมื่อแก้ `party/` หรือ `shared/` + มี secret (ดูด้านล่าง) |
+| **CI (build)** | GitHub Actions ทุก push — ต้องผ่านก่อนถึงจะไม่มี ❌ ที่ commit |
 
 ### ตั้ง PartyKit ให้ deploy อัตโนมัติ (ครั้งเดียว)
 
@@ -75,6 +76,12 @@ npm run party:deploy
 ---
 
 ## แก้ปัญหา
+
+**เครื่องหมาย ❌ ที่ commit บน GitHub**  
+- มักมาจาก workflow **Deploy PartyKit** ค้างหรือไม่มี secret  
+- ตอนนี้มี workflow **CI** (build) แยกแล้ว — push ใหม่ควรเห็น ✅ จาก CI  
+- แก้เฉพาะเว็บ: Vercel deploy เอง ไม่ต้องรอ PartyKit  
+- แก้เซิร์ฟเวอร์: ตั้ง `PARTYKIT_LOGIN` + `PARTYKIT_TOKEN` หรือรัน `npm run party:deploy` มือ
 
 **ค้างที่ "กำลังเชื่อมต่อ..."**  
 - รีเฟรชหน้า หรือลองเบราว์เซอร์อื่น

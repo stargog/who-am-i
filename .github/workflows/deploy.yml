@@ -1,13 +1,22 @@
-name: Deploy
+name: Deploy PartyKit
 
 on:
   push:
     branches:
       - master
+    paths:
+      - "party/**"
+      - "shared/**"
+      - "partykit.json"
+      - "package.json"
+      - "package-lock.json"
+  workflow_dispatch:
 
 jobs:
   deploy-partykit:
+    if: ${{ secrets.PARTYKIT_LOGIN != '' && secrets.PARTYKIT_TOKEN != '' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
