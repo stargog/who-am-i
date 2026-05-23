@@ -1,7 +1,9 @@
 export type DeckCategory =
   | "anime_stories"
   | "movie_stories"
-  | "tv_stories";
+  | "tv_stories"
+  | "animals"
+  | "objects";
 
 function categoryPosterPath(id: DeckCategory): string {
   return `/categories/${id.replace(/_/g, "-")}.jpg`;
@@ -26,6 +28,16 @@ export const DECK_CATEGORIES: {
     id: "tv_stories",
     label: "TV Series",
     poster: "/categories/movie-characters.jpg",
+  },
+  {
+    id: "animals",
+    label: "Animals",
+    poster: categoryPosterPath("animals"),
+  },
+  {
+    id: "objects",
+    label: "Objects",
+    poster: categoryPosterPath("objects"),
   },
 ];
 

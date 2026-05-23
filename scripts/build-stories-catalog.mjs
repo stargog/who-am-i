@@ -1,13 +1,14 @@
 /**
  * Build shared/decks/catalog.json from scripts/stories-data.mjs
  */
-import { existsSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { STORIES } from "./stories-data.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const outPath = join(root, "shared/decks/catalog.json");
+const extraPath = join(root, "shared/decks/extra-entries.json");
 const deckImageDir = join(root, "apps/web/public/deck");
 
 function existingDeckImage(id) {
@@ -35,7 +36,7 @@ function buildAliases(s) {
   return [...new Set(out.filter(Boolean))];
 }
 
-const entries = STORIES.map((s) => {
+const storyEntries = STORIES.map((s) => {
   const aliases = buildAliases(s);
   const entry = {
     id: `story-${s.id}`,
@@ -58,6 +59,17 @@ const entries = STORIES.map((s) => {
   if (aliases.length > 0) entry.aliases = aliases;
   return entry;
 });
+
+function loadExtraEntries() {
+  if (!existsSync(extraPath)) return [];
+  const raw = JSON.parse(readFileSync(extraPath, "utf8"));
+  return raw.map((entry) => ({
+    ...entry,
+    image: existingDeckImage(entry.id),
+  }));
+}
+
+const entries = [...storyEntries, ...loadExtraEntries()];
 
 const ids = new Set();
 for (const e of entries) {

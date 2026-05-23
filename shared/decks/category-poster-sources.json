@@ -7,5 +7,13 @@
   "tv_stories": {
     "source": "wikipedia",
     "title": "Television show"
+  },
+  "animals": {
+    "source": "wikipedia",
+    "title": "Animal"
+  },
+  "objects": {
+    "source": "wikipedia",
+    "title": "Tool"
   }
 }

@@ -188,8 +188,7 @@ export function Lobby({
           Your categories
         </h2>
         <p className="mb-3 text-sm text-white/35">
-          Pick at least {MIN_PLAYER_CATEGORIES} — you will only get a story
-          from your own picks.
+          Choose one or more — you will only get cards from your own picks.
         </p>
         <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {DECK_CATEGORIES.map((cat) => (
@@ -210,8 +209,8 @@ export function Lobby({
               : "text-amber-400/90"
           }`}
         >
-          {myCategories.length}/{MIN_PLAYER_CATEGORIES}+ categories · {myPoolSize}{" "}
-          stories in your pool
+          {myCategories.length} categor{myCategories.length === 1 ? "y" : "ies"}{" "}
+          · {myPoolSize} cards in your pool
         </p>
       </Panel>
 
@@ -272,7 +271,7 @@ export function Lobby({
         </ul>
         {me?.isHost && connected.length >= MIN_PLAYERS && !assignmentOk && (
           <p className="mt-3 text-xs text-amber-400/90">
-            Category picks may overlap — need enough unique stories across
+            Category picks may overlap — need enough unique cards across
             players.
           </p>
         )}
@@ -289,7 +288,7 @@ export function Lobby({
 
       {!canReady && (
         <p className="text-center text-xs text-white/25">
-          Select at least {MIN_PLAYER_CATEGORIES} categories to ready up
+          Select at least one category to ready up
         </p>
       )}
 
@@ -307,8 +306,8 @@ export function Lobby({
 
       {me?.isHost && !allReady && (
         <p className="text-center text-xs text-white/25">
-          Need {MIN_PLAYERS}+ players, {MIN_PLAYER_CATEGORIES}+ categories each,
-          unique assignable stories, and everyone ready
+          Need {MIN_PLAYERS}+ players, at least one category each, unique
+          assignable cards, and everyone ready
         </p>
       )}
     </motion.div>

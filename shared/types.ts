@@ -74,7 +74,7 @@ export type ServerMessage =
 
 export const MAX_PLAYERS = 8;
 export const MIN_PLAYERS = 2;
-export const MIN_PLAYER_CATEGORIES = 2;
+export const MIN_PLAYER_CATEGORIES = 1;
 export const MAX_NAME_LENGTH = 24;
 export const MAX_TEXT_LENGTH = 80;
 export const DISCONNECT_GRACE_MS = 60_000;
