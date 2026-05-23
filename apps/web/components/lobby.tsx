@@ -91,29 +91,56 @@ export function Lobby({
   const [optimisticCategories, setOptimisticCategories] = useState<
     DeckCategory[] | null
   >(null);
-  const pendingCategoriesRef = useRef<DeckCategory[] | null>(null);
+  const sentCategoriesRef = useRef<DeckCategory[] | null>(null);
+  const serverCategoriesAtSendRef = useRef<DeckCategory[] | null>(null);
+  const categoryStateVersionRef = useRef(0);
+  const categoryStateVersionAtSendRef = useRef(0);
 
   useEffect(() => {
-    const pending = pendingCategoriesRef.current;
-    if (!pending) return;
+    categoryStateVersionRef.current += 1;
+  }, [serverCategories]);
+
+  useEffect(() => {
+    const sent = sentCategoriesRef.current;
+    if (!sent) return;
+    if (categoryStateVersionRef.current <= categoryStateVersionAtSendRef.current) {
+      return;
+    }
+
     const server = serverCategories ?? [];
     const serverSet = new Set(server);
-    const settled =
-      pending.length === server.length &&
-      pending.every((c) => serverSet.has(c));
-    if (settled) {
-      pendingCategoriesRef.current = null;
+    const matches =
+      sent.length === server.length &&
+      sent.every((c) => serverSet.has(c));
+
+    if (matches) {
+      sentCategoriesRef.current = null;
+      serverCategoriesAtSendRef.current = null;
+      categoryStateVersionAtSendRef.current = 0;
+      setOptimisticCategories(null);
+      return;
+    }
+
+    const atSend = serverCategoriesAtSendRef.current ?? [];
+    const serverUnchanged =
+      server.length === atSend.length &&
+      server.every((c) => atSend.includes(c));
+    if (serverUnchanged) {
+      sentCategoriesRef.current = null;
+      serverCategoriesAtSendRef.current = null;
+      categoryStateVersionAtSendRef.current = 0;
       setOptimisticCategories(null);
     }
   }, [serverCategories]);
 
   const me = state.players.find((p) => p.id === playerId);
   const connected = state.players.filter((p) => p.connected);
-  const myCategories = optimisticCategories ?? serverCategories ?? [];
+  const myServerCategories = serverCategories ?? [];
+  const myCategories = optimisticCategories ?? myServerCategories;
   const roomUrl = getRoomUrl(state.code);
 
   const myPoolSize = getDeckPool(
-    myCategories.length > 0 ? myCategories : undefined
+    myServerCategories.length > 0 ? myServerCategories : undefined
   ).length;
 
   const everyoneHasCategories = connected.every(
@@ -132,13 +159,15 @@ export function Lobby({
     assignmentOk;
 
   const canReady =
-    myCategories.length >= MIN_PLAYER_CATEGORIES && myPoolSize > 0;
+    myServerCategories.length >= MIN_PLAYER_CATEGORIES && myPoolSize > 0;
 
   function toggleCategory(id: DeckCategory) {
     const next = myCategories.includes(id)
       ? myCategories.filter((c) => c !== id)
       : [...myCategories, id];
-    pendingCategoriesRef.current = next;
+    serverCategoriesAtSendRef.current = myServerCategories;
+    categoryStateVersionAtSendRef.current = categoryStateVersionRef.current;
+    sentCategoriesRef.current = next;
     setOptimisticCategories(next);
     onSetCategories(next);
   }
@@ -204,13 +233,18 @@ export function Lobby({
         </ul>
         <p
           className={`mt-3 text-xs ${
-            myCategories.length >= MIN_PLAYER_CATEGORIES && myPoolSize > 0
+            myServerCategories.length >= MIN_PLAYER_CATEGORIES && myPoolSize > 0
               ? "text-white/30"
               : "text-amber-400/90"
           }`}
         >
-          {myCategories.length} categor{myCategories.length === 1 ? "y" : "ies"}{" "}
-          · {myPoolSize} cards in your pool
+          {myServerCategories.length} categor
+          {myServerCategories.length === 1 ? "y" : "ies"} saved · {myPoolSize}{" "}
+          cards in your pool
+          {optimisticCategories &&
+            optimisticCategories.length !== myServerCategories.length && (
+              <span className="text-white/20"> · saving…</span>
+            )}
         </p>
       </Panel>
 
@@ -288,7 +322,9 @@ export function Lobby({
 
       {!canReady && (
         <p className="text-center text-xs text-white/25">
-          Select at least one category to ready up
+          {myServerCategories.length === 0
+            ? "Select at least one category to ready up"
+            : "No cards in your selected categories — pick different ones"}
         </p>
       )}
 

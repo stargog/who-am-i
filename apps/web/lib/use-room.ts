@@ -36,7 +36,6 @@ export function useRoom(roomCode: string, playerName: string) {
         const msg = JSON.parse(evt.data as string) as ServerMessage;
         if (msg.type === "state") {
           setState(msg.state);
-          setError(null);
         } else if (msg.type === "error") {
           setError(msg.message);
         }
