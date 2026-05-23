@@ -1,13 +1,13 @@
 {
   "version": 3,
   "source": "scripts/stories-data.mjs",
-  "generated": "2026-05-23T14:35:54.298Z",
+  "generated": "2026-05-23T14:56:21.105Z",
   "entries": [
     {
       "id": "story-one-piece",
       "name": "One Piece",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-one-piece.jpg",
       "imageAlt": "One Piece",
       "tags": {
         "type": "story",
@@ -28,13 +28,14 @@
       ],
       "aliases": [
         "Wan Pisu"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-naruto",
       "name": "Naruto",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-naruto.jpg",
       "imageAlt": "Naruto",
       "tags": {
         "type": "story",
@@ -55,13 +56,14 @@
       ],
       "aliases": [
         "Naruto"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-dragon-ball",
       "name": "Dragon Ball",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-dragon-ball.jpg",
       "imageAlt": "Dragon Ball",
       "tags": {
         "type": "story",
@@ -84,13 +86,14 @@
         "Doragon Boru",
         "Dragon Ball Z",
         "Doragon Boru Zetto"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-pokemon",
       "name": "Pokémon",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-pokemon.jpg",
       "imageAlt": "Pokémon",
       "tags": {
         "type": "story",
@@ -112,13 +115,14 @@
       "aliases": [
         "Poketto Monsutā",
         "Pokemon"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-bleach",
       "name": "Bleach",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-bleach.jpg",
       "imageAlt": "Bleach",
       "tags": {
         "type": "story",
@@ -139,13 +143,14 @@
       ],
       "aliases": [
         "Burīchi"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-hunter-x-hunter",
       "name": "Hunter x Hunter",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-hunter-x-hunter.jpg",
       "imageAlt": "Hunter x Hunter",
       "tags": {
         "type": "story",
@@ -166,13 +171,14 @@
       ],
       "aliases": [
         "Hantā Hantā"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-jojo",
       "name": "JoJo's Bizarre Adventure",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-jojo.jpg",
       "imageAlt": "JoJo's Bizarre Adventure",
       "tags": {
         "type": "story",
@@ -193,13 +199,14 @@
       ],
       "aliases": [
         "JoJo no Kimyō na Bōken"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-doraemon",
       "name": "Doraemon",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-doraemon.jpg",
       "imageAlt": "Doraemon",
       "tags": {
         "type": "story",
@@ -220,13 +227,14 @@
       ],
       "aliases": [
         "Doraemon"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-demon-slayer",
       "name": "Demon Slayer",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-demon-slayer.jpg",
       "imageAlt": "Demon Slayer",
       "tags": {
         "type": "story",
@@ -247,13 +255,14 @@
       ],
       "aliases": [
         "Kimetsu no Yaiba"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-attack-on-titan",
       "name": "Attack on Titan",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-attack-on-titan.jpg",
       "imageAlt": "Attack on Titan",
       "tags": {
         "type": "story",
@@ -274,13 +283,14 @@
       ],
       "aliases": [
         "Shingeki no Kyojin"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-my-hero-academia",
       "name": "My Hero Academia",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-my-hero-academia.jpg",
       "imageAlt": "My Hero Academia",
       "tags": {
         "type": "story",
@@ -301,13 +311,14 @@
       ],
       "aliases": [
         "Boku no Hero Academia"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-jujutsu-kaisen",
       "name": "Jujutsu Kaisen",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-jujutsu-kaisen.jpg",
       "imageAlt": "Jujutsu Kaisen",
       "tags": {
         "type": "story",
@@ -328,13 +339,14 @@
       ],
       "aliases": [
         "Jujutsu Kaisen"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-death-note",
       "name": "Death Note",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-death-note.jpg",
       "imageAlt": "Death Note",
       "tags": {
         "type": "story",
@@ -355,13 +367,14 @@
       ],
       "aliases": [
         "Desu Nōto"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-chainsaw-man",
       "name": "Chainsaw Man",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-chainsaw-man.jpg",
       "imageAlt": "Chainsaw Man",
       "tags": {
         "type": "story",
@@ -382,13 +395,14 @@
       ],
       "aliases": [
         "Chenso Man"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-spy-x-family",
       "name": "Spy x Family",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-spy-x-family.jpg",
       "imageAlt": "Spy x Family",
       "tags": {
         "type": "story",
@@ -409,13 +423,14 @@
       ],
       "aliases": [
         "Supai Famirī"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-sailor-moon",
       "name": "Sailor Moon",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-sailor-moon.jpg",
       "imageAlt": "Sailor Moon",
       "tags": {
         "type": "story",
@@ -436,13 +451,14 @@
       ],
       "aliases": [
         "Bishōjo Senshi Sērā Mūn"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-evangelion",
       "name": "Neon Genesis Evangelion",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-evangelion.jpg",
       "imageAlt": "Neon Genesis Evangelion",
       "tags": {
         "type": "story",
@@ -464,13 +480,14 @@
       "aliases": [
         "Shinseiki Evangerion",
         "Evangelion"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-cowboy-bebop",
       "name": "Cowboy Bebop",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-cowboy-bebop.jpg",
       "imageAlt": "Cowboy Bebop",
       "tags": {
         "type": "story",
@@ -491,13 +508,14 @@
       ],
       "aliases": [
         "Kaubōi Bibappu"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-fma-brotherhood",
       "name": "Fullmetal Alchemist: Brotherhood",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-fma-brotherhood.jpg",
       "imageAlt": "Fullmetal Alchemist: Brotherhood",
       "tags": {
         "type": "story",
@@ -519,13 +537,14 @@
       "aliases": [
         "Hagane no Renkinjutsushi",
         "Fullmetal Alchemist"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-sword-art-online",
       "name": "Sword Art Online",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-sword-art-online.jpg",
       "imageAlt": "Sword Art Online",
       "tags": {
         "type": "story",
@@ -546,13 +565,14 @@
       ],
       "aliases": [
         "Sōdo Āto Onrain"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-tokyo-ghoul",
       "name": "Tokyo Ghoul",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-tokyo-ghoul.jpg",
       "imageAlt": "Tokyo Ghoul",
       "tags": {
         "type": "story",
@@ -573,13 +593,14 @@
       ],
       "aliases": [
         "Tōkyō Gūru"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-spirited-away",
       "name": "Spirited Away",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-spirited-away.jpg",
       "imageAlt": "Spirited Away",
       "tags": {
         "type": "story",
@@ -600,13 +621,14 @@
       ],
       "aliases": [
         "Sen to Chihiro no Kamikakushi"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-totoro",
       "name": "My Neighbor Totoro",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-totoro.jpg",
       "imageAlt": "My Neighbor Totoro",
       "tags": {
         "type": "story",
@@ -627,13 +649,14 @@
       ],
       "aliases": [
         "Tonari no Totoro"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-howls-moving-castle",
       "name": "Howl's Moving Castle",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-howls-moving-castle.jpg",
       "imageAlt": "Howl's Moving Castle",
       "tags": {
         "type": "story",
@@ -654,13 +677,14 @@
       ],
       "aliases": [
         "Hauru no Ugoku Shiro"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-princess-mononoke",
       "name": "Princess Mononoke",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-princess-mononoke.jpg",
       "imageAlt": "Princess Mononoke",
       "tags": {
         "type": "story",
@@ -681,13 +705,14 @@
       ],
       "aliases": [
         "Mononoke Hime"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-your-name",
       "name": "Your Name",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-your-name.jpg",
       "imageAlt": "Your Name",
       "tags": {
         "type": "story",
@@ -708,13 +733,14 @@
       ],
       "aliases": [
         "Kimi no Na wa"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-akira",
       "name": "Akira",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-akira.jpg",
       "imageAlt": "Akira",
       "tags": {
         "type": "story",
@@ -735,13 +761,14 @@
       ],
       "aliases": [
         "Akira"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-ghost-in-the-shell",
       "name": "Ghost in the Shell",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-ghost-in-the-shell.jpg",
       "imageAlt": "Ghost in the Shell",
       "tags": {
         "type": "story",
@@ -762,13 +789,14 @@
       ],
       "aliases": [
         "Kōkaku Kidōtai"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-slam-dunk",
       "name": "Slam Dunk",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-slam-dunk.jpg",
       "imageAlt": "Slam Dunk",
       "tags": {
         "type": "story",
@@ -789,13 +817,14 @@
       ],
       "aliases": [
         "Suramu Danku"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-detective-conan",
       "name": "Detective Conan",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-detective-conan.jpg",
       "imageAlt": "Detective Conan",
       "tags": {
         "type": "story",
@@ -817,13 +846,14 @@
       "aliases": [
         "Meitantei Konan",
         "Case Closed"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-digimon-adventure",
       "name": "Digimon Adventure",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-digimon-adventure.jpg",
       "imageAlt": "Digimon Adventure",
       "tags": {
         "type": "story",
@@ -844,13 +874,14 @@
       ],
       "aliases": [
         "Dejimon Adobenchā"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-yu-gi-oh",
       "name": "Yu-Gi-Oh!",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-yu-gi-oh.jpg",
       "imageAlt": "Yu-Gi-Oh!",
       "tags": {
         "type": "story",
@@ -871,13 +902,14 @@
       ],
       "aliases": [
         "Yū Gi Ō"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-captain-tsubasa",
       "name": "Captain Tsubasa",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-captain-tsubasa.jpg",
       "imageAlt": "Captain Tsubasa",
       "tags": {
         "type": "story",
@@ -898,13 +930,14 @@
       ],
       "aliases": [
         "Kyaputen Tsubasa"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-gintama",
       "name": "Gintama",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-gintama.jpg",
       "imageAlt": "Gintama",
       "tags": {
         "type": "story",
@@ -925,13 +958,14 @@
       ],
       "aliases": [
         "Gintama"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-code-geass",
       "name": "Code Geass",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-code-geass.jpg",
       "imageAlt": "Code Geass",
       "tags": {
         "type": "story",
@@ -953,13 +987,14 @@
       "aliases": [
         "Kōdo Giasu",
         "Code Geass Lelouch of the Rebellion"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-one-punch-man",
       "name": "One Punch Man",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-one-punch-man.jpg",
       "imageAlt": "One Punch Man",
       "tags": {
         "type": "story",
@@ -980,13 +1015,14 @@
       ],
       "aliases": [
         "Wanpanman"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-mob-psycho",
       "name": "Mob Psycho 100",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-mob-psycho.jpg",
       "imageAlt": "Mob Psycho 100",
       "tags": {
         "type": "story",
@@ -1007,13 +1043,14 @@
       ],
       "aliases": [
         "Mobu Saiko Hyaku"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-haikyu",
       "name": "Haikyu!!",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-haikyu.jpg",
       "imageAlt": "Haikyu!!",
       "tags": {
         "type": "story",
@@ -1034,13 +1071,14 @@
       ],
       "aliases": [
         "Haikyū"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-dragon-ball-super",
       "name": "Dragon Ball Super",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-dragon-ball-super.jpg",
       "imageAlt": "Dragon Ball Super",
       "tags": {
         "type": "story",
@@ -1062,13 +1100,14 @@
       "aliases": [
         "Doragon Boru Sūpā",
         "DBS"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-nausicaa",
       "name": "Nausicaä of the Valley of the Wind",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-nausicaa.jpg",
       "imageAlt": "Nausicaä of the Valley of the Wind",
       "tags": {
         "type": "story",
@@ -1089,13 +1128,14 @@
       ],
       "aliases": [
         "Kaze no Tani no Naushika"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-kiki-delivery-service",
       "name": "Kiki's Delivery Service",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-kiki-delivery-service.jpg",
       "imageAlt": "Kiki's Delivery Service",
       "tags": {
         "type": "story",
@@ -1116,13 +1156,14 @@
       ],
       "aliases": [
         "Majo no Takkyūbin"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-castle-in-the-sky",
       "name": "Castle in the Sky",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-castle-in-the-sky.jpg",
       "imageAlt": "Castle in the Sky",
       "tags": {
         "type": "story",
@@ -1143,13 +1184,14 @@
       ],
       "aliases": [
         "Tenkū no Shiro Rapyuta"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-kurokos-basketball",
       "name": "Kuroko's Basketball",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-kurokos-basketball.jpg",
       "imageAlt": "Kuroko's Basketball",
       "tags": {
         "type": "story",
@@ -1170,13 +1212,14 @@
       ],
       "aliases": [
         "Kuroko no Basuke"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-steins-gate",
       "name": "Steins;Gate",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-steins-gate.jpg",
       "imageAlt": "Steins;Gate",
       "tags": {
         "type": "story",
@@ -1197,13 +1240,14 @@
       ],
       "aliases": [
         "Shutainzu Gēto"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-re-zero",
       "name": "Re:Zero",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-re-zero.jpg",
       "imageAlt": "Re:Zero",
       "tags": {
         "type": "story",
@@ -1224,13 +1268,14 @@
       ],
       "aliases": [
         "Re:Zero"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-black-clover",
       "name": "Black Clover",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-black-clover.jpg",
       "imageAlt": "Black Clover",
       "tags": {
         "type": "story",
@@ -1251,13 +1296,14 @@
       ],
       "aliases": [
         "Burakku Kurōbā"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-fairy-tail",
       "name": "Fairy Tail",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-fairy-tail.jpg",
       "imageAlt": "Fairy Tail",
       "tags": {
         "type": "story",
@@ -1278,13 +1324,14 @@
       ],
       "aliases": [
         "Fearī Teiru"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-vinland-saga",
       "name": "Vinland Saga",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-vinland-saga.jpg",
       "imageAlt": "Vinland Saga",
       "tags": {
         "type": "story",
@@ -1305,13 +1352,14 @@
       ],
       "aliases": [
         "Vinland Saga"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-blue-lock",
       "name": "Blue Lock",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-blue-lock.jpg",
       "imageAlt": "Blue Lock",
       "tags": {
         "type": "story",
@@ -1332,13 +1380,14 @@
       ],
       "aliases": [
         "Burū Rokku"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-frieren",
       "name": "Frieren: Beyond Journey's End",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-frieren.jpg",
       "imageAlt": "Frieren: Beyond Journey's End",
       "tags": {
         "type": "story",
@@ -1359,13 +1408,14 @@
       ],
       "aliases": [
         "Sōsō no Frieren"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-solo-leveling",
       "name": "Solo Leveling",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-solo-leveling.jpg",
       "imageAlt": "Solo Leveling",
       "tags": {
         "type": "story",
@@ -1386,13 +1436,14 @@
       ],
       "aliases": [
         "Ore dake Level Up na Ken"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-ponyo",
       "name": "Ponyo",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-ponyo.jpg",
       "imageAlt": "Ponyo",
       "tags": {
         "type": "story",
@@ -1413,13 +1464,14 @@
       ],
       "aliases": [
         "Gake no Ue no Ponyo"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-initial-d",
       "name": "Initial D",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-initial-d.jpg",
       "imageAlt": "Initial D",
       "tags": {
         "type": "story",
@@ -1440,13 +1492,14 @@
       ],
       "aliases": [
         "Inisharu Dī"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-madoka-magica",
       "name": "Puella Magi Madoka Magica",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-madoka-magica.jpg",
       "imageAlt": "Puella Magi Madoka Magica",
       "tags": {
         "type": "story",
@@ -1467,13 +1520,14 @@
       ],
       "aliases": [
         "Mahō Shōjo Madoka Magika"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-monogatari",
       "name": "Monogatari Series",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-monogatari.jpg",
       "imageAlt": "Monogatari Series",
       "tags": {
         "type": "story",
@@ -1494,13 +1548,14 @@
       ],
       "aliases": [
         "Monogatari Series"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-psycho-pass",
       "name": "Psycho-Pass",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-psycho-pass.jpg",
       "imageAlt": "Psycho-Pass",
       "tags": {
         "type": "story",
@@ -1521,13 +1576,14 @@
       ],
       "aliases": [
         "Saiko Pasu"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-gundam",
       "name": "Mobile Suit Gundam",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-gundam.jpg",
       "imageAlt": "Mobile Suit Gundam",
       "tags": {
         "type": "story",
@@ -1548,13 +1604,14 @@
       ],
       "aliases": [
         "Kidō Senshi Gandamu"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-bocchi-the-rock",
       "name": "Bocchi the Rock!",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-bocchi-the-rock.jpg",
       "imageAlt": "Bocchi the Rock!",
       "tags": {
         "type": "story",
@@ -1575,13 +1632,14 @@
       ],
       "aliases": [
         "Bocchi the Rock"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-oshi-no-ko",
       "name": "Oshi no Ko",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-oshi-no-ko.jpg",
       "imageAlt": "Oshi no Ko",
       "tags": {
         "type": "story",
@@ -1602,13 +1660,14 @@
       ],
       "aliases": [
         "Oshi no Ko"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-hells-paradise",
       "name": "Hell's Paradise",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-hells-paradise.jpg",
       "imageAlt": "Hell's Paradise",
       "tags": {
         "type": "story",
@@ -1629,13 +1688,14 @@
       ],
       "aliases": [
         "Jigokuraku"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-dr-stone",
       "name": "Dr. Stone",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-dr-stone.jpg",
       "imageAlt": "Dr. Stone",
       "tags": {
         "type": "story",
@@ -1656,13 +1716,14 @@
       ],
       "aliases": [
         "Dr. Stone"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-fire-force",
       "name": "Fire Force",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-fire-force.jpg",
       "imageAlt": "Fire Force",
       "tags": {
         "type": "story",
@@ -1683,13 +1744,14 @@
       ],
       "aliases": [
         "En'en no Shōbōtai"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-tokyo-revengers",
       "name": "Tokyo Revengers",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-tokyo-revengers.jpg",
       "imageAlt": "Tokyo Revengers",
       "tags": {
         "type": "story",
@@ -1710,13 +1772,14 @@
       ],
       "aliases": [
         "Tōkyō Ribenjāzu"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-made-in-abyss",
       "name": "Made in Abyss",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-made-in-abyss.jpg",
       "imageAlt": "Made in Abyss",
       "tags": {
         "type": "story",
@@ -1737,13 +1800,14 @@
       ],
       "aliases": [
         "Meido in Abyss"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-my-dress-up-darling",
       "name": "My Dress-Up Darling",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-my-dress-up-darling.jpg",
       "imageAlt": "My Dress-Up Darling",
       "tags": {
         "type": "story",
@@ -1764,13 +1828,14 @@
       ],
       "aliases": [
         "Sono Bisque Doll wa Koi o Suru"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-soul-eater",
       "name": "Soul Eater",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-soul-eater.jpg",
       "imageAlt": "Soul Eater",
       "tags": {
         "type": "story",
@@ -1791,13 +1856,14 @@
       ],
       "aliases": [
         "Souru Ītā"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-black-butler",
       "name": "Black Butler",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-black-butler.jpg",
       "imageAlt": "Black Butler",
       "tags": {
         "type": "story",
@@ -1818,13 +1884,14 @@
       ],
       "aliases": [
         "Kuroshitsuji"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-noragami",
       "name": "Noragami",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-noragami.jpg",
       "imageAlt": "Noragami",
       "tags": {
         "type": "story",
@@ -1845,13 +1912,14 @@
       ],
       "aliases": [
         "Noragami"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-durarara",
       "name": "Durarara!!",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-durarara.jpg",
       "imageAlt": "Durarara!!",
       "tags": {
         "type": "story",
@@ -1872,13 +1940,14 @@
       ],
       "aliases": [
         "Durarara"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-bakuman",
       "name": "Bakuman",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-bakuman.jpg",
       "imageAlt": "Bakuman",
       "tags": {
         "type": "story",
@@ -1899,13 +1968,14 @@
       ],
       "aliases": [
         "Bakuman"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-parasyte",
       "name": "Parasyte",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-parasyte.jpg",
       "imageAlt": "Parasyte",
       "tags": {
         "type": "story",
@@ -1926,13 +1996,14 @@
       ],
       "aliases": [
         "Kiseijū"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-ergo-proxy",
       "name": "Ergo Proxy",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-ergo-proxy.jpg",
       "imageAlt": "Ergo Proxy",
       "tags": {
         "type": "story",
@@ -1953,13 +2024,14 @@
       ],
       "aliases": [
         "Ergo Proxy"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-flcl",
       "name": "FLCL",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-flcl.jpg",
       "imageAlt": "FLCL",
       "tags": {
         "type": "story",
@@ -1980,13 +2052,14 @@
       ],
       "aliases": [
         "Furi Kuri"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-kill-la-kill",
       "name": "Kill la Kill",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-kill-la-kill.jpg",
       "imageAlt": "Kill la Kill",
       "tags": {
         "type": "story",
@@ -2007,13 +2080,14 @@
       ],
       "aliases": [
         "Kill la Kill"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-promare",
       "name": "Promare",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-promare.jpg",
       "imageAlt": "Promare",
       "tags": {
         "type": "story",
@@ -2034,13 +2108,14 @@
       ],
       "aliases": [
         "Promare"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-weathering-with-you",
       "name": "Weathering with You",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-weathering-with-you.jpg",
       "imageAlt": "Weathering with You",
       "tags": {
         "type": "story",
@@ -2061,13 +2136,14 @@
       ],
       "aliases": [
         "Tenki no Ko"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-a-silent-voice",
       "name": "A Silent Voice",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-a-silent-voice.jpg",
       "imageAlt": "A Silent Voice",
       "tags": {
         "type": "story",
@@ -2088,13 +2164,14 @@
       ],
       "aliases": [
         "Koe no Katachi"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-perfect-blue",
       "name": "Perfect Blue",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-perfect-blue.jpg",
       "imageAlt": "Perfect Blue",
       "tags": {
         "type": "story",
@@ -2115,13 +2192,14 @@
       ],
       "aliases": [
         "Pāfekuto Burū"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-paprika",
       "name": "Paprika",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-paprika.jpg",
       "imageAlt": "Paprika",
       "tags": {
         "type": "story",
@@ -2142,13 +2220,14 @@
       ],
       "aliases": [
         "Papurika"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-violet-evergarden",
       "name": "Violet Evergarden",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-violet-evergarden.jpg",
       "imageAlt": "Violet Evergarden",
       "tags": {
         "type": "story",
@@ -2169,13 +2248,14 @@
       ],
       "aliases": [
         "Vaioretto Evāgāden"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-banana-fish",
       "name": "Banana Fish",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-banana-fish.jpg",
       "imageAlt": "Banana Fish",
       "tags": {
         "type": "story",
@@ -2196,13 +2276,14 @@
       ],
       "aliases": [
         "Banana Fish"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-given",
       "name": "Given",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-given.jpg",
       "imageAlt": "Given",
       "tags": {
         "type": "story",
@@ -2223,13 +2304,14 @@
       ],
       "aliases": [
         "Given"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-beastars",
       "name": "Beastars",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-beastars.jpg",
       "imageAlt": "Beastars",
       "tags": {
         "type": "story",
@@ -2250,13 +2332,14 @@
       ],
       "aliases": [
         "Beastars"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-odd-taxi",
       "name": "Odd Taxi",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-odd-taxi.jpg",
       "imageAlt": "Odd Taxi",
       "tags": {
         "type": "story",
@@ -2277,13 +2360,14 @@
       ],
       "aliases": [
         "Odd Taxi"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-mashle",
       "name": "Mashle: Magic and Muscles",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-mashle.jpg",
       "imageAlt": "Mashle: Magic and Muscles",
       "tags": {
         "type": "story",
@@ -2304,13 +2388,14 @@
       ],
       "aliases": [
         "Mashle"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-undead-unluck",
       "name": "Undead Unluck",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-undead-unluck.jpg",
       "imageAlt": "Undead Unluck",
       "tags": {
         "type": "story",
@@ -2331,13 +2416,14 @@
       ],
       "aliases": [
         "Undead Unluck"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-dandadan",
       "name": "Dandadan",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-dandadan.jpg",
       "imageAlt": "Dandadan",
       "tags": {
         "type": "story",
@@ -2358,13 +2444,14 @@
       ],
       "aliases": [
         "Dandadan"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-hellsing",
       "name": "Hellsing",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-hellsing.jpg",
       "imageAlt": "Hellsing",
       "tags": {
         "type": "story",
@@ -2385,13 +2472,14 @@
       ],
       "aliases": [
         "Hellsing"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-trigun",
       "name": "Trigun",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-trigun.jpg",
       "imageAlt": "Trigun",
       "tags": {
         "type": "story",
@@ -2412,13 +2500,14 @@
       ],
       "aliases": [
         "Trigun"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-samurai-champloo",
       "name": "Samurai Champloo",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-samurai-champloo.jpg",
       "imageAlt": "Samurai Champloo",
       "tags": {
         "type": "story",
@@ -2439,13 +2528,14 @@
       ],
       "aliases": [
         "Samurai Champloo"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-serial-experiments-lain",
       "name": "Serial Experiments Lain",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-serial-experiments-lain.jpg",
       "imageAlt": "Serial Experiments Lain",
       "tags": {
         "type": "story",
@@ -2467,13 +2557,14 @@
       "aliases": [
         "Serial Experiments Lain",
         "Lain"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-cardcaptor-sakura",
       "name": "Cardcaptor Sakura",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-cardcaptor-sakura.jpg",
       "imageAlt": "Cardcaptor Sakura",
       "tags": {
         "type": "story",
@@ -2494,13 +2585,14 @@
       ],
       "aliases": [
         "Kādokyaputā Sakura"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-ranma",
       "name": "Ranma ½",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-ranma.jpg",
       "imageAlt": "Ranma ½",
       "tags": {
         "type": "story",
@@ -2521,13 +2613,14 @@
       ],
       "aliases": [
         "Ranma Nibun no Ichi"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-inuyasha",
       "name": "Inuyasha",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-inuyasha.jpg",
       "imageAlt": "Inuyasha",
       "tags": {
         "type": "story",
@@ -2548,13 +2641,14 @@
       ],
       "aliases": [
         "Inuyasha"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-rurouni-kenshin",
       "name": "Rurouni Kenshin",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-rurouni-kenshin.jpg",
       "imageAlt": "Rurouni Kenshin",
       "tags": {
         "type": "story",
@@ -2575,13 +2669,14 @@
       ],
       "aliases": [
         "Rurouni Kenshin"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-bleach-thousand-year",
       "name": "Bleach: Thousand-Year Blood War",
       "category": "anime_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-bleach-thousand-year.jpg",
       "imageAlt": "Bleach: Thousand-Year Blood War",
       "tags": {
         "type": "story",
@@ -2602,13 +2697,14 @@
       ],
       "aliases": [
         "Bleach: Sennen Kessen-hen"
-      ]
+      ],
+      "imageAttribution": "MyAnimeList/Jikan"
     },
     {
       "id": "story-star-wars",
       "name": "Star Wars",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-star-wars.jpg",
       "imageAlt": "Star Wars",
       "tags": {
         "type": "story",
@@ -2626,13 +2722,14 @@
       ],
       "facts": [
         "Farm boy Luke Skywalker joins rebels against the evil Empire."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-avengers",
       "name": "The Avengers",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-avengers.jpg",
       "imageAlt": "The Avengers",
       "tags": {
         "type": "story",
@@ -2650,13 +2747,14 @@
       ],
       "facts": [
         "Iron Man, Captain America, Thor, and others unite against Loki."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-iron-man",
       "name": "Iron Man",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-iron-man.jpg",
       "imageAlt": "Iron Man",
       "tags": {
         "type": "story",
@@ -2674,13 +2772,14 @@
       ],
       "facts": [
         "Tony Stark builds a suit after being held captive in a cave."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-spider-man",
       "name": "Spider-Man",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-spider-man.jpg",
       "imageAlt": "Spider-Man",
       "tags": {
         "type": "story",
@@ -2698,13 +2797,14 @@
       ],
       "facts": [
         "Peter Parker becomes Spider-Man after a radioactive spider bite."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-black-panther",
       "name": "Black Panther",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-black-panther.jpg",
       "imageAlt": "Black Panther",
       "tags": {
         "type": "story",
@@ -2722,13 +2822,14 @@
       ],
       "facts": [
         "T'Challa returns to rule Wakanda and faces Killmonger."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-harry-potter",
       "name": "Harry Potter",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-harry-potter.jpg",
       "imageAlt": "Harry Potter",
       "tags": {
         "type": "story",
@@ -2746,13 +2847,14 @@
       ],
       "facts": [
         "Harry Potter discovers he is a wizard and fights Lord Voldemort."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-lotr",
       "name": "The Lord of the Rings",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-lotr.jpg",
       "imageAlt": "The Lord of the Rings",
       "tags": {
         "type": "story",
@@ -2770,13 +2872,14 @@
       ],
       "facts": [
         "Frodo Baggins carries the One Ring to Mount Doom."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-the-hobbit",
       "name": "The Hobbit",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-hobbit.jpg",
       "imageAlt": "The Hobbit",
       "tags": {
         "type": "story",
@@ -2794,13 +2897,14 @@
       ],
       "facts": [
         "Bilbo Baggins joins dwarves to reclaim Erebor from Smaug."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-jurassic-park",
       "name": "Jurassic Park",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-jurassic-park.jpg",
       "imageAlt": "Jurassic Park",
       "tags": {
         "type": "story",
@@ -2818,13 +2922,14 @@
       ],
       "facts": [
         "Scientists recreate dinosaurs on an island where security fails."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-james-bond",
       "name": "James Bond",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-james-bond.jpg",
       "imageAlt": "James Bond",
       "tags": {
         "type": "story",
@@ -2842,13 +2947,14 @@
       ],
       "facts": [
         "Secret agent James Bond takes on global villains for MI6."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-fast-and-furious",
       "name": "Fast & Furious",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-fast-and-furious.jpg",
       "imageAlt": "Fast & Furious",
       "tags": {
         "type": "story",
@@ -2866,13 +2972,14 @@
       ],
       "facts": [
         "Dominic Toretto's crew evolves from racers to global heist specialists."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-indiana-jones",
       "name": "Indiana Jones",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-indiana-jones.jpg",
       "imageAlt": "Indiana Jones",
       "tags": {
         "type": "story",
@@ -2890,13 +2997,14 @@
       ],
       "facts": [
         "Indiana Jones races Nazis and cults for legendary relics."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-mission-impossible",
       "name": "Mission: Impossible",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-mission-impossible.jpg",
       "imageAlt": "Mission: Impossible",
       "tags": {
         "type": "story",
@@ -2914,13 +3022,14 @@
       ],
       "facts": [
         "Ethan Hunt and the IMF carry out covert operations worldwide."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-lion-king",
       "name": "The Lion King",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-lion-king.jpg",
       "imageAlt": "The Lion King",
       "tags": {
         "type": "story",
@@ -2938,13 +3047,14 @@
       ],
       "facts": [
         "Simba must reclaim Pride Rock from his uncle Scar."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-frozen",
       "name": "Frozen",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-frozen.jpg",
       "imageAlt": "Frozen",
       "tags": {
         "type": "story",
@@ -2962,13 +3072,14 @@
       ],
       "facts": [
         "Elsa hides her powers while Anna searches for her in a frozen kingdom."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-moana",
       "name": "Moana",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-moana.jpg",
       "imageAlt": "Moana",
       "tags": {
         "type": "story",
@@ -2986,13 +3097,14 @@
       ],
       "facts": [
         "Moana sails across the ocean to restore the heart of Te Fiti."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-aladdin",
       "name": "Aladdin",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-aladdin.jpg",
       "imageAlt": "Aladdin",
       "tags": {
         "type": "story",
@@ -3010,13 +3122,14 @@
       ],
       "facts": [
         "Aladdin finds a magic lamp and poses as a prince to win Jasmine."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-beauty-and-the-beast",
       "name": "Beauty and the Beast",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-beauty-and-the-beast.jpg",
       "imageAlt": "Beauty and the Beast",
       "tags": {
         "type": "story",
@@ -3034,13 +3147,14 @@
       ],
       "facts": [
         "Belle learns to love the Beast to break his curse."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-little-mermaid",
       "name": "The Little Mermaid",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-little-mermaid.jpg",
       "imageAlt": "The Little Mermaid",
       "tags": {
         "type": "story",
@@ -3058,13 +3172,14 @@
       ],
       "facts": [
         "Ariel trades her voice to become human and meet Prince Eric."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-toy-story",
       "name": "Toy Story",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-toy-story.jpg",
       "imageAlt": "Toy Story",
       "tags": {
         "type": "story",
@@ -3082,13 +3197,14 @@
       ],
       "facts": [
         "Woody and Buzz Lightyear learn to share Andy's room."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-finding-nemo",
       "name": "Finding Nemo",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-finding-nemo.jpg",
       "imageAlt": "Finding Nemo",
       "tags": {
         "type": "story",
@@ -3106,13 +3222,14 @@
       ],
       "facts": [
         "Marlin crosses the ocean to rescue his son Nemo."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-the-incredibles",
       "name": "The Incredibles",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-incredibles.jpg",
       "imageAlt": "The Incredibles",
       "tags": {
         "type": "story",
@@ -3130,13 +3247,14 @@
       ],
       "facts": [
         "The Parr family suits up to stop Syndrome and save the city."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-coco",
       "name": "Coco",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-coco.jpg",
       "imageAlt": "Coco",
       "tags": {
         "type": "story",
@@ -3154,13 +3272,14 @@
       ],
       "facts": [
         "Miguel enters the Land of the Dead to learn about his ancestor."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-inside-out",
       "name": "Inside Out",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-inside-out.jpg",
       "imageAlt": "Inside Out",
       "tags": {
         "type": "story",
@@ -3178,13 +3297,14 @@
       ],
       "facts": [
         "Joy and Sadness navigate Riley's mind during a difficult move."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-up",
       "name": "Up",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-up.jpg",
       "imageAlt": "Up",
       "tags": {
         "type": "story",
@@ -3202,13 +3322,14 @@
       ],
       "facts": [
         "Carl Fredricksen flies his house to Paradise Falls with Russell."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-wall-e",
       "name": "WALL·E",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-wall-e.jpg",
       "imageAlt": "WALL·E",
       "tags": {
         "type": "story",
@@ -3226,13 +3347,14 @@
       ],
       "facts": [
         "WALL·E falls for EVE and helps humanity return to Earth."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-titanic",
       "name": "Titanic",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-titanic.jpg",
       "imageAlt": "Titanic",
       "tags": {
         "type": "story",
@@ -3250,13 +3372,14 @@
       ],
       "facts": [
         "Jack and Rose fall in love aboard the doomed RMS Titanic."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-avatar",
       "name": "Avatar",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-avatar.jpg",
       "imageAlt": "Avatar",
       "tags": {
         "type": "story",
@@ -3274,13 +3397,14 @@
       ],
       "facts": [
         "Jake Sully joins the Na'vi through an avatar body on Pandora."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-forrest-gump",
       "name": "Forrest Gump",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-forrest-gump.jpg",
       "imageAlt": "Forrest Gump",
       "tags": {
         "type": "story",
@@ -3298,13 +3422,14 @@
       ],
       "facts": [
         "Forrest Gump unwittingly influences decades of American history."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-the-godfather",
       "name": "The Godfather",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-godfather.jpg",
       "imageAlt": "The Godfather",
       "tags": {
         "type": "story",
@@ -3322,13 +3447,14 @@
       ],
       "facts": [
         "Michael Corleone transforms from outsider to head of the Corleone family."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-shawshank",
       "name": "The Shawshank Redemption",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-shawshank.jpg",
       "imageAlt": "The Shawshank Redemption",
       "tags": {
         "type": "story",
@@ -3346,13 +3472,14 @@
       ],
       "facts": [
         "Andy Dufresne survives Shawshank prison and plans a secret escape."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-pulp-fiction",
       "name": "Pulp Fiction",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-pulp-fiction.jpg",
       "imageAlt": "Pulp Fiction",
       "tags": {
         "type": "story",
@@ -3370,13 +3497,14 @@
       ],
       "facts": [
         "Interwoven stories of hitmen, a boxer, and gangsters in Los Angeles."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-inception",
       "name": "Inception",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-inception.jpg",
       "imageAlt": "Inception",
       "tags": {
         "type": "story",
@@ -3394,13 +3522,14 @@
       ],
       "facts": [
         "Dom Cobb plants an idea in a target's mind through shared dreaming."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-interstellar",
       "name": "Interstellar",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-interstellar.jpg",
       "imageAlt": "Interstellar",
       "tags": {
         "type": "story",
@@ -3418,13 +3547,14 @@
       ],
       "facts": [
         "Cooper travels through a wormhole to find a new home for mankind."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-the-matrix",
       "name": "The Matrix",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-matrix.jpg",
       "imageAlt": "The Matrix",
       "tags": {
         "type": "story",
@@ -3442,13 +3572,14 @@
       ],
       "facts": [
         "Neo learns humanity is trapped in a machine-controlled simulation."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-terminator",
       "name": "The Terminator",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-terminator.jpg",
       "imageAlt": "The Terminator",
       "tags": {
         "type": "story",
@@ -3466,13 +3597,14 @@
       ],
       "facts": [
         "A cyborg is sent back to kill Sarah Connor before her son is born."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-alien",
       "name": "Alien",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-alien.jpg",
       "imageAlt": "Alien",
       "tags": {
         "type": "story",
@@ -3490,13 +3622,14 @@
       ],
       "facts": [
         "Ripley and the Nostromo crew face a deadly alien organism."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-jaws",
       "name": "Jaws",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-jaws.jpg",
       "imageAlt": "Jaws",
       "tags": {
         "type": "story",
@@ -3514,13 +3647,14 @@
       ],
       "facts": [
         "Police chief Brody hunts a great white shark attacking Amity Island."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-et",
       "name": "E.T. the Extra-Terrestrial",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-et.jpg",
       "imageAlt": "E.T. the Extra-Terrestrial",
       "tags": {
         "type": "story",
@@ -3538,13 +3672,14 @@
       ],
       "facts": [
         "A boy befriends a stranded alien and helps him phone home."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-back-to-the-future",
       "name": "Back to the Future",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-back-to-the-future.jpg",
       "imageAlt": "Back to the Future",
       "tags": {
         "type": "story",
@@ -3562,13 +3697,14 @@
       ],
       "facts": [
         "Marty McFly accidentally travels to 1955 and must unite his parents."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-halloween",
       "name": "Halloween",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-halloween.jpg",
       "imageAlt": "Halloween",
       "tags": {
         "type": "story",
@@ -3586,13 +3722,14 @@
       ],
       "facts": [
         "Michael Myers returns home to terrorize babysitters on Halloween night."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-scream",
       "name": "Scream",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-scream.jpg",
       "imageAlt": "Scream",
       "tags": {
         "type": "story",
@@ -3610,13 +3747,14 @@
       ],
       "facts": [
         "A masked killer targets teens who know horror movie tropes."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-the-conjuring",
       "name": "The Conjuring",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-conjuring.jpg",
       "imageAlt": "The Conjuring",
       "tags": {
         "type": "story",
@@ -3634,13 +3772,14 @@
       ],
       "facts": [
         "Ed and Lorraine Warren help a family haunted in a Rhode Island farmhouse."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-john-wick",
       "name": "John Wick",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-john-wick.jpg",
       "imageAlt": "John Wick",
       "tags": {
         "type": "story",
@@ -3658,13 +3797,14 @@
       ],
       "facts": [
         "John Wick returns to the underworld after criminals kill his puppy."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-top-gun-maverick",
       "name": "Top Gun: Maverick",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-top-gun-maverick.jpg",
       "imageAlt": "Top Gun: Maverick",
       "tags": {
         "type": "story",
@@ -3682,13 +3822,14 @@
       ],
       "facts": [
         "Pete Maverick Mitchell trains Top Gun graduates for a dangerous mission."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-barbie",
       "name": "Barbie",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-barbie.jpg",
       "imageAlt": "Barbie",
       "tags": {
         "type": "story",
@@ -3706,13 +3847,14 @@
       ],
       "facts": [
         "Barbie leaves Barbieland after an existential crisis."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-oppenheimer",
       "name": "Oppenheimer",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-oppenheimer.jpg",
       "imageAlt": "Oppenheimer",
       "tags": {
         "type": "story",
@@ -3730,13 +3872,14 @@
       ],
       "facts": [
         "J. Robert Oppenheimer leads development of the nuclear bomb in WWII."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-gladiator",
       "name": "Gladiator",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-gladiator.jpg",
       "imageAlt": "Gladiator",
       "tags": {
         "type": "story",
@@ -3754,13 +3897,14 @@
       ],
       "facts": [
         "Maximus seeks vengeance against Emperor Commodus as a gladiator."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-pirates-caribbean",
       "name": "Pirates of the Caribbean",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-pirates-caribbean.jpg",
       "imageAlt": "Pirates of the Caribbean",
       "tags": {
         "type": "story",
@@ -3778,13 +3922,14 @@
       ],
       "facts": [
         "Jack Sparrow and Will Turner battle undead pirates and the East India Company."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-transformers",
       "name": "Transformers",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-transformers.jpg",
       "imageAlt": "Transformers",
       "tags": {
         "type": "story",
@@ -3802,13 +3947,14 @@
       ],
       "facts": [
         "Sam Witwicky helps Autobots protect Earth from Decepticons."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-dark-knight",
       "name": "The Dark Knight",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-dark-knight.jpg",
       "imageAlt": "The Dark Knight",
       "tags": {
         "type": "story",
@@ -3826,13 +3972,14 @@
       ],
       "facts": [
         "Batman faces the Joker's chaos while Harvey Dent falls."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-batman",
       "name": "Batman",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-batman.jpg",
       "imageAlt": "Batman",
       "tags": {
         "type": "story",
@@ -3850,13 +3997,14 @@
       ],
       "facts": [
         "Bruce Wayne fights crime as the masked vigilante Batman."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-superman",
       "name": "Superman",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-superman.jpg",
       "imageAlt": "Superman",
       "tags": {
         "type": "story",
@@ -3874,13 +4022,14 @@
       ],
       "facts": [
         "Clark Kent protects Earth as Superman from Metropolis."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-wonder-woman",
       "name": "Wonder Woman",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-wonder-woman.jpg",
       "imageAlt": "Wonder Woman",
       "tags": {
         "type": "story",
@@ -3898,13 +4047,14 @@
       ],
       "facts": [
         "Diana leaves Themyscira to end the war as Wonder Woman."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-guardians-galaxy",
       "name": "Guardians of the Galaxy",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-guardians-galaxy.jpg",
       "imageAlt": "Guardians of the Galaxy",
       "tags": {
         "type": "story",
@@ -3922,13 +4072,14 @@
       ],
       "facts": [
         "Peter Quill's misfit crew saves the galaxy from Ronan."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-deadpool",
       "name": "Deadpool",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-deadpool.jpg",
       "imageAlt": "Deadpool",
       "tags": {
         "type": "story",
@@ -3946,13 +4097,14 @@
       ],
       "facts": [
         "Wade Wilson becomes Deadpool seeking revenge on Ajax."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-shrek",
       "name": "Shrek",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-shrek.jpg",
       "imageAlt": "Shrek",
       "tags": {
         "type": "story",
@@ -3970,13 +4122,14 @@
       ],
       "facts": [
         "Shrek rescues Fiona to get his swamp back from Lord Farquaad."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-kung-fu-panda",
       "name": "Kung Fu Panda",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-kung-fu-panda.jpg",
       "imageAlt": "Kung Fu Panda",
       "tags": {
         "type": "story",
@@ -3994,13 +4147,14 @@
       ],
       "facts": [
         "Po becomes the Dragon Warrior and defends the Valley of Peace."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-how-to-train-dragon",
       "name": "How to Train Your Dragon",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-how-to-train-dragon.jpg",
       "imageAlt": "How to Train Your Dragon",
       "tags": {
         "type": "story",
@@ -4018,13 +4172,14 @@
       ],
       "facts": [
         "Hiccup tames Toothless and changes how Vikings see dragons."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-hunger-games",
       "name": "The Hunger Games",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-hunger-games.jpg",
       "imageAlt": "The Hunger Games",
       "tags": {
         "type": "story",
@@ -4042,13 +4197,14 @@
       ],
       "facts": [
         "Katniss Everdeen volunteers for the deadly Hunger Games."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-twilight",
       "name": "Twilight",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-twilight.jpg",
       "imageAlt": "Twilight",
       "tags": {
         "type": "story",
@@ -4066,13 +4222,14 @@
       ],
       "facts": [
         "Bella Swan falls for vampire Edward Cullen in Forks."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-la-la-land",
       "name": "La La Land",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-la-la-land.jpg",
       "imageAlt": "La La Land",
       "tags": {
         "type": "story",
@@ -4090,13 +4247,14 @@
       ],
       "facts": [
         "Mia and Sebastian pursue art and love in modern Los Angeles."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-parasite",
       "name": "Parasite",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-parasite.jpg",
       "imageAlt": "Parasite",
       "tags": {
         "type": "story",
@@ -4114,13 +4272,14 @@
       ],
       "facts": [
         "The Kim family infiltrates the wealthy Park household with dark results."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-the-shining",
       "name": "The Shining",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-shining.jpg",
       "imageAlt": "The Shining",
       "tags": {
         "type": "story",
@@ -4138,13 +4297,14 @@
       ],
       "facts": [
         "Jack Torrance descends into madness while caretaking the Overlook Hotel."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-fight-club",
       "name": "Fight Club",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-fight-club.jpg",
       "imageAlt": "Fight Club",
       "tags": {
         "type": "story",
@@ -4162,13 +4322,14 @@
       ],
       "facts": [
         "An insomniac forms an underground fight club with Tyler Durden."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-goodfellas",
       "name": "Goodfellas",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-goodfellas.jpg",
       "imageAlt": "Goodfellas",
       "tags": {
         "type": "story",
@@ -4186,13 +4347,14 @@
       ],
       "facts": [
         "Henry Hill rises and falls in the Italian-American mafia."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-casablanca",
       "name": "Casablanca",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-casablanca.jpg",
       "imageAlt": "Casablanca",
       "tags": {
         "type": "story",
@@ -4210,13 +4372,14 @@
       ],
       "facts": [
         "Rick Blaine must choose love or helping refugees escape Nazis."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-rocky",
       "name": "Rocky",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-rocky.jpg",
       "imageAlt": "Rocky",
       "tags": {
         "type": "story",
@@ -4234,13 +4397,14 @@
       ],
       "facts": [
         "Rocky Balboa gets a shot at the heavyweight championship."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-home-alone",
       "name": "Home Alone",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-home-alone.jpg",
       "imageAlt": "Home Alone",
       "tags": {
         "type": "story",
@@ -4258,13 +4422,14 @@
       ],
       "facts": [
         "Kevin McCallister defends his home when left behind on vacation."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-ghostbusters",
       "name": "Ghostbusters",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-ghostbusters.jpg",
       "imageAlt": "Ghostbusters",
       "tags": {
         "type": "story",
@@ -4282,13 +4447,14 @@
       ],
       "facts": [
         "Scientists start a business capturing ghosts in New York City."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-men-in-black",
       "name": "Men in Black",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-men-in-black.jpg",
       "imageAlt": "Men in Black",
       "tags": {
         "type": "story",
@@ -4306,13 +4472,14 @@
       ],
       "facts": [
         "Agents K and J police extraterrestrial activity on Earth."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-mad-max-fury-road",
       "name": "Mad Max: Fury Road",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-mad-max-fury-road.jpg",
       "imageAlt": "Mad Max: Fury Road",
       "tags": {
         "type": "story",
@@ -4330,13 +4497,14 @@
       ],
       "facts": [
         "Max and Furiosa flee Immortan Joe across the wasteland."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-blade-runner",
       "name": "Blade Runner",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-blade-runner.jpg",
       "imageAlt": "Blade Runner",
       "tags": {
         "type": "story",
@@ -4354,13 +4522,14 @@
       ],
       "facts": [
         "Deckard hunts bioengineered replicants in future LA."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-the-exorcist",
       "name": "The Exorcist",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-exorcist.jpg",
       "imageAlt": "The Exorcist",
       "tags": {
         "type": "story",
@@ -4378,13 +4547,14 @@
       ],
       "facts": [
         "Regan MacNeil is possessed and two priests attempt an exorcism."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-se7en",
       "name": "Se7en",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-se7en.jpg",
       "imageAlt": "Se7en",
       "tags": {
         "type": "story",
@@ -4402,13 +4572,14 @@
       ],
       "facts": [
         "Two detectives hunt a serial killer themed on the seven sins."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-memento",
       "name": "Memento",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-memento.jpg",
       "imageAlt": "Memento",
       "tags": {
         "type": "story",
@@ -4426,13 +4597,14 @@
       ],
       "facts": [
         "Leonard Shelby investigates his wife's murder with short-term memory loss."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-the-prestige",
       "name": "The Prestige",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-prestige.jpg",
       "imageAlt": "The Prestige",
       "tags": {
         "type": "story",
@@ -4450,13 +4622,14 @@
       ],
       "facts": [
         "Two illusionists sabotage each other obsessed with the perfect trick."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-whiplash",
       "name": "Whiplash",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-whiplash.jpg",
       "imageAlt": "Whiplash",
       "tags": {
         "type": "story",
@@ -4474,13 +4647,14 @@
       ],
       "facts": [
         "Andrew Neiman endures abuse from conductor Terence Fletcher to excel."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-get-out",
       "name": "Get Out",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-get-out.jpg",
       "imageAlt": "Get Out",
       "tags": {
         "type": "story",
@@ -4498,13 +4672,14 @@
       ],
       "facts": [
         "Chris Washington uncovers horrifying secrets at his girlfriend's family estate."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-knives-out",
       "name": "Knives Out",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-knives-out.jpg",
       "imageAlt": "Knives Out",
       "tags": {
         "type": "story",
@@ -4522,13 +4697,14 @@
       ],
       "facts": [
         "A detective investigates the death of a wealthy crime novelist."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-everything-everywhere",
       "name": "Everything Everywhere All at Once",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-everything-everywhere.jpg",
       "imageAlt": "Everything Everywhere All at Once",
       "tags": {
         "type": "story",
@@ -4546,13 +4722,14 @@
       ],
       "facts": [
         "Evelyn Wang experiences many universes while fighting a nihilistic threat."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-dune",
       "name": "Dune",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-dune.jpg",
       "imageAlt": "Dune",
       "tags": {
         "type": "story",
@@ -4570,13 +4747,14 @@
       ],
       "facts": [
         "Paul Atreides becomes a leader on the desert planet Arrakis."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-creed",
       "name": "Creed",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-creed.jpg",
       "imageAlt": "Creed",
       "tags": {
         "type": "story",
@@ -4594,13 +4772,14 @@
       ],
       "facts": [
         "Adonis Johnson trains with Rocky Balboa to honor his father's legacy."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-black-swan",
       "name": "Black Swan",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-black-swan.jpg",
       "imageAlt": "Black Swan",
       "tags": {
         "type": "story",
@@ -4618,13 +4797,14 @@
       ],
       "facts": [
         "Nina Sayers unravels competing for the lead in Swan Lake."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-the-grand-budapest",
       "name": "The Grand Budapest Hotel",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-grand-budapest.jpg",
       "imageAlt": "The Grand Budapest Hotel",
       "tags": {
         "type": "story",
@@ -4642,13 +4822,14 @@
       ],
       "facts": [
         "Gustave H. and Zero Moustafa navigate murder and a stolen painting."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-amelie",
       "name": "Amélie",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-amelie.jpg",
       "imageAlt": "Amélie",
       "tags": {
         "type": "story",
@@ -4666,13 +4847,14 @@
       ],
       "facts": [
         "Amélie Poulain quietly improves lives while seeking her own happiness."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-life-of-pi",
       "name": "Life of Pi",
       "category": "movie_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-life-of-pi.jpg",
       "imageAlt": "Life of Pi",
       "tags": {
         "type": "story",
@@ -4690,13 +4872,14 @@
       ],
       "facts": [
         "Pi Patel survives a shipwreck on a lifeboat with a Bengal tiger."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-squid-game",
       "name": "Squid Game",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-squid-game.jpg",
       "imageAlt": "Squid Game",
       "tags": {
         "type": "story",
@@ -4717,13 +4900,14 @@
       ],
       "aliases": [
         "Ojing-eo Geim"
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-game-of-thrones",
       "name": "Game of Thrones",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-game-of-thrones.jpg",
       "imageAlt": "Game of Thrones",
       "tags": {
         "type": "story",
@@ -4741,13 +4925,14 @@
       ],
       "facts": [
         "Noble families war for control of the Seven Kingdoms of Westeros."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-stranger-things",
       "name": "Stranger Things",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-stranger-things.jpg",
       "imageAlt": "Stranger Things",
       "tags": {
         "type": "story",
@@ -4765,13 +4950,14 @@
       ],
       "facts": [
         "Kids in Hawkins face monsters from an alternate dimension."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-breaking-bad",
       "name": "Breaking Bad",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-breaking-bad.jpg",
       "imageAlt": "Breaking Bad",
       "tags": {
         "type": "story",
@@ -4789,13 +4975,14 @@
       ],
       "facts": [
         "Walter White cooks meth after a terminal cancer diagnosis."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-friends",
       "name": "Friends",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-friends.jpg",
       "imageAlt": "Friends",
       "tags": {
         "type": "story",
@@ -4813,13 +5000,14 @@
       ],
       "facts": [
         "Rachel, Ross, Monica, Chandler, Joey, and Phoebe navigate life in Manhattan."
-      ]
+      ],
+      "imageAttribution": "Manual URL"
     },
     {
       "id": "story-the-simpsons",
       "name": "The Simpsons",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-simpsons.jpg",
       "imageAlt": "The Simpsons",
       "tags": {
         "type": "story",
@@ -4837,13 +5025,14 @@
       ],
       "facts": [
         "Homer, Marge, Bart, Lisa, and Maggie Simpson satirize American life."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-walking-dead",
       "name": "The Walking Dead",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-walking-dead.jpg",
       "imageAlt": "The Walking Dead",
       "tags": {
         "type": "story",
@@ -4861,13 +5050,14 @@
       ],
       "facts": [
         "Rick Grimes leads survivors after the dead rise to eat the living."
-      ]
+      ],
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-the-office",
       "name": "The Office",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-office.jpg",
       "imageAlt": "The Office",
       "tags": {
         "type": "story",
@@ -4885,13 +5075,14 @@
       ],
       "facts": [
         "Employees of a Scranton paper branch face awkward humor daily."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-lost",
       "name": "Lost",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-lost.jpg",
       "imageAlt": "Lost",
       "tags": {
         "type": "story",
@@ -4909,13 +5100,14 @@
       ],
       "facts": [
         "Survivors of Oceanic 815 uncover strange forces on a mysterious island."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-house-of-cards",
       "name": "House of Cards",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-house-of-cards.jpg",
       "imageAlt": "House of Cards",
       "tags": {
         "type": "story",
@@ -4933,13 +5125,14 @@
       ],
       "facts": [
         "Frank Underwood schemes from congress to the presidency."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-black-mirror",
       "name": "Black Mirror",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-black-mirror.jpg",
       "imageAlt": "Black Mirror",
       "tags": {
         "type": "story",
@@ -4957,13 +5150,14 @@
       ],
       "facts": [
         "Each episode explores dark consequences of near-future technology."
-      ]
+      ],
+      "imageAttribution": "Wikidata"
     },
     {
       "id": "story-the-mandalorian",
       "name": "The Mandalorian",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-mandalorian.jpg",
       "imageAlt": "The Mandalorian",
       "tags": {
         "type": "story",
@@ -4981,13 +5175,14 @@
       ],
       "facts": [
         "Din Djarin protects Grogu while navigating the post-Empire galaxy."
-      ]
+      ],
+      "imageAttribution": "Wikidata"
     },
     {
       "id": "story-loki",
       "name": "Loki",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-loki.jpg",
       "imageAlt": "Loki",
       "tags": {
         "type": "story",
@@ -5005,13 +5200,14 @@
       ],
       "facts": [
         "Loki variants threaten the timeline under TVA control."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-wandavision",
       "name": "WandaVision",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-wandavision.jpg",
       "imageAlt": "WandaVision",
       "tags": {
         "type": "story",
@@ -5029,13 +5225,14 @@
       ],
       "facts": [
         "Wanda Maximoff creates a false suburban reality in Westview."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-wednesday",
       "name": "Wednesday",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-wednesday.jpg",
       "imageAlt": "Wednesday",
       "tags": {
         "type": "story",
@@ -5053,13 +5250,14 @@
       ],
       "facts": [
         "Wednesday Addams investigates murders at a school for outcasts."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-the-boys",
       "name": "The Boys",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-boys.jpg",
       "imageAlt": "The Boys",
       "tags": {
         "type": "story",
@@ -5077,13 +5275,14 @@
       ],
       "facts": [
         "A vigilante group fights abusive corporate superheroes called The Seven."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-chernobyl",
       "name": "Chernobyl",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-chernobyl.jpg",
       "imageAlt": "Chernobyl",
       "tags": {
         "type": "story",
@@ -5101,13 +5300,14 @@
       ],
       "facts": [
         "Workers and officials respond to the 1986 Chernobyl reactor explosion."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-peaky-blinders",
       "name": "Peaky Blinders",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-peaky-blinders.jpg",
       "imageAlt": "Peaky Blinders",
       "tags": {
         "type": "story",
@@ -5125,13 +5325,14 @@
       ],
       "facts": [
         "Tommy Shelby expands the Peaky Blinders crime empire."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-sherlock",
       "name": "Sherlock",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-sherlock.jpg",
       "imageAlt": "Sherlock",
       "tags": {
         "type": "story",
@@ -5149,13 +5350,14 @@
       ],
       "facts": [
         "Sherlock Holmes solves crimes in contemporary London with Dr. Watson."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-the-witcher",
       "name": "The Witcher",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-the-witcher.jpg",
       "imageAlt": "The Witcher",
       "tags": {
         "type": "story",
@@ -5173,13 +5375,14 @@
       ],
       "facts": [
         "Geralt navigates politics and monsters while protecting Ciri."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-arcane",
       "name": "Arcane",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-arcane.jpg",
       "imageAlt": "Arcane",
       "tags": {
         "type": "story",
@@ -5197,13 +5400,14 @@
       ],
       "facts": [
         "Sisters Vi and Jinx are torn apart by war between twin cities."
-      ]
+      ],
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-avatar-tla",
       "name": "Avatar: The Last Airbender",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-avatar-tla.jpg",
       "imageAlt": "Avatar: The Last Airbender",
       "tags": {
         "type": "story",
@@ -5221,13 +5425,14 @@
       ],
       "facts": [
         "Aang must master all elements to end the Fire Nation's war."
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     },
     {
       "id": "story-fullmetal-tv",
       "name": "Fullmetal Alchemist",
       "category": "tv_stories",
-      "image": "/deck/placeholder.svg",
+      "image": "/deck/story-fullmetal-tv.jpg",
       "imageAlt": "Fullmetal Alchemist",
       "tags": {
         "type": "story",
@@ -5248,7 +5453,8 @@
       ],
       "aliases": [
         "Fullmetal Alchemist 2003"
-      ]
+      ],
+      "imageAttribution": "Wikipedia"
     }
   ]
 }

@@ -1,13 +1,26 @@
 /**
  * Build shared/decks/catalog.json from scripts/stories-data.mjs
  */
-import { writeFileSync } from "node:fs";
+import { existsSync, statSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { STORIES } from "./stories-data.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const outPath = join(root, "shared/decks/catalog.json");
+const deckImageDir = join(root, "apps/web/public/deck");
+
+function existingDeckImage(id) {
+  for (const ext of [".jpg", ".jpeg", ".webp", ".png"]) {
+    const p = join(deckImageDir, `${id}${ext}`);
+    try {
+      if (existsSync(p) && statSync(p).size > 800) return `/deck/${id}${ext}`;
+    } catch {
+      /* skip */
+    }
+  }
+  return "/deck/placeholder.svg";
+}
 
 function mediaFromCategory(category) {
   if (category === "anime_stories") return "anime";
@@ -28,7 +41,7 @@ const entries = STORIES.map((s) => {
     id: `story-${s.id}`,
     name: s.name,
     category: s.category,
-    image: "/deck/placeholder.svg",
+    image: existingDeckImage(`story-${s.id}`),
     imageAlt: s.name,
     tags: {
       type: "story",
