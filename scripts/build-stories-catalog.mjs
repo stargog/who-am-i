@@ -17,7 +17,7 @@ function mediaFromCategory(category) {
 
 function buildAliases(s) {
   const out = [];
-  if (s.nameJa) out.push(s.nameJa);
+  if (s.nameRomaji) out.push(s.nameRomaji);
   if (s.aliases?.length) out.push(...s.aliases);
   return [...new Set(out.filter(Boolean))];
 }

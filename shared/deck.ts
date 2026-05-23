@@ -49,7 +49,7 @@ export type DeckEntry = {
   tags: DeckTags;
   hints: string[];
   facts: string[];
-  /** Extra accepted guess strings (e.g. Japanese title). Server-only for matching. */
+  /** Extra accepted guess strings (e.g. romaji). Server-only for matching. */
   aliases?: string[];
 };
 

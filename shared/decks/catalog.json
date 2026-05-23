@@ -1,7 +1,7 @@
 {
   "version": 3,
   "source": "scripts/stories-data.mjs",
-  "generated": "2026-05-23T14:29:50.614Z",
+  "generated": "2026-05-23T14:35:54.298Z",
   "entries": [
     {
       "id": "story-one-piece",
@@ -27,7 +27,7 @@
         "Monkey D. Luffy searches for the ultimate treasure left by Gol D. Roger."
       ],
       "aliases": [
-        "ワンピース"
+        "Wan Pisu"
       ]
     },
     {
@@ -54,7 +54,7 @@
         "A young ninja seeks recognition and dreams of becoming Hokage."
       ],
       "aliases": [
-        "ナルト"
+        "Naruto"
       ]
     },
     {
@@ -81,9 +81,9 @@
         "Goku and friends defend Earth while searching for Dragon Balls."
       ],
       "aliases": [
-        "ドラゴンボール",
+        "Doragon Boru",
         "Dragon Ball Z",
-        "ドラゴンボールZ"
+        "Doragon Boru Zetto"
       ]
     },
     {
@@ -110,9 +110,8 @@
         "Trainers journey to become Pokémon Masters."
       ],
       "aliases": [
-        "ポケットモンスター",
-        "Pokemon",
-        "ポケモン"
+        "Poketto Monsutā",
+        "Pokemon"
       ]
     },
     {
@@ -139,7 +138,7 @@
         "Ichigo Kurosaki gains powers to protect humans from hollows."
       ],
       "aliases": [
-        "ブリーチ"
+        "Burīchi"
       ]
     },
     {
@@ -166,7 +165,7 @@
         "Gon Freecss takes the Hunter Exam to find his father Ging."
       ],
       "aliases": [
-        "ハンター×ハンター"
+        "Hantā Hantā"
       ]
     },
     {
@@ -193,7 +192,7 @@
         "The Joestar family battles supernatural enemies across generations."
       ],
       "aliases": [
-        "ジョジョの奇妙な冒険"
+        "JoJo no Kimyō na Bōken"
       ]
     },
     {
@@ -220,7 +219,7 @@
         "A robotic cat helps a boy named Nobita with future gadgets."
       ],
       "aliases": [
-        "ドラえもん"
+        "Doraemon"
       ]
     },
     {
@@ -247,7 +246,6 @@
         "Tanjiro Kamado fights demons after his family is slaughtered."
       ],
       "aliases": [
-        "鬼滅の刃",
         "Kimetsu no Yaiba"
       ]
     },
@@ -275,7 +273,6 @@
         "Humanity lives behind walls fearing man-eating Titans."
       ],
       "aliases": [
-        "進撃の巨人",
         "Shingeki no Kyojin"
       ]
     },
@@ -303,7 +300,6 @@
         "Izuku Midoriya trains to become the greatest hero."
       ],
       "aliases": [
-        "僕のヒーローアカデミア",
         "Boku no Hero Academia"
       ]
     },
@@ -331,7 +327,7 @@
         "Yuji Itadori joins Jujutsu High to fight curses."
       ],
       "aliases": [
-        "呪術廻戦"
+        "Jujutsu Kaisen"
       ]
     },
     {
@@ -358,7 +354,7 @@
         "A student uses a notebook that can kill anyone whose name is written in it."
       ],
       "aliases": [
-        "デスノート"
+        "Desu Nōto"
       ]
     },
     {
@@ -385,7 +381,7 @@
         "Denji merges with his dog Pochita to hunt devils for a normal life."
       ],
       "aliases": [
-        "チェンソーマン"
+        "Chenso Man"
       ]
     },
     {
@@ -412,7 +408,7 @@
         "A spy, assassin, and telepath form a fake family for their missions."
       ],
       "aliases": [
-        "スパイファミリー"
+        "Supai Famirī"
       ]
     },
     {
@@ -439,7 +435,7 @@
         "Usagi Tsukino becomes Sailor Moon to fight evil."
       ],
       "aliases": [
-        "美少女戦士セーラームーン"
+        "Bishōjo Senshi Sērā Mūn"
       ]
     },
     {
@@ -466,9 +462,8 @@
         "Teenagers pilot Evangelions to protect Earth from Angels."
       ],
       "aliases": [
-        "新世紀エヴァンゲリオン",
-        "Evangelion",
-        "エヴァンゲリオン"
+        "Shinseiki Evangerion",
+        "Evangelion"
       ]
     },
     {
@@ -495,7 +490,7 @@
         "Spike Spiegel and crew chase bounties aboard the Bebop."
       ],
       "aliases": [
-        "カウボーイビバップ"
+        "Kaubōi Bibappu"
       ]
     },
     {
@@ -522,9 +517,8 @@
         "Edward and Alphonse Elric try to restore their bodies after a failed ritual."
       ],
       "aliases": [
-        "鋼の錬金術師",
-        "Fullmetal Alchemist",
-        "鋼の錬金術師 FULLMETAL ALCHEMIST"
+        "Hagane no Renkinjutsushi",
+        "Fullmetal Alchemist"
       ]
     },
     {
@@ -551,7 +545,7 @@
         "Players are trapped in a VRMMORPG where death is real."
       ],
       "aliases": [
-        "ソードアート・オンライン"
+        "Sōdo Āto Onrain"
       ]
     },
     {
@@ -578,7 +572,7 @@
         "Ken Kaneki becomes part ghoul and is caught between two worlds."
       ],
       "aliases": [
-        "東京喰種"
+        "Tōkyō Gūru"
       ]
     },
     {
@@ -605,7 +599,7 @@
         "Chihiro works in a spirit world to save her parents."
       ],
       "aliases": [
-        "千と千尋の神隠し"
+        "Sen to Chihiro no Kamikakushi"
       ]
     },
     {
@@ -632,7 +626,7 @@
         "Two sisters befriend forest spirits including Totoro."
       ],
       "aliases": [
-        "となりのトトロ"
+        "Tonari no Totoro"
       ]
     },
     {
@@ -659,7 +653,7 @@
         "Sophie is cursed by a witch and finds refuge in Howl's castle."
       ],
       "aliases": [
-        "ハウルの動く城"
+        "Hauru no Ugoku Shiro"
       ]
     },
     {
@@ -686,7 +680,7 @@
         "Ashitaka mediates conflict between forest gods and iron town."
       ],
       "aliases": [
-        "もののけ姫"
+        "Mononoke Hime"
       ]
     },
     {
@@ -713,7 +707,6 @@
         "Two teenagers mysteriously swap bodies and try to find each other."
       ],
       "aliases": [
-        "君の名は。",
         "Kimi no Na wa"
       ]
     },
@@ -741,7 +734,7 @@
         "A biker gang member gains devastating psychic powers in future Tokyo."
       ],
       "aliases": [
-        "アキラ"
+        "Akira"
       ]
     },
     {
@@ -768,7 +761,7 @@
         "Major Motoko Kusanagi hunts cyber-criminals in a networked future."
       ],
       "aliases": [
-        "攻殻機動隊"
+        "Kōkaku Kidōtai"
       ]
     },
     {
@@ -795,7 +788,7 @@
         "Hanamichi Sakuragi joins his school basketball team and grows as a player."
       ],
       "aliases": [
-        "スラムダンク"
+        "Suramu Danku"
       ]
     },
     {
@@ -822,7 +815,7 @@
         "Shinichi Kudo is transformed into a child and solves cases as Conan Edogawa."
       ],
       "aliases": [
-        "名探偵コナン",
+        "Meitantei Konan",
         "Case Closed"
       ]
     },
@@ -850,7 +843,7 @@
         "Children partner with Digimon to save both worlds."
       ],
       "aliases": [
-        "デジモンアドベンチャー"
+        "Dejimon Adobenchā"
       ]
     },
     {
@@ -877,7 +870,7 @@
         "Yugi Mutou solves puzzles and duels with the Millennium Puzzle's power."
       ],
       "aliases": [
-        "遊戯王"
+        "Yū Gi Ō"
       ]
     },
     {
@@ -904,7 +897,7 @@
         "Tsubasa Ozora pursues his dream of winning the World Cup."
       ],
       "aliases": [
-        "キャプテン翼"
+        "Kyaputen Tsubasa"
       ]
     },
     {
@@ -931,7 +924,7 @@
         "Gintoki Sakata takes odd jobs in an alternate Edo period Japan."
       ],
       "aliases": [
-        "銀魂"
+        "Gintama"
       ]
     },
     {
@@ -958,7 +951,7 @@
         "Lelouch vi Britannia leads a rebellion with the Geass power."
       ],
       "aliases": [
-        "コードギアス",
+        "Kōdo Giasu",
         "Code Geass Lelouch of the Rebellion"
       ]
     },
@@ -986,7 +979,7 @@
         "Saitama seeks a worthy opponent after becoming too strong from training."
       ],
       "aliases": [
-        "ワンパンマン"
+        "Wanpanman"
       ]
     },
     {
@@ -1013,7 +1006,7 @@
         "Shigeo Kageyama suppresses his emotions while working for a fake psychic."
       ],
       "aliases": [
-        "モブサイコ100"
+        "Mobu Saiko Hyaku"
       ]
     },
     {
@@ -1040,7 +1033,7 @@
         "Shoyo Hinata and Tobio Kageyama push Karasuno toward nationals."
       ],
       "aliases": [
-        "ハイキュー!!"
+        "Haikyū"
       ]
     },
     {
@@ -1067,7 +1060,7 @@
         "Goku faces universes-level threats after the Buu saga."
       ],
       "aliases": [
-        "ドラゴンボール超",
+        "Doragon Boru Sūpā",
         "DBS"
       ]
     },
@@ -1095,7 +1088,7 @@
         "Nausicaä tries to prevent war between humans and the toxic jungle."
       ],
       "aliases": [
-        "風の谷のナウシカ"
+        "Kaze no Tani no Naushika"
       ]
     },
     {
@@ -1122,7 +1115,7 @@
         "Kiki trains as a witch and runs a delivery service by broomstick."
       ],
       "aliases": [
-        "魔女の宅急便"
+        "Majo no Takkyūbin"
       ]
     },
     {
@@ -1149,7 +1142,7 @@
         "Sheeta and Pazu seek a legendary castle in the sky."
       ],
       "aliases": [
-        "天空の城ラピュタ"
+        "Tenkū no Shiro Rapyuta"
       ]
     },
     {
@@ -1176,7 +1169,7 @@
         "Tetsuya Kuroko supports a team aiming to defeat his former middle school stars."
       ],
       "aliases": [
-        "黒子のバスケ"
+        "Kuroko no Basuke"
       ]
     },
     {
@@ -1203,7 +1196,7 @@
         "Okabe Rintaro discovers their lab can send messages to the past."
       ],
       "aliases": [
-        "シュタインズ・ゲート"
+        "Shutainzu Gēto"
       ]
     },
     {
@@ -1230,7 +1223,7 @@
         "Subaru Natsuki is summoned to another world and resets on death."
       ],
       "aliases": [
-        "Re:ゼロから始める異世界生活"
+        "Re:Zero"
       ]
     },
     {
@@ -1257,7 +1250,7 @@
         "Asta aims to become Wizard King despite having no magic."
       ],
       "aliases": [
-        "ブラッククローバー"
+        "Burakku Kurōbā"
       ]
     },
     {
@@ -1284,7 +1277,7 @@
         "Natsu Dragneel and the Fairy Tail guild take magic requests."
       ],
       "aliases": [
-        "フェアリーテイル"
+        "Fearī Teiru"
       ]
     },
     {
@@ -1311,7 +1304,7 @@
         "Thorfinn seeks revenge against the man who killed his father."
       ],
       "aliases": [
-        "ヴィンランド・サガ"
+        "Vinland Saga"
       ]
     },
     {
@@ -1338,7 +1331,7 @@
         "Japan's striker project isolates forwards to create a world-class egoist."
       ],
       "aliases": [
-        "ブルーロック"
+        "Burū Rokku"
       ]
     },
     {
@@ -1365,7 +1358,7 @@
         "Frieren revisits places from her journey after the Demon King is defeated."
       ],
       "aliases": [
-        "葬送のフリーレン"
+        "Sōsō no Frieren"
       ]
     },
     {
@@ -1392,7 +1385,7 @@
         "Sung Jinwoo is the only hunter who can level up infinitely."
       ],
       "aliases": [
-        "俺だけレベルアップな件"
+        "Ore dake Level Up na Ken"
       ]
     },
     {
@@ -1419,7 +1412,7 @@
         "A goldfish princess wants to become human after meeting Sosuke."
       ],
       "aliases": [
-        "崖の上のポニョ"
+        "Gake no Ue no Ponyo"
       ]
     },
     {
@@ -1446,7 +1439,7 @@
         "Takumi Fujiwara delivers tofu and becomes a legendary downhill racer."
       ],
       "aliases": [
-        "頭文字D"
+        "Inisharu Dī"
       ]
     },
     {
@@ -1473,7 +1466,7 @@
         "Madoka Kaname is offered a contract to become a magical girl."
       ],
       "aliases": [
-        "魔法少女まどか☆マギカ"
+        "Mahō Shōjo Madoka Magika"
       ]
     },
     {
@@ -1500,7 +1493,7 @@
         "Koyomi Araragi helps classmates afflicted by oddities and apparitions."
       ],
       "aliases": [
-        "物語シリーズ"
+        "Monogatari Series"
       ]
     },
     {
@@ -1527,7 +1520,7 @@
         "Inspectors hunt criminals judged by the Sibyl System's psycho-pass."
       ],
       "aliases": [
-        "サイコパス"
+        "Saiko Pasu"
       ]
     },
     {
@@ -1554,7 +1547,7 @@
         "Amuro Ray pilots the Gundam in the One Year War between Earth and colonies."
       ],
       "aliases": [
-        "機動戦士ガンダム"
+        "Kidō Senshi Gandamu"
       ]
     },
     {
@@ -1581,7 +1574,7 @@
         "Hitori Gotoh joins a band and struggles to overcome her shyness."
       ],
       "aliases": [
-        "ぼっち・ざ・ろっく！"
+        "Bocchi the Rock"
       ]
     },
     {
@@ -1608,7 +1601,7 @@
         "A doctor reincarnates as the son of his favorite idol and uncovers dark secrets."
       ],
       "aliases": [
-        "【推しの子】"
+        "Oshi no Ko"
       ]
     },
     {
@@ -1635,7 +1628,7 @@
         "Gabimaru the Hollow seeks a pardon by finding the elixir of life on an island."
       ],
       "aliases": [
-        "地獄楽"
+        "Jigokuraku"
       ]
     },
     {
@@ -1662,7 +1655,7 @@
         "Senku Ishigami revives civilization using science after a global petrification."
       ],
       "aliases": [
-        "Dr.STONE"
+        "Dr. Stone"
       ]
     },
     {
@@ -1689,7 +1682,7 @@
         "Shinra Kusakabe joins Company 8 to fight infernals and uncover a conspiracy."
       ],
       "aliases": [
-        "炎炎ノ消防隊"
+        "En'en no Shōbōtai"
       ]
     },
     {
@@ -1716,7 +1709,7 @@
         "Takemichi Hanagaki travels back to save his girlfriend from a tragic fate."
       ],
       "aliases": [
-        "東京リベンジャーズ"
+        "Tōkyō Ribenjāzu"
       ]
     },
     {
@@ -1743,7 +1736,7 @@
         "Riko and Reg descend the Abyss seeking her mother at the bottom."
       ],
       "aliases": [
-        "メイドインアビス"
+        "Meido in Abyss"
       ]
     },
     {
@@ -1770,7 +1763,7 @@
         "Wakana Gojo helps Marin Kitagawa create cosplay outfits."
       ],
       "aliases": [
-        "その着せ替え人形は恋をする"
+        "Sono Bisque Doll wa Koi o Suru"
       ]
     },
     {
@@ -1797,7 +1790,7 @@
         "Students at Death Weapon Meister Academy collect evil souls."
       ],
       "aliases": [
-        "ソウルイーター"
+        "Souru Ītā"
       ]
     },
     {
@@ -1824,7 +1817,7 @@
         "Ciel Phantomhive serves the queen with help from demon butler Sebastian."
       ],
       "aliases": [
-        "黒執事"
+        "Kuroshitsuji"
       ]
     },
     {
@@ -1851,7 +1844,7 @@
         "Yato is a stray god trying to build his own shrine."
       ],
       "aliases": [
-        "ノラガミ"
+        "Noragami"
       ]
     },
     {
@@ -1878,7 +1871,7 @@
         "Many characters' stories intertwine in Ikebukuro including Celty the dullahan."
       ],
       "aliases": [
-        "デュラララ!!"
+        "Durarara"
       ]
     },
     {
@@ -1905,7 +1898,7 @@
         "Moritaka and Akito aim to get their manga serialized in Jump."
       ],
       "aliases": [
-        "バクマン。"
+        "Bakuman"
       ]
     },
     {
@@ -1932,7 +1925,7 @@
         "Shinichi Izumi's right hand is taken over by a parasite named Migi."
       ],
       "aliases": [
-        "寄生獣"
+        "Kiseijū"
       ]
     },
     {
@@ -1959,7 +1952,7 @@
         "Re-l Mayer investigates awakened monsters called Proxies."
       ],
       "aliases": [
-        "エルゴプラクシー"
+        "Ergo Proxy"
       ]
     },
     {
@@ -1986,7 +1979,7 @@
         "Naota Nandaba's mundane life is disrupted by Haruko Haruhara and robots."
       ],
       "aliases": [
-        "フリクリ"
+        "Furi Kuri"
       ]
     },
     {
@@ -2013,7 +2006,7 @@
         "Ryuko Matoi seeks her father's killer at Honnouji Academy."
       ],
       "aliases": [
-        "キルラキル"
+        "Kill la Kill"
       ]
     },
     {
@@ -2040,7 +2033,7 @@
         "Lio Fotia and Galo Thymos clash as Burnish mutants face extinction."
       ],
       "aliases": [
-        "プロメア"
+        "Promare"
       ]
     },
     {
@@ -2067,7 +2060,7 @@
         "Hodaka meets Hina, who can clear the sky with her prayers."
       ],
       "aliases": [
-        "天気の子"
+        "Tenki no Ko"
       ]
     },
     {
@@ -2094,7 +2087,7 @@
         "Shoya Ishida tries to make amends with Shoko Nishimiya."
       ],
       "aliases": [
-        "聲の形"
+        "Koe no Katachi"
       ]
     },
     {
@@ -2121,7 +2114,7 @@
         "Mima Kirigoe's reality blurs as she becomes a target of obsession."
       ],
       "aliases": [
-        "パーフェクトブルー"
+        "Pāfekuto Burū"
       ]
     },
     {
@@ -2148,7 +2141,7 @@
         "Therapists use DC Mini devices until dreams leak into reality."
       ],
       "aliases": [
-        "パプリカ"
+        "Papurika"
       ]
     },
     {
@@ -2175,7 +2168,7 @@
         "Violet learns the meaning of love while writing letters for others."
       ],
       "aliases": [
-        "ヴァイオレット・エヴァーガーデン"
+        "Vaioretto Evāgāden"
       ]
     },
     {
@@ -2202,7 +2195,7 @@
         "Ash Lynx investigates a drug called Banana Fish linked to his brother."
       ],
       "aliases": [
-        "バナナフィッシュ"
+        "Banana Fish"
       ]
     },
     {
@@ -2229,7 +2222,7 @@
         "Mafuyu Sato joins a band and processes grief through music."
       ],
       "aliases": [
-        "ギヴン"
+        "Given"
       ]
     },
     {
@@ -2256,7 +2249,7 @@
         "Legoshi, a gray wolf, struggles with instincts in a herbivore-carnivore society."
       ],
       "aliases": [
-        "BEASTARS"
+        "Beastars"
       ]
     },
     {
@@ -2283,7 +2276,7 @@
         "Odokawa's taxi rides connect strangers in a missing-girl case."
       ],
       "aliases": [
-        "オッドタクシー"
+        "Odd Taxi"
       ]
     },
     {
@@ -2310,7 +2303,7 @@
         "Mash Burnedead survives a magic world using only physical strength."
       ],
       "aliases": [
-        "マッシュル"
+        "Mashle"
       ]
     },
     {
@@ -2337,7 +2330,7 @@
         "Andy and Fuuko seek the Union's truth while hunted for their unluck."
       ],
       "aliases": [
-        "アンデッドアンラック"
+        "Undead Unluck"
       ]
     },
     {
@@ -2364,7 +2357,7 @@
         "Momo and Okarun battle aliens and yokai while navigating high school."
       ],
       "aliases": [
-        "ダンダダン"
+        "Dandadan"
       ]
     },
     {
@@ -2391,7 +2384,7 @@
         "The Hellsing Organization fights supernatural threats in England."
       ],
       "aliases": [
-        "ヘルシング"
+        "Hellsing"
       ]
     },
     {
@@ -2418,7 +2411,7 @@
         "Vash the Stampede is a gunslinger with a huge bounty and a peaceful heart."
       ],
       "aliases": [
-        "トライガン"
+        "Trigun"
       ]
     },
     {
@@ -2445,7 +2438,7 @@
         "Fuu hires two swordsmen to find a sunflower samurai."
       ],
       "aliases": [
-        "サムライチャンプルー"
+        "Samurai Champloo"
       ]
     },
     {
@@ -2472,7 +2465,7 @@
         "Lain Iwakura explores the Wired and questions identity."
       ],
       "aliases": [
-        "シリアルエクスペリメンツレイン",
+        "Serial Experiments Lain",
         "Lain"
       ]
     },
@@ -2500,7 +2493,7 @@
         "Sakura Kinomoto must capture magical cards she accidentally released."
       ],
       "aliases": [
-        "カードキャプターさくら"
+        "Kādokyaputā Sakura"
       ]
     },
     {
@@ -2527,7 +2520,7 @@
         "Ranma Saotome turns into a girl when splashed with cold water."
       ],
       "aliases": [
-        "らんま1/2"
+        "Ranma Nibun no Ichi"
       ]
     },
     {
@@ -2554,7 +2547,7 @@
         "Kagome and half-demon Inuyasha seek shards of the Shikon Jewel."
       ],
       "aliases": [
-        "犬夜叉"
+        "Inuyasha"
       ]
     },
     {
@@ -2581,7 +2574,7 @@
         "Himura Kenshin wanders Japan protecting people without killing."
       ],
       "aliases": [
-        "るろうに剣心"
+        "Rurouni Kenshin"
       ]
     },
     {
@@ -2608,7 +2601,7 @@
         "Ichigo faces the Wandenreich's invasion in the final Bleach arc."
       ],
       "aliases": [
-        "BLEACH 千年血戦篇"
+        "Bleach: Sennen Kessen-hen"
       ]
     },
     {
@@ -4723,7 +4716,7 @@
         "Contestants play childhood games for money with lethal penalties."
       ],
       "aliases": [
-        "오징어 게임"
+        "Ojing-eo Geim"
       ]
     },
     {
@@ -5254,9 +5247,7 @@
         "Ed and Al search for the Philosopher's Stone in this TV adaptation."
       ],
       "aliases": [
-        [
-          "Fullmetal Alchemist 2003"
-        ]
+        "Fullmetal Alchemist 2003"
       ]
     }
   ]

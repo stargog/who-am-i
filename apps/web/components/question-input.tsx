@@ -104,7 +104,7 @@ export function QuestionInput({
                 value={guessValue}
                 onChange={(e) => setGuessValue(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleGuessSubmit()}
-                placeholder="Story title (EN or 日本語 for anime)"
+                placeholder="Story title (English or romaji for anime)"
                 maxLength={80}
                 className="w-full rounded-2xl px-4 py-3.5 text-base text-white placeholder-white/25 outline-none transition-all sm:flex-1"
                 style={{

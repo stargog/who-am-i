@@ -117,7 +117,7 @@ export type GuessableEntry = {
   aliases?: string[];
 };
 
-/** Match guess against display name and optional aliases (e.g. Japanese titles). */
+/** Match guess against display name and optional aliases (e.g. romaji). */
 export function entryGuessMatches(
   guess: string,
   entry: GuessableEntry
