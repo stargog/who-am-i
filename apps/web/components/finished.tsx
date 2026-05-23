@@ -66,7 +66,7 @@ export function Finished({ state, playerId, onPlayAgain }: Props) {
 
         <Panel>
           <h2 className="mb-4 text-sm font-bold uppercase tracking-widest text-white/40">
-            Everyone&apos;s characters
+            Everyone&apos;s stories
           </h2>
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {state.players.map((p) => {

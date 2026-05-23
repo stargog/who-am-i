@@ -48,7 +48,7 @@ export default function HomePage() {
             Who Am I?
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-white/40 md:text-base">
-            Create a room, invite friends, assign characters, and ask yes/no
+            Create a room, invite friends, get random stories, and ask yes/no
             questions until you guess who you are.
           </p>
         </motion.div>

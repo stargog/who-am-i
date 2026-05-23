@@ -30,7 +30,7 @@ export function pickDeckForPlayers(
   const pool = getDeckPool(categories);
   if (pool.length < count) {
     throw new Error(
-      `Not enough characters in deck (need ${count}, have ${pool.length})`
+      `Not enough stories in deck (need ${count}, have ${pool.length})`
     );
   }
   const shuffled = [...pool];
@@ -41,7 +41,7 @@ export function pickDeckForPlayers(
   return shuffled.slice(0, count);
 }
 
-/** Assign one unique character per player from each player's own category pool. */
+/** Assign one unique story per player from each player's own category pool. */
 export function assignCharactersPerPlayer(
   playerIds: string[],
   getCategories: (playerId: string) => DeckCategory[],
@@ -90,6 +90,16 @@ export function canAssignCharactersPerPlayer(
 }
 
 export function formatTagLine(tags: DeckEntry["tags"]): string {
+  if (tags.type === "story") {
+    const parts: string[] = [];
+    if (tags.media === "anime") parts.push("Anime");
+    else if (tags.media === "movie") parts.push("Movie");
+    else if (tags.media === "tv") parts.push("TV");
+    parts.push("Story");
+    if (tags.tier) parts.push(`Tier ${tags.tier.toUpperCase()}`);
+    return parts.join(" · ");
+  }
+
   const parts: string[] = [];
   parts.push(tags.type);
   if (tags.human) parts.push("Human");

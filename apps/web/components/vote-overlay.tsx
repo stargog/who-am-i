@@ -70,7 +70,7 @@ export function VoteOverlay({
                 <p className="mt-2 text-xs text-white/35">
                   About{" "}
                   <span style={{ color: askerColor }}>{askerName}</span>
-                  &apos;s character
+                  &apos;s story
                 </p>
               </motion.div>
 

@@ -20,7 +20,7 @@ import {
 } from "../shared/deck-utils";
 import { DECK_CATEGORIES, type DeckCategory } from "../shared/deck";
 import {
-  guessesMatch,
+  entryGuessMatches,
   sanitizeText,
   shuffle,
 } from "../shared/utils";
@@ -370,7 +370,7 @@ export default class RoomServer implements Party.Server {
       if (getDeckPool(p.preferredCategories).length === 0) {
         this.sendError(
           sender,
-          `${p.name} has no characters in their selected categories`
+          `${p.name} has no stories in their selected categories`
         );
         return;
       }
@@ -386,7 +386,7 @@ export default class RoomServer implements Party.Server {
     if (!assignment) {
       this.sendError(
         sender,
-        "Cannot assign unique characters — try different category mixes"
+        "Cannot assign unique stories — try different category mixes"
       );
       return;
     }
@@ -528,13 +528,23 @@ export default class RoomServer implements Party.Server {
       return;
     }
 
-    const character = getCharacterForPlayer(this.state.assignments, playerId);
-    if (!character) {
-      this.sendError(sender, "Your character was not found");
+    const assignment = this.state.assignments.find(
+      (a) => a.targetPlayerId === playerId
+    );
+    const entry = assignment?.deckEntryId
+      ? getDeckEntry(assignment.deckEntryId)
+      : undefined;
+
+    if (!assignment) {
+      this.sendError(sender, "Your story was not found");
       return;
     }
 
-    if (guessesMatch(clean, character)) {
+    const matched =
+      (entry && entryGuessMatches(clean, entry)) ||
+      entryGuessMatches(clean, { name: assignment.character });
+
+    if (matched) {
       this.state.winnerId = playerId;
       this.state.phase = "finished";
       this.state.pendingQuestion = undefined;

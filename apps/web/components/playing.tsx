@@ -256,7 +256,7 @@ export function Playing({
             />
 
             <p className="mt-4 max-w-md text-center text-xs text-white/25 md:text-sm">
-              Your card is hidden (?). Opponents show full character info on the
+              Your card is hidden (?). Opponents show full story info on the
               table.
             </p>
           </motion.div>

@@ -188,7 +188,7 @@ export function Lobby({
           Your categories
         </h2>
         <p className="mb-3 text-sm text-white/35">
-          Pick at least {MIN_PLAYER_CATEGORIES} — you will only get a character
+          Pick at least {MIN_PLAYER_CATEGORIES} — you will only get a story
           from your own picks.
         </p>
         <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
@@ -211,7 +211,7 @@ export function Lobby({
           }`}
         >
           {myCategories.length}/{MIN_PLAYER_CATEGORIES}+ categories · {myPoolSize}{" "}
-          characters in your pool
+          stories in your pool
         </p>
       </Panel>
 
@@ -272,7 +272,7 @@ export function Lobby({
         </ul>
         {me?.isHost && connected.length >= MIN_PLAYERS && !assignmentOk && (
           <p className="mt-3 text-xs text-amber-400/90">
-            Category picks may overlap — need enough unique characters across
+            Category picks may overlap — need enough unique stories across
             players.
           </p>
         )}
@@ -308,7 +308,7 @@ export function Lobby({
       {me?.isHost && !allReady && (
         <p className="text-center text-xs text-white/25">
           Need {MIN_PLAYERS}+ players, {MIN_PLAYER_CATEGORIES}+ categories each,
-          unique assignable characters, and everyone ready
+          unique assignable stories, and everyone ready
         </p>
       )}
     </motion.div>

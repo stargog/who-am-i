@@ -8,8 +8,19 @@ export function sanitizeText(input: string, maxLen = MAX_TEXT_LENGTH): string {
     .slice(0, maxLen);
 }
 
+function hasCjk(text: string): boolean {
+  return /[\u3040-\u30ff\u3400-\u9fff]/.test(text);
+}
+
 export function normalizeGuess(text: string): string {
-  return sanitizeText(text)
+  const raw = sanitizeText(text).trim();
+  if (!raw) return "";
+
+  if (hasCjk(raw)) {
+    return raw.normalize("NFKC").replace(/\s+/g, "");
+  }
+
+  return raw
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
@@ -99,6 +110,20 @@ export function guessesMatch(guess: string, answer: string): boolean {
   }
 
   return false;
+}
+
+export type GuessableEntry = {
+  name: string;
+  aliases?: string[];
+};
+
+/** Match guess against display name and optional aliases (e.g. Japanese titles). */
+export function entryGuessMatches(
+  guess: string,
+  entry: GuessableEntry
+): boolean {
+  const candidates = [entry.name, ...(entry.aliases ?? [])];
+  return candidates.some((answer) => guessesMatch(guess, answer));
 }
 
 export function generateRoomCode(): string {

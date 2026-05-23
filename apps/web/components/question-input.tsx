@@ -96,7 +96,7 @@ export function QuestionInput({
             exit={{ opacity: 0, y: -20 }}
           >
             <p className="mb-3 text-center text-sm font-bold uppercase tracking-widest text-emerald-400/90">
-              Guess your character
+              Guess your story
             </p>
             <motion.div className="flex flex-col gap-3 sm:flex-row sm:items-stretch">
               <input

@@ -119,7 +119,7 @@ export function CharacterCard({
       >
         <span className="text-4xl font-bold text-[var(--muted)] md:text-5xl">?</span>
         {isTable && (
-          <p className="mt-1 text-center text-sm text-[var(--muted)]">Your character</p>
+          <p className="mt-1 text-center text-sm text-[var(--muted)]">Your story</p>
         )}
       </div>
     );
