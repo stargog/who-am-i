@@ -1,7 +1,7 @@
 {
   "version": 3,
   "source": "scripts/stories-data.mjs",
-  "generated": "2026-05-23T14:56:21.105Z",
+  "generated": "2026-05-23T16:05:36.421Z",
   "entries": [
     {
       "id": "story-one-piece",
@@ -2848,7 +2848,7 @@
       "facts": [
         "Harry Potter discovers he is a wizard and fights Lord Voldemort."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "Wikimedia Commons"
     },
     {
       "id": "story-lotr",
@@ -4901,7 +4901,7 @@
       "aliases": [
         "Ojing-eo Geim"
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-game-of-thrones",
@@ -4926,7 +4926,7 @@
       "facts": [
         "Noble families war for control of the Seven Kingdoms of Westeros."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-stranger-things",
@@ -4951,7 +4951,7 @@
       "facts": [
         "Kids in Hawkins face monsters from an alternate dimension."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-breaking-bad",
@@ -4976,7 +4976,7 @@
       "facts": [
         "Walter White cooks meth after a terminal cancer diagnosis."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-friends",
@@ -5001,7 +5001,7 @@
       "facts": [
         "Rachel, Ross, Monica, Chandler, Joey, and Phoebe navigate life in Manhattan."
       ],
-      "imageAttribution": "Manual URL"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-the-simpsons",
@@ -5026,7 +5026,7 @@
       "facts": [
         "Homer, Marge, Bart, Lisa, and Maggie Simpson satirize American life."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-walking-dead",
@@ -5076,7 +5076,7 @@
       "facts": [
         "Employees of a Scranton paper branch face awkward humor daily."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-lost",
@@ -5101,7 +5101,7 @@
       "facts": [
         "Survivors of Oceanic 815 uncover strange forces on a mysterious island."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-house-of-cards",
@@ -5126,7 +5126,7 @@
       "facts": [
         "Frank Underwood schemes from congress to the presidency."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-black-mirror",
@@ -5151,7 +5151,7 @@
       "facts": [
         "Each episode explores dark consequences of near-future technology."
       ],
-      "imageAttribution": "Wikidata"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-the-mandalorian",
@@ -5176,7 +5176,7 @@
       "facts": [
         "Din Djarin protects Grogu while navigating the post-Empire galaxy."
       ],
-      "imageAttribution": "Wikidata"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-loki",
@@ -5201,7 +5201,7 @@
       "facts": [
         "Loki variants threaten the timeline under TVA control."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-wandavision",
@@ -5226,7 +5226,7 @@
       "facts": [
         "Wanda Maximoff creates a false suburban reality in Westview."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-wednesday",
@@ -5251,7 +5251,7 @@
       "facts": [
         "Wednesday Addams investigates murders at a school for outcasts."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-the-boys",
@@ -5276,7 +5276,7 @@
       "facts": [
         "A vigilante group fights abusive corporate superheroes called The Seven."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-chernobyl",
@@ -5301,7 +5301,7 @@
       "facts": [
         "Workers and officials respond to the 1986 Chernobyl reactor explosion."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-peaky-blinders",
@@ -5326,7 +5326,7 @@
       "facts": [
         "Tommy Shelby expands the Peaky Blinders crime empire."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-sherlock",
@@ -5351,7 +5351,7 @@
       "facts": [
         "Sherlock Holmes solves crimes in contemporary London with Dr. Watson."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-the-witcher",
@@ -5376,7 +5376,7 @@
       "facts": [
         "Geralt navigates politics and monsters while protecting Ciri."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-arcane",
@@ -5426,7 +5426,7 @@
       "facts": [
         "Aang must master all elements to end the Fire Nation's war."
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     },
     {
       "id": "story-fullmetal-tv",
@@ -5454,7 +5454,7 @@
       "aliases": [
         "Fullmetal Alchemist 2003"
       ],
-      "imageAttribution": "Wikipedia"
+      "imageAttribution": "TVMaze"
     }
   ]
 }
