@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import { Users, BookOpen, RotateCcw } from "lucide-react";
 import { BgmPlayer } from "./bgm-player";
+import { SfxMuteButton } from "./sfx-mute-button";
 
 type Props = {
   children: ReactNode;
@@ -104,7 +105,10 @@ export function GameShell({
 
           {headerExtra}
 
-          <BgmPlayer />
+          <div className="flex items-center gap-1">
+            <BgmPlayer />
+            <SfxMuteButton />
+          </div>
 
           {showMobileToggles && onMobilePanel && (
             <>

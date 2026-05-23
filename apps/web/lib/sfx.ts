@@ -1,4 +1,4 @@
-import { getBgmMuted } from "@/lib/bgm-storage";
+import { getSfxMuted } from "@/lib/sfx-storage";
 
 export type SfxId =
   | "voteYes"
@@ -40,7 +40,7 @@ export function unlockAudio() {
 }
 
 export function playSfx(id: SfxId) {
-  if (typeof window === "undefined" || getBgmMuted()) return;
+  if (typeof window === "undefined" || getSfxMuted()) return;
 
   const audio = new Audio(SFX_SRC[id]);
   audio.volume = SFX_VOLUME[id];

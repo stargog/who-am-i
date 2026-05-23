@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Volume2, VolumeX } from "lucide-react";
+import { Music, Music2 } from "lucide-react";
 import { BGM_VOLUME, getBgmMuted, setBgmMuted } from "@/lib/bgm-storage";
 import { unlockAudio } from "@/lib/sfx";
 
@@ -76,13 +76,13 @@ export function BgmPlayer() {
           background: "rgba(255,255,255,0.06)",
           border: "1px solid rgba(255,255,255,0.08)",
         }}
-        aria-label={muted ? "Turn music on" : "Turn music off"}
-        title={muted ? "Music off" : "Music on"}
+        aria-label={muted ? "เปิดเพลงพื้นหลัง" : "ปิดเพลงพื้นหลัง"}
+        title={muted ? "เพลงพื้นหลังปิด" : "เพลงพื้นหลังเปิด"}
       >
         {muted ? (
-          <VolumeX className="h-4 w-4 text-white/40" />
+          <Music2 className="h-4 w-4 text-white/40" />
         ) : (
-          <Volume2 className="h-4 w-4 text-white/60" />
+          <Music className="h-4 w-4 text-white/60" />
         )}
       </button>
     </>
