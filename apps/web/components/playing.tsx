@@ -12,6 +12,7 @@ import { KnownInfoPanel } from "./known-info-panel";
 import { QuestionInput, type QuestionPhase } from "./question-input";
 import { FloatingNotification } from "./floating-notification";
 import { VoteOverlay } from "./vote-overlay";
+import { playSfx } from "@/lib/sfx";
 
 type Props = {
   state: ClientRoomState;
@@ -67,6 +68,16 @@ export function Playing({
     if (state.questions.length > prevQuestionLenRef.current) {
       const last = state.questions[state.questions.length - 1];
       if (last) {
+        if (last.text.startsWith("[Guess]")) {
+          playSfx("clueNo");
+        } else if (last.answer === "yes") {
+          playSfx("clueYes");
+        } else if (last.answer === "no") {
+          playSfx("clueNo");
+        } else {
+          playSfx("tie");
+        }
+
         const msg =
           last.answer === "yes"
             ? "YES — new clue added!"

@@ -19,7 +19,8 @@
     "sync:images": "node scripts/sync-deck-images.mjs",
     "party:deploy": "partykit deploy",
     "ship": "node scripts/ship.mjs",
-    "fetch:posters": "node scripts/fetch-category-posters.mjs"
+    "fetch:posters": "node scripts/fetch-category-posters.mjs",
+    "generate:sfx": "node scripts/generate-sfx.mjs"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",

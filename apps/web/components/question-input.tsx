@@ -10,6 +10,7 @@ import {
   Target,
 } from "lucide-react";
 import { SUGGESTED_QUESTIONS } from "@/lib/player-theme";
+import { playSfx } from "@/lib/sfx";
 
 export type QuestionPhase =
   | "asking"
@@ -55,6 +56,7 @@ export function QuestionInput({
     if (!canSubmitQuestion) return;
     const q = inputValue.trim();
     if (!q) return;
+    playSfx("sendQuestion");
     onQuestion(q.endsWith("?") ? q : `${q}?`);
     setInputValue("");
     setShowSuggestions(false);
@@ -63,6 +65,7 @@ export function QuestionInput({
   const applySuggestedQuestion = (q: string) => {
     const formatted = q.endsWith("?") ? q : `${q}?`;
     if (canSubmitQuestion) {
+      playSfx("sendQuestion");
       onQuestion(formatted);
       setInputValue("");
       setShowSuggestions(false);
@@ -76,6 +79,7 @@ export function QuestionInput({
   const handleGuessSubmit = () => {
     const g = guessValue.trim();
     if (!g) return;
+    playSfx("guess");
     onGuess(g);
     setGuessValue("");
   };

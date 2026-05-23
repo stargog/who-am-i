@@ -1,7 +1,9 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Trophy, Star } from "lucide-react";
+import { playSfx } from "@/lib/sfx";
 
 type Props = {
   show: boolean;
@@ -20,6 +22,16 @@ export function CelebrationOverlay({
   onContinue,
   continueLabel = "Continue",
 }: Props) {
+  const playedWinRef = useRef(false);
+
+  useEffect(() => {
+    if (show && !playedWinRef.current) {
+      playedWinRef.current = true;
+      playSfx("win");
+    }
+    if (!show) playedWinRef.current = false;
+  }, [show]);
+
   const confettiColors = [
     "#ff6b6b",
     "#4ecdc4",

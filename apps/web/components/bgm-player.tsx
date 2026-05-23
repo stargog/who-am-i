@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import { BGM_VOLUME, getBgmMuted, setBgmMuted } from "@/lib/bgm-storage";
+import { unlockAudio } from "@/lib/sfx";
 
 const BGM_SRC = "/audio/bgm.mp3";
 
@@ -38,6 +39,7 @@ export function BgmPlayer() {
     if (!ready) return;
 
     const tryStart = () => {
+      unlockAudio();
       if (startedRef.current || getBgmMuted()) return;
       startedRef.current = true;
       applyToAudio(false);
@@ -52,6 +54,7 @@ export function BgmPlayer() {
   }, [ready, applyToAudio]);
 
   function toggleMute() {
+    unlockAudio();
     const next = !muted;
     setMuted(next);
     setBgmMuted(next);

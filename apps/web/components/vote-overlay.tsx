@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ThumbsUp, ThumbsDown } from "lucide-react";
 import type { ClientDeckInfo } from "@who-am-i/shared/deck";
+import { playSfx } from "@/lib/sfx";
 import { CharacterCard } from "./character-card";
 
 type Props = {
@@ -84,7 +85,10 @@ export function VoteOverlay({
                   type="button"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  onClick={() => onVote("yes")}
+                  onClick={() => {
+                    playSfx("voteYes");
+                    onVote("yes");
+                  }}
                   className="flex flex-1 items-center justify-center gap-2 rounded-2xl py-4 text-base font-black tracking-wide"
                   style={{
                     background:
@@ -100,7 +104,10 @@ export function VoteOverlay({
                   type="button"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  onClick={() => onVote("no")}
+                  onClick={() => {
+                    playSfx("voteNo");
+                    onVote("no");
+                  }}
                   className="flex flex-1 items-center justify-center gap-2 rounded-2xl py-4 text-base font-black tracking-wide"
                   style={{
                     background:
